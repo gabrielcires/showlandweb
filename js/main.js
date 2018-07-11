@@ -23,6 +23,15 @@ function toggleSubMenu(x) {
         ad.classList.toggle("show-menu");
     }
 
+// slider
+    var slider = tns({
+        container: '.first-slider',
+        items: 3,
+        slideBy: 'page',
+        autoplay: true,
+        controls: true,
+    });
+
 // smothscroll
 // $(document).on('click', 'a[href^="#"]', function (event) {
 //     event.preventDefault();
