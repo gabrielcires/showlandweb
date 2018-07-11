@@ -29,7 +29,9 @@ function toggleSubMenu(x) {
         items: 3,
         slideBy: 'page',
         autoplay: true,
-        controls: true,
+        controls: false,
+        items: 1,
+        arrowKeys: false,
     });
 
 // smothscroll
