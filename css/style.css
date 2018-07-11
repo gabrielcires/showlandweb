@@ -28,6 +28,7 @@
 
 @keyframes goUp {
     0% {transform: translateY(0); opacity: 0;}
+    50% {transform: translateY(-30%); opacity: 0;}
     100% {transform: translateY(-55%); opacity: 1;}
 }
 
@@ -38,7 +39,8 @@
 
 @keyframes fadeOut {
     0% {opacity: 1;}
-    100% {opacity: 0;}
+    90% {opacity: 0;}
+    100% {opacity: 0; z-index: -100;}
 }
 
 @keyframes scaleUp {
@@ -47,6 +49,7 @@
 }
 
 /* GENERAL */
+/* color corporativo #e0013f */
 ::selection {
     background: #b71350;
     color: white;
@@ -81,6 +84,20 @@ a {
     text-decoration: none;
 }
 
+.no-pad {
+    padding: 0;
+}
+
+.no-select {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .container {
     margin: 0 50px 0;
 }
@@ -98,10 +115,10 @@ a {
     top: 0;
     bottom: 0;
     overflow: hidden;
-    /* animation: fadeOut .5s 3s forwards cubic-bezier(.64, .01, .62, 1); */
+    animation: fadeOut .5s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform:translate3d(0, 0, 0);
     -webkit-transform:translate3d(0, 0, 0);
-    /* display: none; */
+    display: none;
 }
 
 .load-vector {
@@ -126,7 +143,7 @@ a {
 }
 
 .load-vector.fourth-wave {
-    animation: goUp 1s 1.5s forwards cubic-bezier(.65,0,.27,1);
+    animation: goUp 1s 1.2s forwards cubic-bezier(.65,0,.27,1);
 }
 
 .wave-cover{
@@ -157,33 +174,131 @@ a {
 
 /* HEADER */
 header {
-    width: 100%;
-    height: fit-content;
-    background: rgba(255, 255, 255, .3);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    background: rgba(179, 4, 91, 1);
+    background: -moz-linear-gradient(-45deg, rgba(179, 4, 91, 1) 0%, rgba(232, 111, 196, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(179, 4, 91, 1)), color-stop(100%, rgba(232, 111, 196, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(179, 4, 91, 1) 0%, rgba(232, 111, 196, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(179, 4, 91, 1) 0%, rgba(232, 111, 196, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(179, 4, 91, 1) 0%, rgba(232, 111, 196, 1) 100%);
+    background: linear-gradient(135deg, rgba(179, 4, 91, 1) 0%, rgba(232, 111, 196, 1) 100%);
     display: flex;
     justify-content: center;
     text-align: center;
     position: fixed;
     font-family: 'Gotham-light';
+    overflow-y: scroll;
+    transition: all .3s ease;
+    transform: translateX(100%);
 }
 
 header ul {
     padding: 0 30px;
     width: 100%;
+    margin: auto;
+    height: fit-content;
 }
 
 header ul li {
     list-style-type: none;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
     border-bottom: 3px solid rgba(255, 255, 255, .1);
+    transition: all .5s ease;
+}
+
+header ul li .sub-sect {
+    padding: 0;
+    transition: all .3s ease;
+    opacity: 0;
+    height: 0;
+    z-index: -1;
+}
+
+header ul li .sub-sect.show-menu {
+    transition: all .3s ease;
+    padding: 0;
+    opacity: 1;
+    height: 200px;
+}
+
+header ul li .sub-sect li {
+    border-bottom: 0;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+    margin: 3px 0;
 }
 
 a {
     color: white;
+    background-color: none;
     width: 100%;
+    display: inline-block;
+    font-size: 1em;
 }
 
+.serv-sect {
+    font-size: 1em;
+    color: white;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.down-arrow {
+    color: white;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.menu-cont {
+    width: 50px;
+    height: 50px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 200;
+    transition: all .3s ease;
+}
+
+.menu-cont .menu-icon {
+    height: fit-content;
+    width: 30px;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all .3s ease;
+}
+
+.change .bar1 {
+    transform: translateY(7px) rotate(-45deg);
+}
+
+.change .bar2 {
+    transform: rotate(45deg);
+}
+
+.change .bar3 {
+    opacity: 0;
+}
+
+header.show-menu {
+    opacity: 1;
+    transform: translateX(0);
+}
 /* MEDIA-QUERY */
 @media only screen and (min-width: 500px) {
     .container {
