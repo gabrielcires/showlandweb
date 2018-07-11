@@ -1,12 +1,12 @@
 // prueba de animaciones
-setTimeout(function(){
-    var a = document.getElementById("iniAnim");
-    a.className += " anim";       
-    setTimeout(function(){
-        var b = document.getElementById("loadsc");
-        b.className += " no-disp";
-    }, 500);
-}, 3100);
+// setTimeout(function(){
+//     var a = document.getElementById("iniAnim");
+//     a.className += " anim";       
+//     setTimeout(function(){
+//         var b = document.getElementById("loadsc");
+//         b.className += " no-disp";
+//     }, 500);
+// }, 3100);
 
 // toggle menu
 function toggleMenu(x) {
@@ -18,7 +18,9 @@ function toggleMenu(x) {
 // toggle submenu
 function toggleSubMenu(x) {
         var sm = document.getElementById("subMenu");
+        var ad = document.getElementById("arrowDown");
         sm.classList.toggle("show-menu");
+        ad.classList.toggle("show-menu");
     }
 
 // smothscroll

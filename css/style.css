@@ -118,7 +118,7 @@ a {
     animation: fadeOut .5s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform:translate3d(0, 0, 0);
     -webkit-transform:translate3d(0, 0, 0);
-    /* display: none; */
+    display: none;
 }
 
 .load-vector {
@@ -205,7 +205,7 @@ header ul li {
     list-style-type: none;
     width: 100%;
     padding: 20px 0;
-    border-bottom: 3px solid rgba(255, 255, 255, .1);
+    border-bottom: 3px solid rgba(255, 255, 255, .2);
     transition: all .5s ease;
 }
 
@@ -250,6 +250,12 @@ a {
     color: white;
     margin-top: -20px;
     margin-bottom: 10px;
+    transition: all .3s ease;
+}
+
+.down-arrow.show-menu {
+    transform: rotate(180deg);
+    margin: -10px 0 0;
 }
 
 .menu-cont {
