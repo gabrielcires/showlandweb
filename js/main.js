@@ -26,12 +26,18 @@ function toggleSubMenu(x) {
 // slider
     var slider = tns({
         container: '.first-slider',
-        items: 3,
         slideBy: 'page',
         autoplay: true,
         controls: false,
         items: 1,
         arrowKeys: false,
+        slideBy: 1,
+        nav: false,
+        navContainer: false,
+        autoplayHoverPause: true,
+        autoplayButtonOutput: false,
+        touch: true,
+        mouseDrag: true,
     });
 
 // smothscroll
