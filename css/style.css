@@ -51,7 +51,7 @@
 /* GENERAL */
 /* color corporativo #e0013f */
 ::selection {
-    background: #b71350;
+    background: #e0013f;
     color: white;
 }
 
@@ -65,23 +65,39 @@ html {
 
 body {
     width: 100%;
-    height: 2000px;
     background: black;
     font-family: "Gotham";
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-        font-family: 'Josefin Sans', sans-serif;
-} */
+section {
+    padding: 50px 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+        font-family: 'Gotham';
+        color: white;
+        margin: 0 0 30px;
+}
 
 p {
     font-size: 1.1em;
-    font-weight: 400;
-    margin-bottom: 50px;
+    font-family: "Gotham-light";
+    margin: 0 0 30px;
+    color: white;
 }
 
 a {
     text-decoration: none;
+}
+
+hr {
+    width: 100%;
+    margin: auto 30px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
 }
 
 .no-pad {
@@ -98,8 +114,21 @@ a {
     user-select: none;
 }
 
+.bdr-title {
+    border-bottom: 10px solid #e0013f;
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+.bdr-thin {
+    border: 1px solid #e0013f;
+    width: fit-content;
+    padding: 10px;
+    margin: 0;
+}
+
 .container {
-    margin: 0 50px 0;
+    margin: 0 25px 0;
 }
 
 /* LOADING */
@@ -115,7 +144,7 @@ a {
     top: 0;
     bottom: 0;
     overflow: hidden;
-    animation: fadeOut .5s 3s forwards cubic-bezier(.64, .01, .62, 1);
+    animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform:translate3d(0, 0, 0);
     -webkit-transform:translate3d(0, 0, 0);
     display: none;
@@ -191,7 +220,7 @@ header {
     position: fixed;
     font-family: 'Gotham-light';
     overflow-y: scroll;
-    transition: all .3s ease;
+    transition: all .4s ease;
     transform: translateX(100%);
     z-index: 2000;
 }
@@ -267,6 +296,8 @@ header a {
 .menu-cont {
     width: 50px;
     height: 50px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .3);
     margin: 20px auto 0;
     display: flex;
     flex-wrap: wrap;
@@ -291,6 +322,7 @@ header a {
     width: 20px;
     height: 2px;
     background-color: white;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .5);
     margin: 5px auto;
     transition: all .3s ease;
 }
@@ -337,35 +369,116 @@ header.show-menu {
 .show-home {
     width: 100%;
     height: auto;
-    margin-top: 150px;
+    margin: 110px 0 50px;
 }
-
+/* slider */
 .tns-outer {
-    margin: 0 -40px;
+    margin: 0 -25px;
 }
 
 .first-slider {
     width: 100%;
     height: fit-content;
+    position: relative;
+}
+
+.dark-borders::before {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.44);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.44) 0%, rgba(243, 243, 243, 0) 21%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 74%, rgba(186, 186, 186, 0) 81%, rgba(0, 0, 0, 0.44) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.44)), color-stop(21%, rgba(243, 243, 243, 0)), color-stop(22%, rgba(255, 255, 255, 0)), color-stop(74%, rgba(255, 255, 255, 0)), color-stop(81%, rgba(186, 186, 186, 0)), color-stop(100%, rgba(0, 0, 0, 0.44)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.44) 0%, rgba(243, 243, 243, 0) 21%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 74%, rgba(186, 186, 186, 0) 81%, rgba(0, 0, 0, 0.44) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.44) 0%, rgba(243, 243, 243, 0) 21%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 74%, rgba(186, 186, 186, 0) 81%, rgba(0, 0, 0, 0.44) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.44) 0%, rgba(243, 243, 243, 0) 21%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 74%, rgba(186, 186, 186, 0) 81%, rgba(0, 0, 0, 0.44) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.44) 0%, rgba(243, 243, 243, 0) 21%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 74%, rgba(186, 186, 186, 0) 81%, rgba(0, 0, 0, 0.44) 100%);
+}
+
+.darklay::before {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 100;
+    background: rgba(89, 89, 89, 0.25);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(89, 89, 89, 0.25)), color-stop(100%, rgba(19, 19, 19, 0.67)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
+    background: radial-gradient(ellipse at center, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
 }
 
 .first-slider div {
     min-height: 100px;
 }
 
-.one {
-    background: red
+/* ------- */
+/* secciones home */
+/* section#presentación {
+    
+} */
+
+section#servicios {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.two {
-    background: blue
+.sect-tle-out{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    object-position: center;
+    margin-bottom: 40px;
 }
 
-.three {
-    background: green
+.serv-cont {
+    width: 100%;
+    height: auto;
+    background: red;
+    margin: 40px 0 0;
+    position: relative;
 }
 
-/* MEDIA-QUERY */
+.serv-img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.serv-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    z-index: 300;
+    text-align: center;
+}
+
+.serv-cap {
+    margin: 10px auto 0;
+    font-family: "Gotham-bold";
+}
+
+ /* MEDIA-QUERY  */
 @media only screen and (min-width: 500px) {
     .container {
         margin: 0 40px 0;

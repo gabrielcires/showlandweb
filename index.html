@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <div id="menuAnim" class="menu-cont">
+    <div id="menuAnim" class="menu-cont no-select">
         <div class="menu-icon" onclick="toggleMenu(this)">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -44,7 +44,7 @@
                     <i class="fas fa-home"></i> Home</li>
             </a>
             <li class="no-pad">
-                <p class="serv-sect" onclick="toggleSubMenu(this)">
+                <p class="serv-sect no-select" onclick="toggleSubMenu(this)">
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
                 <ul class="sub-sect" id="subMenu">
@@ -93,11 +93,73 @@
     <div class="container">
         <img class="show-home" src="assets/img/showlh.svg" alt="">
 
-        <div class="first-slider">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
+        <div class="first-slider dark-borders">
+            <div>
+                <img class="img-fluid" src="assets/img/slide1.jpg" alt="">
+            </div>
+            <div>
+                <img class="img-fluid" src="assets/img/slide2.jpg" alt="">
+            </div>
+            <div>
+                <img class="img-fluid" src="assets/img/slide3.jpg" alt="">
+            </div>
+            <div>
+                <img class="img-fluid" src="assets/img/slide4.jpg" alt="">
+            </div>
+            <div>
+                <img class="img-fluid" src="assets/img/slide5.jpg" alt="">
+            </div>
+            <div>
+                <img class="img-fluid" src="assets/img/slide6.jpg" alt="">
+            </div>
         </div>
+
+        <section id="presentacion">
+
+            <h1 class="bdr-title">¡Hola!</h1>
+            <p>Somos una empresa joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente.</p>
+            <p>En lo que a un buen servicio se refiere no descuidamos ningún detalle, llegaremos hasta dónde el cliente quiera
+                respetando su idea original. Nos implicamos al 100% en cada uno de nuestros departamentos con todo lo que
+                necesitas, da igual lo pequeño o grande que sea su evento, todo lo que está en nuestras manos se puede hacer
+                realidad.
+            </p>
+            <p>Trabajamos día a día para hacernos un hueco entre las mejores empresas del sector, a día de hoy, nuestros clientes
+                están muy satisfechos y más de uno nos abalan a la hora de recomendarnos a más gente.</p>
+
+        </section>
+
+        <section id="Servicios">
+
+            <div class="sect-tle-out">
+                <hr>
+                <h2 class="bdr-thin">Servicios</h1>
+                    <hr>
+            </div>
+
+            <div class="serv-cont darklay">
+                <img class="img-fluid" src="assets/img/serv1.jpg" alt="">
+                <div class="serv-icon">
+                    <img class="serv-img" src="assets/img/corp-icon.svg" alt="">
+                    <p class="serv-cap">Eventos Corporativos</p>
+                </div>
+            </div>
+            <div class="serv-cont darklay">
+                <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
+                <div class="serv-icon">
+                    <img class="serv-img" src="assets/img/sound-icon.svg" alt="">
+                    <p class="serv-cap">Sonido e Iluminación</p>
+                </div>
+            </div>
+            <div class="serv-cont darklay">
+                <img class="img-fluid" src="assets/img/serv3.jpg" alt="">
+                <div class="serv-icon">
+                    <img class="serv-img" src="assets/img/design-icon.svg" alt="">
+                    <p class="serv-cap">Diseño y Comunicación</p>
+                </div>
+            </div>
+            
+
+        </section>
 
     </div>
     <footer></footer>
