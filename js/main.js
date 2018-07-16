@@ -1,50 +1,54 @@
-// prueba de animaciones
-// setTimeout(function(){
-//     var a = document.getElementById("iniAnim");
-//     a.className += " anim";       
-//     setTimeout(function(){
-//         var b = document.getElementById("loadsc");
-//         b.className += " no-disp";
-//     }, 500);
-// }, 3100);
-
 // toggle menu
 function toggleMenu(x) {
-        var m = document.getElementById("menu");
-        x.classList.toggle("change");
-        m.classList.toggle("show-menu");
-    }
+    var menu = document.getElementById("menu");
+    x.classList.toggle("change");
+    menu.classList.toggle("show-menu");
+}
 
 // toggle submenu
 function toggleSubMenu(x) {
-        var sm = document.getElementById("subMenu");
-        var ad = document.getElementById("arrowDown");
-        sm.classList.toggle("show-menu");
-        ad.classList.toggle("show-menu");
-    }
+    var subMenu = document.getElementById("subMenu");
+    var ad = document.getElementById("arrowDown");
+    subMenu.classList.toggle("show-menu");
+    ad.classList.toggle("show-menu");
+}
+
+// toggle contacto
+var menuCont = document.getElementById("menuCont");
+var menuAnim = document.getElementById("menuAnim");
+var c = document.getElementById("contacto");
+var social = document.getElementById("social");
+
+function toggleContacto(x) {
+    var contArrow = document.getElementById("contArrow");
+    menuCont.classList.toggle("fade-out");
+    menuAnim.classList.toggle("fade-out");
+    social.classList.toggle("fade-out");
+    c.classList.toggle("show-contacto");
+    contArrow.classList.add("fade-in");
+}
+
+function ContactoOut(x) {
+    menuCont.classList.remove("fade-out");
+    menuAnim.classList.remove("fade-out");
+    social.classList.remove("fade-out");
+    c.classList.remove("show-contacto");
+    x.classList.remove("fade-in");
+}
 
 // slider
-    var slider = tns({
-        container: '.first-slider',
-        slideBy: 'page',
-        autoplay: true,
-        controls: false,
-        items: 1,
-        arrowKeys: false,
-        slideBy: 1,
-        nav: false,
-        navContainer: false,
-        autoplayHoverPause: true,
-        autoplayButtonOutput: false,
-        touch: true,
-        mouseDrag: true,
-    });
-
-// smothscroll
-// $(document).on('click', 'a[href^="#"]', function (event) {
-//     event.preventDefault();
-    
-//     $('html, body').animate({
-//         scrollTop: $($.attr(this, 'href')).offset().top
-//     }, 500);
-// });
+var slider = tns({
+    container: '.first-slider',
+    slideBy: 'page',
+    autoplay: true,
+    controls: false,
+    items: 1,
+    arrowKeys: false,
+    slideBy: 1,
+    nav: false,
+    navContainer: false,
+    autoplayHoverPause: true,
+    autoplayButtonOutput: false,
+    touch: true,
+    mouseDrag: true,
+});

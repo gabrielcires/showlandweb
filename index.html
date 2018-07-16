@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/tiny-slider.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css?version=1" type="text/css">
 
 </head>
 
@@ -29,22 +29,26 @@
         </div>
     </div>
 
-    <div id="menuAnim" class="menu-cont no-select">
-        <div class="menu-icon" onclick="toggleMenu(this)">
+    <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
+        <div class="menu-icon">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
     </div>
 
+    <div id="contArrow" class="back-arrow" onclick="ContactoOut(this)">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+
     <header id="menu">
-        <ul>
+        <ul id="menuCont">
             <a class="no-select" href="">
                 <li>
                     <i class="fas fa-home"></i> Home</li>
             </a>
-            <li class="no-pad">
-                <p class="serv-sect no-select" onclick="toggleSubMenu(this)">
+            <li class="no-pad" onclick="toggleSubMenu(this)">
+                <p class="serv-sect no-select">
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
                 <ul class="sub-sect" id="subMenu">
@@ -66,15 +70,14 @@
                     <i class="fas fa-book-open"></i> Blog</li>
             </a>
 
-
-            <a class="no-select" href="">
-                <li>
-                    <i class="fas fa-phone"></i> Contacto</li>
-            </a>
+            <li class="no-pad">
+                <p class="serv-sect no-select" onclick="toggleContacto(this)">
+                    <i class="fas fa-phone"></i> Contacto</p>
+            </li>
 
         </ul>
 
-        <div class="social">
+        <div id="social" class="social">
             <a href="">
                 <i class="fab fa-facebook-square"></i>
             </a>
@@ -88,7 +91,21 @@
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
+
+        <section id="contacto" class="">
+
+            <h2>Contacto</h2>
+            <form class="contacto-form" action="">
+
+                <input type="text">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+
+            </form>
+        </section>
     </header>
+
 
     <div class="container">
         <img class="show-home" src="assets/img/showlh.svg" alt="">
@@ -135,27 +152,27 @@
                 <h2 class="bdr-thin">Servicios</h1>
                     <hr>
             </div>
-                <div class="serv-cont darklay">
-                        <img class="img-fluid" src="assets/img/serv1.jpg" alt="">
-                        <div class="serv-icon">
-                            <img class="serv-img" src="assets/img/corp-icon.svg" alt="">
-                            <p class="serv-cap">Eventos Corporativos</p>
-                        </div>
+            <div class="serv-cont darklay">
+                <img class="img-fluid" src="assets/img/serv1.jpg" alt="">
+                <div class="serv-icon">
+                    <img class="serv-img" src="assets/img/corp-icon.svg" alt="">
+                    <p class="serv-cap">Eventos Corporativos</p>
                 </div>
-                <div class="serv-cont darklay">
-                    <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
-                    <div class="serv-icon">
-                        <img class="serv-img" src="assets/img/sound-icon.svg" alt="">
-                        <p class="serv-cap">Sonido e Iluminación</p>
-                    </div>
+            </div>
+            <div class="serv-cont darklay">
+                <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
+                <div class="serv-icon">
+                    <img class="serv-img" src="assets/img/sound-icon.svg" alt="">
+                    <p class="serv-cap">Sonido e Iluminación</p>
                 </div>
-                <div class="serv-cont darklay">
-                    <img class="img-fluid" src="assets/img/serv3.jpg" alt="">
-                    <div class="serv-icon">
-                        <img class="serv-img" src="assets/img/design-icon.svg" alt="">
-                        <p class="serv-cap">Diseño y Comunicación</p>
-                    </div>
+            </div>
+            <div class="serv-cont darklay">
+                <img class="img-fluid" src="assets/img/serv3.jpg" alt="">
+                <div class="serv-icon">
+                    <img class="serv-img" src="assets/img/design-icon.svg" alt="">
+                    <p class="serv-cap">Diseño y Comunicación</p>
                 </div>
+            </div>
         </section>
         <section id="video">
 

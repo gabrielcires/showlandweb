@@ -104,6 +104,16 @@ hr {
     padding: 0;
 }
 
+.fade-out {
+    opacity: 0;
+    transform: translateX(200%);
+    transition: all .4s ease;
+}
+
+.fade-in {
+    opacity: 1!important;
+}
+
 .no-select {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -147,7 +157,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform:translate3d(0, 0, 0);
     -webkit-transform:translate3d(0, 0, 0);
-    display: none;
+    /* display: none; */
 }
 
 .load-vector {
@@ -206,6 +216,7 @@ header {
     width: 100vw;
     height: 100vh;
     opacity: 0;
+    position: relative;
     background: rgba(89, 0, 25, 1);
     background: -moz-linear-gradient(-45deg, rgba(89, 0, 25, 1) 0%, rgba(89, 0, 25, 1) 15%, rgba(141, 0, 40, 1) 48%, rgba(224, 1, 64, 1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(89, 0, 25, 1)), color-stop(15%, rgba(89, 0, 25, 1)), color-stop(48%, rgba(141, 0, 40, 1)), color-stop(100%, rgba(224, 1, 64, 1)));
@@ -220,6 +231,7 @@ header {
     position: fixed;
     font-family: 'Gotham-light';
     overflow-y: scroll;
+    overflow-x: hidden;
     transition: all .4s ease;
     transform: translateX(100%);
     z-index: 2000;
@@ -231,6 +243,7 @@ header ul {
     margin: auto;
     margin-top: 150px;
     height: fit-content;
+    transition: all .4s ease;
 }
 
 header ul li {
@@ -262,6 +275,7 @@ header ul li .sub-sect.show-menu {
 header ul li .sub-sect li {
     border-bottom: 0;
     margin: 3px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
 }
 
 header a {
@@ -305,7 +319,7 @@ header a {
     position: fixed;
     top: 0;
     right: 20px;
-    z-index: 3000;
+    z-index: 4000;
     transition: all .3s ease;
 }
 
@@ -357,6 +371,7 @@ header.show-menu {
     justify-content: center;
     align-content: center;
     margin-bottom: 20px;
+    transition: all .6s ease;
 }
 
 .social a {
@@ -478,6 +493,65 @@ section#servicios {
 .serv-cap {
     margin: 10px auto 0;
     font-family: "Gotham-bold";
+}
+
+/* CONTACTO */
+#contacto {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    position: fixed;
+    font-family: 'Gotham-light';
+    overflow-y: scroll;
+    transition: all .4s ease;
+    transform: translateX(-100%);
+    z-index: 3000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+section#contacto.show-contacto {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.contacto-form {
+    width: 100%;
+    padding: 20px;
+}
+
+.contacto-form input {
+    width: 100%;
+    height: 40px;
+    margin: 20px auto;
+}
+
+.back-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    opacity: 0;
+    color: white;
+    background: rgba(0, 0, 0, .3);
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, .3);
+    margin: 20px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 3500;
+    transition: all .8s ease;
 }
 
  /* MEDIA-QUERY  */
