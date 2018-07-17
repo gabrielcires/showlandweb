@@ -76,7 +76,7 @@ section {
 h1, h2, h3, h4, h5, h6 {
         font-family: 'Gotham';
         color: white;
-        margin: 0 0 30px;
+        margin: 0;
 }
 
 p {
@@ -102,6 +102,10 @@ hr {
 
 .no-pad {
     padding: 0;
+}
+
+.mrg-bottom {
+    margin-bottom: 30px;
 }
 
 .fade-out {
@@ -133,7 +137,9 @@ hr {
 .bdr-thin {
     border: 1px solid #e0013f;
     width: fit-content;
+    height: auto;
     padding: 10px;
+    vertical-align: middle;
     margin: 0;
 }
 
@@ -157,7 +163,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform:translate3d(0, 0, 0);
     -webkit-transform:translate3d(0, 0, 0);
-    /* display: none; */
+    display: none;
 }
 
 .load-vector {
@@ -464,7 +470,7 @@ section#servicios {
     width: 100%;
     height: auto;
     background: red;
-    margin: 40px 0 0;
+    margin: auto;
     position: relative;
 }
 
@@ -596,6 +602,11 @@ section#contacto.show-contacto {
         right: 0;
         left: 0;
         animation: scaleUp .3s 1.8s forwards ease;
+    }
+    _::-webkit-full-page-media,
+    _:future,
+    :root .pad-top-safari {
+        padding-top: 20px;
     }
 }
 
