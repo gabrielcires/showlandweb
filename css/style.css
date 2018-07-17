@@ -506,6 +506,11 @@ section#servicios {
     font-family: "Gotham-bold";
 }
 
+.fake-play {
+    font-size: 80px;
+    color: white;
+}
+
 /* CONTACTO */
 #contacto {
     width: 100vw;
