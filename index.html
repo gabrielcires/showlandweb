@@ -95,14 +95,24 @@
         <section id="contacto" class="">
 
             <h2>Contacto</h2>
-            <form class="contacto-form" action="">
+            <form class="contacto-form" action="" target="_self" method="POST">
 
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-
+                <p class="form-text">Nombre</p>
+                <input name="nombre" type="text" placeholder="Nombre">
+                <p class="form-text">Correo</p>
+                <input name="correo" type="email" placeholder="Email">
+                <p class="form-text">Asunto</p>
+                <input name="asunto" type="text" placeholder="Asunto">
+                <p class="form-text">Mensaje</p>
+                <textarea name="mensaje" id="" cols="30" rows="6" placeholder="Mensaje"></textarea>
+                <input class="submit-btn" type="submit" value="Enviar">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
+                    <p><i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
+                    <p><i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p>
+                </div>
             </form>
+
         </section>
     </header>
 
@@ -149,8 +159,10 @@
 
             <div class="sect-tle-out">
                 <hr>
-                <div class="bdr-thin"><h2 class="pad-top-safari">Servicios</h2></div>
-                    <hr>
+                <div class="bdr-thin">
+                    <h2 class="pad-top-safari">Servicios</h2>
+                </div>
+                <hr>
             </div>
             <div class="serv-cont darklay">
                 <img class="img-fluid" src="assets/img/serv1.jpg" alt="">
