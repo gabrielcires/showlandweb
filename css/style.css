@@ -111,6 +111,10 @@ hr {
     margin-bottom: 30px;
 }
 
+.nomrg-btm{
+    margin-bottom: 0;
+}
+
 .fade-out {
     opacity: 0;
     transform: translateX(200%);
@@ -299,20 +303,19 @@ header a {
     font-size: 1em;
     color: white;
     margin: 0;
-    padding: 20px 0;
+    padding: 20px 0 0;
     cursor: pointer;
 }
 
 .down-arrow {
     color: white;
-    margin-top: -20px;
     margin-bottom: 10px;
-    transition: all .3s ease;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .down-arrow.show-menu {
     transform: rotate(180deg);
-    margin: -10px 0 0;
+    margin: 10px 0 0;
 }
 
 .menu-cont {
@@ -468,7 +471,7 @@ section#servicios {
     justify-content: center;
     width: 100%;
     object-position: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .serv-cont {
