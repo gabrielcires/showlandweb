@@ -1,13 +1,43 @@
-<?php $nombre = $_POST['nombre'];
-$correo = $_POST['correo'];
-$mensaje = $_POST['mensaje'];
-$asunto = $_POST['asunto'];
-$formcontent="Correo: $correo \n
-De: $nombre \n
-Asunto: $asunto \n
-Mensaje: $mensaje";
-$recipient = "info@showlandproducciones.es";
-$mailheader = "De: $correo \r\n";
-mail($recipient, $asunto, $formcontent, $mailheader) or die("Error!");
-echo "Enviado!";
+<?php 
+
+// $name = $_POST['name'];
+// $email = $_POST['email'];
+// $message = $_POST['message'];
+// $subject = $_POST['subject'];
+// $formcontent="Correo: $email \n
+// De: $name \n
+// Asunto: $subject \n
+// Mensaje: $message";
+// $recipient = "gabrielcireslopez@gmail.com";
+// $mailheader = "De: $email \r\n";
+// mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+// echo "Enviado!";
+
+// -----------
+
+if(isset($_POST['contactSubmit'])){
+	$message = " ";
+	$name = $_POST["name"] ;
+	$email = $_POST["email"];
+	$formMessage = $_POST["message"];
+	
+	
+	$message .= "Full Name: " . $name . "\
+";
+	$message .= "Email Address: " . $email . "\
+";
+	$message .= "Comment: " . $formMessage . "\
+";
+	
+	$subject = "Contact Us";
+	$myEmail =" gabrielcireslopez@gmail.com";
+	
+	if (mail($myEmail, $subject, $message)){
+		$success = "Message successfully sent";
+	}else{
+		$success = "Message Sending Failed, try again";
+	}
+}
+
 ?>
+
