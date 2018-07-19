@@ -192,6 +192,7 @@ hr {
 .bdr-title {
     border-bottom: 10px solid #e0013f;
     width: fit-content;
+    width: -moz-max-content;
     padding-bottom: 10px;
     font-size: 1.2em;
 }
@@ -199,6 +200,7 @@ hr {
 .bdr-thin {
     border: 1px solid #e0013f;
     width: fit-content;
+    width: -moz-max-content;
     height: auto;
     padding: 10px;
     vertical-align: middle;
@@ -447,6 +449,7 @@ header.show-menu {
 
 .social a {
     width: fit-content;
+    width: -moz-max-content;
     margin: 10px;
 }
 
@@ -542,6 +545,7 @@ section#servicios {
     height: auto;
     margin: auto;
     position: relative;
+    display: table;
 }
 
 .serv-img {
@@ -556,9 +560,13 @@ section#servicios {
     bottom: 0;
     right: 0;
     left: 0;
+    display: table-cell;
+    vertical-align: middle;
     margin: auto;
     width: fit-content;
+    width: -moz-max-content;
     height: fit-content;
+    height: -moz-max-content;
     z-index: 300;
     text-align: center;
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, .9));
@@ -764,6 +772,7 @@ input::placeholder {
 
 .social-location a {
     width: fit-content;
+    width: -moz-max-content;
     margin: 10px;
     color: white;
 }

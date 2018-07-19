@@ -1,3 +1,4 @@
+
 // toggle menu
 function toggleMenu(x) {
     var menu = document.getElementById("menu");
@@ -47,10 +48,13 @@ var slider = tns({
     slideBy: 1,
     nav: false,
     navContainer: false,
+    autoplayTimeout: 3000,
     autoplayHoverPause: true,
     autoplayButtonOutput: false,
     touch: true,
     mouseDrag: true,
+    mode: 'gallery',
+    speed: 600,
 });
 
 // formvalidation
