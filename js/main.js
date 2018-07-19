@@ -52,3 +52,7 @@ var slider = tns({
     touch: true,
     mouseDrag: true,
 });
+
+// formvalidation
+var form = document.getElementById("contactForm");
+var isValidForm = form.checkValidity();

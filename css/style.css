@@ -107,8 +107,16 @@ hr {
     padding: 0;
 }
 
+.no-pad-btm {
+    padding-bottom: 0!important;
+}
+
 .mrg-bottom {
     margin-bottom: 30px;
+}
+
+.nomrg-btm{
+    margin-bottom: 0;
 }
 
 .fade-out {
@@ -305,19 +313,18 @@ header a {
 
 .down-arrow {
     color: white;
-    margin-top: -20px;
     margin-bottom: 10px;
-    transition: all .3s ease;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .down-arrow.show-menu {
     transform: rotate(180deg);
-    margin: -10px 0 0;
+    margin: 10px 0 0;
 }
 
 .menu-cont {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     background: rgba(0, 0, 0, .3);
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, .3);
@@ -468,20 +475,19 @@ section#servicios {
     justify-content: center;
     width: 100%;
     object-position: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .serv-cont {
     width: 100%;
     height: auto;
-    background: red;
     margin: auto;
     position: relative;
 }
 
 .serv-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin: auto;
 }
 
@@ -539,27 +545,33 @@ section#contacto.show-contacto {
     opacity: 1;
 }
 
-.contacto-form {
+.contact-form {
     width: 100%;
     padding: 20px;
 }
 
-.contacto-form input {
+.contact-form input {
     width: 100%;
     height: 35px;
-    margin: 5px auto 25px;
+    margin: 5px auto 20px;
 }
 
-.contacto-form textarea {
+.contact-form textarea {
     width: 100%;
     margin: 5px auto 10px;
 }
 
 .submit-btn {
+    width: 100%;
+    height: 35px;
+    margin: 5px auto 10px;
     background: rgba(0, 0, 0, 1);
     color: white;
     border: 0;
-    font-family: "Gotham";
+    font-family: "Gotham-bold";
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: 3px;
 }
 
 .form-text {
@@ -595,8 +607,8 @@ input::placeholder {
 }
 
 .back-arrow {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     opacity: 0;
     color: white;

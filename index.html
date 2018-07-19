@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+
+
 <html lang="es">
 
 <head>
@@ -13,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/tiny-slider.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css?version=3" type="text/css">
+    <link rel="stylesheet" href="css/style.css?" type="text/css">
 
 </head>
 
@@ -48,7 +51,7 @@
                     <i class="fas fa-home"></i> Home</li>
             </a>
             <li class="no-pad" onclick="toggleSubMenu(this)">
-                <p class="serv-sect no-select">
+                <p class="serv-sect no-select no-pad-btm">
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
                 <ul class="sub-sect" id="subMenu">
@@ -63,7 +66,6 @@
                     </a>
                 </ul>
             </li>
-
 
             <a class="no-select" href="">
                 <li>
@@ -95,21 +97,25 @@
         <section id="contacto" class="">
 
             <h2>Contacto</h2>
-            <form class="contacto-form" action="mail.php" target="_blank" method="POST">
 
-                <p class="form-text">Nombre</p>
-                <input name="nombre" type="text" placeholder="Nombre">
-                <p class="form-text">Correo</p>
-                <input name="correo" type="email" placeholder="Email">
+            <form id="contactForm" novalidate class="contact-form" action="mail.php" method="POST">
+
+                <p class="form-text">Nombre*</p>
+                <input name="name" type="text" required data-value-missing="Campo obligatorio!">
+                <p class="form-text">Correo*</p>
+                <input name="email" type="email" required data-value-missing="Campo obligatorio!">
                 <p class="form-text">Asunto</p>
-                <input name="asunto" type="text" placeholder="Asunto">
-                <p class="form-text">Mensaje</p>
-                <textarea name="mensaje" id="" cols="30" rows="6" placeholder="Mensaje"></textarea>
-                <input class="submit-btn" type="submit" value="Enviar">
+                <input name="subject" type="text">
+                <p class="form-text">Mensaje*</p>
+                <textarea name="message" id="" cols="30" rows="6" required data-value-missing="Campo obligatorio!"></textarea>
+                <button class="submit-btn" type="submit">Enviar</button>
                 <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
-                    <p><i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                    <p><i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p>
+                    <p>
+                        <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
+                    <p>
+                        <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
+                    <p>
+                        <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p>
                 </div>
             </form>
 
@@ -141,7 +147,6 @@
         </div>
 
         <section id="presentacion">
-
             <h1 class="bdr-title mrg-bottom">¡Hola!</h1>
             <p>Somos una empresa joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente.</p>
             <p>En lo que a un buen servicio se refiere no descuidamos ningún detalle, llegaremos hasta dónde el cliente quiera
@@ -149,11 +154,11 @@
                 necesitas, da igual lo pequeño o grande que sea su evento, todo lo que está en nuestras manos se puede hacer
                 realidad.
             </p>
-            <p>Trabajamos día a día para hacernos un hueco entre las mejores empresas del sector, a día de hoy, nuestros clientes
-                están muy satisfechos y más de uno nos abalan a la hora de recomendarnos a más gente.</p>
+            <p class="nomrg-btm">Trabajamos día a día para hacernos un hueco entre las mejores empresas del sector, a día de hoy, nuestros clientes
+                están muy satisfechos y más de uno nos avalan a la hora de recomendarnos a más gente.</p>
         </section>
 
-        <section id="Servicios">
+        <section id="servicios">
 
             <div class="sect-tle-out">
                 <hr>
