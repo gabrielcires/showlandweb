@@ -80,16 +80,16 @@
         </ul>
 
         <div id="social" class="social">
-            <a href="">
+            <a href="" class="no-select">
                 <i class="fab fa-facebook-square"></i>
             </a>
-            <a href="">
+            <a href="" class="no-select">
                 <i class="fab fa-twitter-square"></i>
             </a>
-            <a href="">
+            <a href="" class="no-select">
                 <i class="fab fa-youtube-square"></i>
             </a>
-            <a href="">
+            <a href="" class="no-select">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
@@ -195,9 +195,76 @@
                 </div>
             </div>
         </section>
+        <section id="withUs">
 
+            <img class="img-fluid" src="assets/img/withus.svg" alt="">
+            <p class="nomrg-bottom">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
+                que depender de varias empresas, nosotros te ofrecemos TODO para organizar el evento de tus sueños</p>
+
+        </section>
+        <section id="contactoHome" class="ignore-mrg">
+            <div class="sect-tle-out">
+                <div class="bdr-thin">
+                    <h2 class="pad-top-safari">Contacto</h2>
+                </div>
+            </div>
+
+            <div class="cont-home">
+                <form id="contactFormHome" novalidate class="contact-form" action="mail.php" method="POST">
+
+                    <p class="form-text">Nombre*</p>
+                    <input name="name" type="text" required data-value-missing="Campo obligatorio!">
+                    <p class="form-text">Correo*</p>
+                    <input name="email" type="email" required data-value-missing="Campo obligatorio!">
+                    <p class="form-text">Asunto</p>
+                    <input name="subject" type="text">
+                    <p class="form-text">Mensaje*</p>
+                    <textarea name="message" id="" cols="30" rows="6" required data-value-missing="Campo obligatorio!"></textarea>
+                    <button class="submit-btn" type="submit">Enviar</button>
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
+                        <p>
+                            <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
+                        <p>
+                            <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="location">
+
+            <div class="loc-cont">
+                <img class="loc-vector img-fluid" src="assets/img/showLog.svg" alt="">
+                <p class="location-mark"><i class="fas fa-map-marker-alt"></i></p>
+                <p>C/San Ignacio, 14 45600 | Talavera de laReina</p>
+                <div class="social-location">
+                    <a href="" class="no-select">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="" class="no-select">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a href="" class="no-select">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
+                    <a href="" class="no-select">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+        </section>
     </div>
-    <footer></footer>
+    <footer>
+        <div class="footer-cont">
+            <img class="img-fluid foot-svg" src="assets/img/footer1.svg" alt="">
+            <img class="img-fluid foot-svg" src="assets/img/footer2.svg" alt="">
+            <img class="img-fluid foot-svg" src="assets/img/footer3.svg" alt="">
+            <img class="img-fluid foot-svg" src="assets/img/footer4.svg" alt="">
+        </div>
+    </footer>
 
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="js/tiny-slider.js" type="text/javascript"></script>
