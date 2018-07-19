@@ -107,6 +107,10 @@ hr {
     padding: 0;
 }
 
+.no-pad-btm {
+    padding-bottom: 0!important;
+}
+
 .mrg-bottom {
     margin-bottom: 30px;
 }
@@ -303,7 +307,7 @@ header a {
     font-size: 1em;
     color: white;
     margin: 0;
-    padding: 20px 0 0;
+    padding: 20px 0;
     cursor: pointer;
 }
 
@@ -319,8 +323,8 @@ header a {
 }
 
 .menu-cont {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     background: rgba(0, 0, 0, .3);
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, .3);
@@ -482,8 +486,8 @@ section#servicios {
 }
 
 .serv-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     margin: auto;
 }
 
@@ -603,8 +607,8 @@ input::placeholder {
 }
 
 .back-arrow {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     opacity: 0;
     color: white;
