@@ -84,6 +84,35 @@
     }
 }
 
+@keyframes scaleUpDown {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.1) rotate(-5deg) translateY(-20px)
+    }
+    80% {
+        transform: scale(1.1) rotate(-5deg) translateY(-20px)
+    }
+    100% {
+        transform: scale(1.1) rotate(0deg) translateY(0px)
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* GENERAL */
 
 /* color corporativo #e0013f */
@@ -228,7 +257,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    /* display: none; */
+    display: none;
 }
 
 .load-vector {
@@ -513,8 +542,23 @@ header.show-menu {
     background: radial-gradient(ellipse at center, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
 }
 
-.first-slider div {
-    min-height: 100px;
+.first-slider div .slider-txt{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.first-slider div .slider-txt .slider-svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .5));
+    -webkit-filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .5));
+    -ms-filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .5));
 }
 
 /* ------- */
@@ -582,6 +626,48 @@ section#servicios {
 .fake-play {
     font-size: 80px;
     color: white;
+}
+
+.glitch {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+ 
+}
+
+.doAnim .glitch {
+   animation: scaleUpDown .5s 1.1s forwards cubic-bezier(0.165, 0.84, 0.44, 1.23);
+}
+
+.glitch img {
+    position: absolute;
+    max-height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.doAnim .glitch .glitch1 {
+    animation: popIn .2s .2s forwards cubic-bezier(0.165, 0.84, 0.44, 1.23);
+}
+
+.doAnim .glitch .glitch2 {
+    animation: popIn .2s .4s forwards cubic-bezier(0.165, 0.84, 0.44, 1.23);
+}
+
+.doAnim .glitch .glitch3 {
+    animation: popIn .2s .6s forwards cubic-bezier(0.165, 0.84, 0.44, 1.23);
+}
+
+.doAnim .glitch .glitch4 {
+    animation: popIn .2s .8s forwards cubic-bezier(0.165, 0.84, 0.44, 1.23);
+}
+
+.doAnim .glitch .glitch5 {
+    animation: popIn .2s 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1.23);
 }
 
 /* CONTACTO */
@@ -763,7 +849,7 @@ input::placeholder {
     width: 100%;
     height: fit-content;
     color: white;
-    font-size: 1.6em;
+    font-size: 2.2em;
     display: flex;
     justify-content: center;
     align-content: center;
