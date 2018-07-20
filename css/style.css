@@ -228,7 +228,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    /* display: none; */
+    display: none;
 }
 
 .load-vector {
@@ -513,8 +513,21 @@ header.show-menu {
     background: radial-gradient(ellipse at center, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
 }
 
-.first-slider div {
-    min-height: 100px;
+.first-slider div .slider-txt{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.first-slider div .slider-txt .slider-svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .5));
 }
 
 /* ------- */
@@ -763,7 +776,7 @@ input::placeholder {
     width: 100%;
     height: fit-content;
     color: white;
-    font-size: 1.6em;
+    font-size: 2.2em;
     display: flex;
     justify-content: center;
     align-content: center;
