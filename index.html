@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/tiny-slider.css" type="text/css">
+    <link rel="stylesheet" href="css/aos.css?" type="text/css">
     <link rel="stylesheet" href="css/style.css?" type="text/css">
 
 </head>
 
-<body>
+<body style="overflow-x: hidden!important">
 
     <div class="loading">
         <div class="wave-cover"></div>
@@ -121,7 +122,7 @@
     </header>
 
     <div class="container">
-        <img class="show-home" src="assets/img/showlh.svg" alt="">
+        <div class="center-obj"><img class="show-home" src="assets/img/showlh.svg" alt="" data-aos="zoom-out" data-aos-delay="3000"></div>
 
         <div class="first-slider dark-borders">
             <div>
@@ -129,7 +130,7 @@
             </div>
             <div>
                 <div class="slider-txt">
-                    <img class="slider-svg" src="assets/img/diseño.svg" alt="">
+                    <img class="slider-svg" src="assets/img/design.svg" alt="">
                     <img class="img-fluid" src="assets/img/slide2.jpg" alt="">
                 </div>
             </div>
@@ -159,7 +160,7 @@
             </div>
         </div>
 
-        <section id="presentacion">
+        <section id="presentacion" data-aos="fade-in">
             <h1 class="bdr-title mrg-bottom">¡Hola!</h1>
             <p>Somos una empresa joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente.</p>
             <p>En lo que a un buen servicio se refiere no descuidamos ningún detalle, llegaremos hasta dónde el cliente quiera
@@ -171,46 +172,45 @@
                 están muy satisfechos y más de uno nos avalan a la hora de recomendarnos a más gente.</p>
         </section>
 
-        <section id="servicios">
-
-            <div class="sect-tle-out">
+        <section id="servicios" class="ignore-mrg">
+            <div class="sect-tle-out" data-aos="fade-in">
                 <hr>
                 <div class="bdr-thin">
                     <h2 class="pad-top-safari">Servicios</h2>
                 </div>
                 <hr>
             </div>
-            <div class="serv-cont darklay">
+            <div class="serv-cont darklay" data-aos="fade-in">
                 <img class="img-fluid" src="assets/img/serv1.jpg" alt="">
                 <div class="serv-icon">
                     <img class="serv-img" src="assets/img/corp-icon.svg" alt="">
                     <p class="serv-cap">Eventos Corporativos</p>
                 </div>
             </div>
-            <div class="serv-cont darklay">
+            <div class="serv-cont darklay" data-aos="fade-in">
                 <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
                 <div class="serv-icon">
                     <img class="serv-img" src="assets/img/sound-icon.svg" alt="">
                     <p class="serv-cap">Sonido e Iluminación</p>
                 </div>
             </div>
-            <div class="serv-cont darklay">
+            <div class="serv-cont darklay" data-aos="fade-in">
                 <img class="img-fluid" src="assets/img/serv3.jpg" alt="">
                 <div class="serv-icon">
                     <img class="serv-img" src="assets/img/design-icon.svg" alt="">
                     <p class="serv-cap">Diseño y Comunicación</p>
                 </div>
             </div>
-            <div class="serv-cont darklay">
+            <div class="serv-cont darklay fake-vid" data-aos="fade-in">
                 <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
                 <div class="serv-icon">
                     <i class="fas fa-play fake-play"></i>
                 </div>
             </div>
         </section>
-        <section id="withUs" class="whait">
 
-            <div class="glitch">
+        <section id="withUs" class="">
+            <div class="glitch" data-aos="" data-aos-anchor-placement="top-center">
                 <img class="img-fluid glitch1" src="assets/img/withanim/all.svg" alt="">
                 <img class="img-fluid glitch2" src="assets/img/withanim/is.svg" alt="">
                 <img class="img-fluid glitch3" src="assets/img/withanim/posible.svg" alt="">
@@ -218,11 +218,11 @@
                 <img class="img-fluid glitch5" src="assets/img/withanim/us.svg" alt="">
             </div>
 
-            <p class="nomrg-bottom">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
+            <p class="nomrg-bottom" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="top-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
                 que depender de varias empresas, nosotros te ofrecemos TODO para organizar el evento de tus sueños</p>
-
         </section>
-        <section id="contactoHome" class="ignore-mrg">
+
+        <section id="contactoHome" class="ignore-mrg" data-aos="fade-in" ata-aos-anchor-placement="bottom-bottom" data-aos-offset="200">
             <div class="sect-tle-out">
                 <div class="bdr-thin">
                     <h2 class="pad-top-safari">Contacto</h2>
@@ -253,7 +253,7 @@
             </div>
         </section>
 
-        <section id="location">
+        <section id="location" data-aos="fade-in">
 
             <div class="loc-cont">
                 <img class="loc-vector img-fluid" src="assets/img/showLog.svg" alt="">
@@ -280,7 +280,7 @@
         </section>
     </div>
     <footer>
-        <div class="footer-cont">
+        <div class="footer-cont" data-aos="fade-in">
             <img class="img-fluid foot-svg" src="assets/img/footer1.svg" alt="">
             <img class="img-fluid foot-svg" src="assets/img/footer2.svg" alt="">
             <img class="img-fluid foot-svg" src="assets/img/footer3.svg" alt="">
@@ -290,7 +290,9 @@
 
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="js/tiny-slider.js" type="text/javascript"></script>
+    <script src="js/aos.js" type="text/javascript"></script>
     <script src="js/main.js?" type="text/javascript"></script>
+
 
 </body>
 
