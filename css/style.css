@@ -800,7 +800,6 @@ input::placeholder {
     left: 0;
     top: 0;
     z-index: -1;
-    margin: -50px 0;
     background: rgba(89, 0, 25, 1);
     background: -moz-linear-gradient(-45deg, rgba(89, 0, 25, 1) 0%, rgba(89, 0, 25, 1) 15%, rgba(141, 0, 40, 1) 48%, rgba(224, 1, 64, 1) 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(89, 0, 25, 1)), color-stop(15%, rgba(89, 0, 25, 1)), color-stop(48%, rgba(141, 0, 40, 1)), color-stop(100%, rgba(224, 1, 64, 1)));
@@ -808,7 +807,8 @@ input::placeholder {
     background: -o-linear-gradient(-45deg, rgba(89, 0, 25, 1) 0%, rgba(89, 0, 25, 1) 15%, rgba(141, 0, 40, 1) 48%, rgba(224, 1, 64, 1) 100%);
     background: -ms-linear-gradient(-45deg, rgba(89, 0, 25, 1) 0%, rgba(89, 0, 25, 1) 15%, rgba(141, 0, 40, 1) 48%, rgba(224, 1, 64, 1) 100%);
     background: linear-gradient(135deg, rgba(89, 0, 25, 1) 0%, rgba(89, 0, 25, 1) 15%, rgba(141, 0, 40, 1) 48%, rgba(224, 1, 64, 1) 100%);
-    transform: skewY(-10deg)
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
 
 .cont-home input {
@@ -879,9 +879,10 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: -50px;
+    top: 0;
     z-index: -1;
-    transform: skewY(-10deg)
+    -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .foot-svg {
@@ -928,13 +929,7 @@ footer {
         margin-right: -39px;
         margin-left: -39px;
     }
-    .cont-home::before {
-        transform: skewY(-8deg);
-    }
 
-    .footer-cont::before {
-        transform: skewY(-8deg);
-    }
 }
 
 @media only screen and (min-width: 700px) {
@@ -1013,9 +1008,6 @@ footer {
         width: 100%;
         margin: auto 40px;
     }
-    .cont-home::before {
-        transform: skewY(-7deg);
-    }
     .cont-home .contact-form {
         padding: 50px 100px 90px;
         border-top: 1px solid #e0013f;
@@ -1023,18 +1015,9 @@ footer {
     .contact-form {
         padding: 20px 100px;
     }
-    .footer-cont::before {
-        transform: skewY(-7deg);
-    }
 }
 
 @media only screen and (min-width: 800px) {
-    .cont-home::before {
-        transform: skewY(-6deg);
-    }
-    .footer-cont::before {
-        transform: skewY(-6deg);
-    }
 }
 
 @media only screen and (min-width: 900px) {
