@@ -37,25 +37,26 @@ function ContactoOut(x) {
     x.classList.remove("fade-in");
 }
 
-// slider
-var slider = tns({
-    container: '.first-slider',
-    slideBy: 'page',
-    autoplay: true,
-    controls: false,
-    items: 1,
-    arrowKeys: false,
-    slideBy: 1,
-    nav: false,
-    navContainer: false,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    autoplayButtonOutput: false,
-    touch: true,
-    mouseDrag: true,
-    mode: 'gallery',
-    speed: 1000,
-});
+var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    effect: 'fade',
+    keyboard: {
+        enabled: true,
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+})
 
 AOS.init({
     // Global settings

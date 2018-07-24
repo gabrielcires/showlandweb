@@ -15,6 +15,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/tiny-slider.css" type="text/css">
     <link rel="stylesheet" href="css/aos.css?" type="text/css">
+    <link rel="stylesheet" href="css/swiper.css?" type="text/css">
     <link rel="stylesheet" href="css/style.css?" type="text/css">
 
 </head>
@@ -119,44 +120,51 @@
     </header>
 
     <div class="container">
-        <div class="center-obj"><img class="show-home" src="assets/img/showlh.svg" alt="" data-aos="zoom-out" data-aos-delay="3000"></div>
-
-        <div class="first-slider dark-borders">
-            <div>
-                <div class="slider-txt">
-                    <img class="slider-svg" src="assets/img/design.svg" alt="">
-                    <img class="img-fluid" src="assets/img/slide2.jpg" alt="">
-                </div>
-            </div>
-            <div>
-                <img class="img-fluid" src="assets/img/slide1.jpg" alt="">
-            </div>
-            <div>
-                <div class="slider-txt">
-                    <img class="slider-svg" src="assets/img/sonido.svg" alt="">
-                    <img class="img-fluid" src="assets/img/slide3.jpg" alt="">
-                </div>
-            </div>
-            <div>
-                <div class="slider-txt">
-                    <img class="slider-svg" src="assets/img/sonorizacion.svg" alt="">
-                    <img class="img-fluid" src="assets/img/slide4.jpg" alt="">
-                </div>
-            </div>
-            <div>
-                <div class="slider-txt">
-                    <img class="slider-svg" src="assets/img/eventos.svg" alt="">
-                    <img class="img-fluid" src="assets/img/slide5.jpg" alt="">
-                </div>
-            </div>
-            <div>
-                <div class="slider-txt">
-                    <img class="slider-svg" src="assets/img/kids.svg" alt="">
-                    <img class="img-fluid" src="assets/img/slide6.jpg" alt="">
-                </div>
-            </div>
+        <div class="center-obj">
+            <img class="show-home" src="assets/img/showlh.svg" alt="" data-aos="zoom-out" data-aos-delay="3000">
         </div>
 
+        <div class="swiper-container dark-borders">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="img-fluid" src="assets/img/slide1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-txt">
+                        <img class="slider-svg" src="assets/img/design.svg" alt="">
+                        <img class="img-fluid" src="assets/img/slide2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-txt">
+                        <img class="slider-svg" src="assets/img/sonido.svg" alt="">
+                        <img class="img-fluid" src="assets/img/slide3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-txt">
+                        <img class="slider-svg" src="assets/img/sonorizacion.svg" alt="">
+                        <img class="img-fluid" src="assets/img/slide4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-txt">
+                        <img class="slider-svg" src="assets/img/eventos.svg" alt="">
+                        <img class="img-fluid" src="assets/img/slide5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-txt">
+                        <img class="slider-svg" src="assets/img/kids.svg" alt="">
+                        <img class="img-fluid" src="assets/img/slide6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- If we need scrollbar -->
+            <div class="swiper-pagination"></div>
+        </div>
         <section id="presentacion" data-aos="fade-in">
             <h1 class="bdr-title mrg-bottom">¡Hola!</h1>
             <p>Somos una empresa joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente.</p>
@@ -283,8 +291,8 @@
     </footer>
 
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/tiny-slider.js" type="text/javascript"></script>
     <script src="js/aos.js" type="text/javascript"></script>
+    <script src="js/swiper.min.js" type="text/javascript"></script>
     <script src="js/main.js?" type="text/javascript"></script>
 
 
