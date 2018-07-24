@@ -54,7 +54,7 @@ var slider = tns({
     touch: true,
     mouseDrag: true,
     mode: 'gallery',
-    speed: 600,
+    speed: 1000,
 });
 
 AOS.init({
