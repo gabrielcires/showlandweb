@@ -263,7 +263,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    /* display: none; */
+    display: none;
 }
 
 .load-vector {
@@ -348,7 +348,7 @@ header ul {
     padding: 0 30px;
     width: 100%;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 100px;
     height: fit-content;
     transition: all .4s ease;
 }
@@ -411,10 +411,20 @@ header a {
     margin: 10px 0 0;
 }
 
+.menu-btn {
+    margin: 0 0 0 5px;
+    font-family: "Gotham";
+    transition: all .3s ease;
+}
+
+.change .menu-btn {
+    display: none;
+}
+
 .menu-cont {
-    width: 40px;
+    width: auto;
     height: 40px;
-    border-radius: 100%;
+    border-radius: 5px;
     background: rgba(0, 0, 0, .3);
     box-shadow: 0 0 1px 2px rgba(0, 0, 0, .3);
     margin: 20px auto 0;
@@ -427,12 +437,13 @@ header a {
     right: 20px;
     z-index: 4000;
     transition: all .3s ease;
+    cursor: pointer;
 }
 
 .menu-cont .menu-icon {
     height: fit-content;
     width: 30px;
-    cursor: pointer;
+    margin: 0 5px;
     transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
 }
@@ -465,6 +476,24 @@ header a {
     opacity: 0;
 }
 
+.menu-cont.change {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .3);
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, .3);
+    margin: 20px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 4000;
+    transition: all .3s ease;
+}
+
 header.show-menu {
     opacity: 1;
     transform: translateX(0);
@@ -494,13 +523,21 @@ header.show-menu {
     width: 100%;
     max-width: 400px;
     height: auto;
-    margin: 110px 0 50px;
+    margin: 100px;
+}
+
+.show-home-menu {
+    display: inherit;
+    width: calc(100% - 50px);
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, .3));
+    margin: 0 auto 20px;
 }
 
 /* slider */
 
 .swiper-container {
     width: calc(100% + 50px);
+    max-height: 600px;
     margin-left: calc(-25px);
     margin-right: calc(-25px);
     height: auto;
@@ -509,6 +546,9 @@ header.show-menu {
 
 .swiper-slide {
     width: 100%;
+    height: auto;
+    max-height: 600px;
+    background-color: black;
 }
 
 .swiper-pagination-bullet {
@@ -569,6 +609,12 @@ header.show-menu {
     position: relative;
     width: 100%;
     height: auto;
+    max-height: 600px;
+}
+
+.swiper-container .first-slider {
+    object-fit: scale-down;
+    max-height: 600px;
 }
 
 .swiper-container div .slider-txt .slider-svg {
@@ -588,14 +634,17 @@ header.show-menu {
 
 /* secciones home */
 
-/* section#presentación {
-    
-} */
+
+.fake-vid-cont {
+    width: 100%;
+    padding: 0;
+}
 
 section#servicios {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 0;
 }
 
 .sect-tle-out {
@@ -1003,6 +1052,12 @@ footer {
     header {
         max-width: 350px;
     }
+    header ul{
+        margin-top: 20px;
+    }
+    .show-home-menu {
+        margin: 100px auto 20px;
+    }
     section#servicios {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -1015,7 +1070,7 @@ footer {
     .fake-vid {
         grid-column-start: 1;
         grid-column-end: 4;
-        height: 500px;
+        height: 600px;
         overflow: hidden;
     }
     .serv-img {
@@ -1035,7 +1090,7 @@ footer {
         border-top: 1px solid #e0013f;
     }
     .contact-form {
-        padding: 20px 100px;
+        padding: 20px 40px;
     }
 }
 
@@ -1077,8 +1132,8 @@ footer {
         margin: 0 200px 0;
     }
     .ignore-mrg {
-        margin-right: -199px;
-        margin-left: -199px;
+        margin-right: 0;
+        margin-left: 0;
     }
 
     .swiper-container {
@@ -1092,10 +1147,6 @@ footer {
     .container {
         margin: 0 300px 0;
     }
-    .ignore-mrg {
-        margin-right: -299px;
-        margin-left: -299px;
-    }
 
     .swiper-container {
         width: calc(100% + 600px);
@@ -1107,10 +1158,6 @@ footer {
 @media only screen and (min-width: 1600px) {
     .container {
         margin: 0 500px 0;
-    }
-    .ignore-mrg {
-        margin-right: -499px;
-        margin-left: -499px;
     }
 
     .swiper-container {

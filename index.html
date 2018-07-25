@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="css/tiny-slider.css" type="text/css">
     <link rel="stylesheet" href="css/aos.css?" type="text/css">
     <link rel="stylesheet" href="css/swiper.css?" type="text/css">
     <link rel="stylesheet" href="css/style.css?" type="text/css">
@@ -33,6 +32,7 @@
     </div>
 
     <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
+        <p class="menu-btn">MENÚ</p>
         <div class="menu-icon">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -45,7 +45,9 @@
     </div>
 
     <header id="menu">
+            
         <ul id="menuCont">
+            <img class="show-home-menu" src="assets/img/showlh.svg" alt="">
             <a class="no-select" href="">
                 <li>
                     <i class="fas fa-home"></i> Home</li>
@@ -121,7 +123,7 @@
 
     <div class="container">
         <div class="center-obj">
-            <img class="show-home" src="assets/img/showlh.svg" alt="" data-aos="zoom-out" data-aos-delay="3000">
+            <img class="show-home" src="assets/img/showlh.svg" alt="" data-aos="zoom-out" data-aos-delay="2500">
         </div>
 
         <div class="swiper-container dark-borders">
@@ -129,7 +131,7 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <img class="img-fluid" src="assets/img/slide1.jpg" alt="">
+                    <img class="img-fluid first-slider" src="assets/img/slide1.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
                     <div class="slider-txt">
@@ -165,7 +167,7 @@
             <!-- If we need scrollbar -->
             <div class="swiper-pagination"></div>
         </div>
-        <section id="presentacion" data-aos="fade-in">
+        <section id="presentacion" data-aos="fade-in" data-aos-anchor-placement="top-center">
             <h1 class="bdr-title mrg-bottom">¡Hola!</h1>
             <p>Somos una empresa joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente.</p>
             <p>En lo que a un buen servicio se refiere no descuidamos ningún detalle, llegaremos hasta dónde el cliente quiera
@@ -178,7 +180,7 @@
         </section>
 
         <section id="servicios" class="ignore-mrg">
-            <div class="sect-tle-out" data-aos="fade-in">
+            <div class="sect-tle-out" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
                 <hr>
                 <div class="bdr-thin">
                     <h2 class="pad-top-safari">Servicios</h2>
@@ -206,6 +208,8 @@
                     <p class="serv-cap">Diseño y Comunicación</p>
                 </div>
             </div>
+        </section>
+        <section class="fake-vid-cont">
             <div class="serv-cont darklay fake-vid" data-aos="fade-in">
                 <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
                 <div class="serv-icon">
@@ -215,7 +219,7 @@
         </section>
 
         <section id="withUs" class="">
-            <div class="glitch" data-aos="" data-aos-anchor-placement="top-center">
+            <div class="glitch" data-aos="" data-aos-anchor-placement="bottom-bottom">
                 <img class="img-fluid glitch1" src="assets/img/withanim/all.svg" alt="">
                 <img class="img-fluid glitch2" src="assets/img/withanim/is.svg" alt="">
                 <img class="img-fluid glitch3" src="assets/img/withanim/posible.svg" alt="">
@@ -223,11 +227,11 @@
                 <img class="img-fluid glitch5" src="assets/img/withanim/us.svg" alt="">
             </div>
 
-            <p class="nomrg-bottom" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="top-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
+            <p class="nomrg-bottom" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="center-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
                 que depender de varias empresas, nosotros te ofrecemos TODO para organizar el evento de tus sueños</p>
         </section>
 
-        <section id="contactoHome" class="ignore-mrg" data-aos="fade-in" ata-aos-anchor-placement="bottom-bottom" data-aos-offset="200">
+        <section id="contactoHome" class="ignore-mrg" data-aos="fade-in" ata-aos-anchor-placement="top-top" data-aos-offset="200">
             <div class="sect-tle-out">
                 <div class="bdr-thin">
                     <h2 class="pad-top-safari">Contacto</h2>
