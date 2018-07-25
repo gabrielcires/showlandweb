@@ -36,27 +36,37 @@ function ContactoOut(x) {
     c.classList.remove("show-contacto");
     x.classList.remove("fade-in");
 }
+$(document).ready(function () {
+    new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        effect: 'fade',
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
 
-var mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    effect: 'fade',
-    keyboard: {
-        enabled: true,
-    },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    var mySwiper = document.querySelector('.swiper-container').swiper
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+    $(".swiper-container").mouseenter(function () {
+        mySwiper.autoplay.stop();
+    });
 
-})
+    $(".swiper-container").mouseleave(function () {
+        mySwiper.autoplay.start();
+    });
+});
+
 
 AOS.init({
     // Global settings
