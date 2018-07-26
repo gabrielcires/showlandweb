@@ -67,7 +67,6 @@ $(document).ready(function () {
     });
 });
 
-
 AOS.init({
     // Global settings
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
