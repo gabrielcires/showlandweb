@@ -41,7 +41,7 @@
     </div>
 
     <div id="contArrow" class="back-arrow no-select" onclick="ContactoOut(this)">
-        <i class="fas fa-chevron-left"></i>
+        <img src="assets/img/backarrow.svg" alt="">
     </div>
 
     <header id="menu">
@@ -123,49 +123,56 @@
 
     <div class="container">
         <div class="center-obj">
-            <img class="show-home" src="assets/img/showlh.svg" alt="" data-aos="zoom-out" data-aos-delay="2500">
-        </div>
+            <img class="show-home" src="assets/img/showlh.svg" alt="">
 
-        <div class="swiper-container swiper-nomrg dark-borders">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img class="img-fluid first-slider" src="assets/img/slide1.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/design.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide2.jpg" alt="">
+
+            <div class="swiper-container swiper-nomrg dark-borders">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img class="img-fluid first-slider" src="assets/img/slider/slide1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/design.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/sonido.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/eventos.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/kids.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide6.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg-fa" src="assets/img/slider/facebook.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide7.jpg" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/sonido.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/sonorizacion.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/eventos.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide5.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/kids.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide6.jpg" alt="">
-                    </div>
-                </div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-pagination"></div>
             </div>
-            <!-- If we need scrollbar -->
-            <div class="swiper-pagination"></div>
         </div>
         <section id="presentacion" data-aos="fade-in" data-aos-anchor-placement="top-center">
             <div class="logobj-grid">
@@ -226,7 +233,7 @@
             </a>
         </section>
         <section class="fake-vid-cont swiper-nomrg">
-            <div class="serv-cont darklay fake-vid" data-aos="fade-in">
+            <div class="serv-cont-vid darklay fake-vid" data-aos="fade-in">
                 <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
                 <div class="serv-icon">
                     <i class="fas fa-play fake-play"></i>
@@ -243,7 +250,7 @@
                 <img class="img-fluid glitch5" src="assets/img/withanim/us.svg" alt="">
             </div>
 
-            <p class="nomrg-bottom" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="center-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
+            <p class="nomrg-bottom withus-txt" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="center-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
                 que depender de varias empresas, nosotros te ofrecemos TODO para organizar el evento de tus sueños</p>
         </section>
 
@@ -281,11 +288,18 @@
         <section id="location" data-aos="fade-in">
 
             <div class="loc-cont">
-                <img class="loc-vector img-fluid" src="assets/img/showLog.svg" alt="">
-                <p class="location-mark">
-                    <i class="fas fa-map-marker-alt"></i>
-                </p>
-                <p>C/San Ignacio, 14 45600 | Talavera de laReina</p>
+                <div class="loc-anim">
+                    <a href="https://goo.gl/maps/nvdGMq6E81k" target="_blank">
+                        <img class="loc-vector img-fluid" src="assets/img/showLog.svg" alt="">
+                        <p class="location-mark">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </p>
+                        <p class="loc-hide">C/San Ignacio, 14 45600 | Talavera de laReina</p>
+                        <p class="loc-go">Ver en Google Maps
+                            <img src="assets/img/backarrow.svg" alt="">
+                        </p>
+                    </a>
+                </div>
                 <div class="location social">
                     <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select" target="_blank">
                         <img class="img-fluid" src="assets/img/facebook.svg" alt="">
@@ -303,10 +317,16 @@
     </div>
     <footer>
         <div class="footer-cont" data-aos="fade-in">
-            <img class="img-fluid foot-svg" src="assets/img/footer1.svg" alt="">
-            <img class="img-fluid foot-svg" src="assets/img/footer2.svg" alt="">
+            <a href="https://www.facebook.com/SHOWLANDGROUP/" target="_blank">
+                <img class="img-fluid foot-svg" src="assets/img/footer1.svg" alt="">
+            </a>
+            <a href="https://www.facebook.com/PublitruckTalavera/" target="_blank">
+                <img class="img-fluid foot-svg" src="assets/img/footer2.svg" alt="">
+            </a>
             <img class="img-fluid foot-svg" src="assets/img/footer3.svg" alt="">
-            <img class="img-fluid foot-svg" src="assets/img/footer4.svg" alt="">
+            <a href="https://www.facebook.com/WOWGarageESP/" target="_blank">
+                <img class="img-fluid foot-svg" src="assets/img/footer4.svg" alt="">
+            </a>
         </div>
     </footer>
 
