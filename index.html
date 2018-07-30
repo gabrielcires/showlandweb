@@ -97,17 +97,22 @@
 
             <h2>Contacto</h2>
 
-            <form id="contactForm" novalidate class="contact-form" action="mail.php" method="POST">
+            <form id="contactForm" class="contact-form" method="POST">
 
                 <p class="form-text">Nombre*</p>
                 <input name="name" type="text" required data-value-missing="Campo obligatorio!">
+
                 <p class="form-text">Correo*</p>
                 <input name="email" type="email" required data-value-missing="Campo obligatorio!">
+
                 <p class="form-text">Asunto</p>
                 <input name="subject" type="text">
+
                 <p class="form-text">Mensaje*</p>
                 <textarea name="message" id="" cols="30" rows="6" required data-value-missing="Campo obligatorio!"></textarea>
+
                 <button class="submit-btn" type="submit">Enviar</button>
+
                 <div class="contact-info">
                     <p>
                         <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
@@ -262,17 +267,23 @@
             </div>
 
             <div class="cont-home">
-                <form id="contactFormHome" novalidate class="contact-form" action="mail.php" method="POST">
+                
+                <form id="contactFormHome" class="contact-form" method="POST" target="#contactoHome">
 
                     <p class="form-text">Nombre*</p>
                     <input name="name" type="text" required data-value-missing="Campo obligatorio!">
+
                     <p class="form-text">Correo*</p>
                     <input name="email" type="email" required data-value-missing="Campo obligatorio!">
+
                     <p class="form-text">Asunto</p>
                     <input name="subject" type="text">
+
                     <p class="form-text">Mensaje*</p>
                     <textarea name="message" id="" cols="30" rows="6" required data-value-missing="Campo obligatorio!"></textarea>
-                    <button class="submit-btn" type="submit">Enviar</button>
+
+                    <button class="submit-btn" type="submit" onclick="submitForm()">Enviar</button>
+
                     <div class="contact-info">
                         <p>
                             <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>

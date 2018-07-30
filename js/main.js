@@ -85,6 +85,20 @@ AOS.init({
     anchorPlacement: 'bottom-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 AOS.refresh()
+
 // formvalidation
-// var form = document.getElementById("contactForm");
-// var isValidForm = form.checkValidity();
+
+function submitForm() {
+    $.ajax({
+        url: 'mail.php',
+        type: 'post',
+        data: $('#contactFormHome').serialize(),
+        success: function () {
+            alert("worked");
+        }
+    });
+
+    // $('contacFormHome').submit(function (evt) {
+    //     evt.preventDefault(); //prevents the default action
+    // }
+}
