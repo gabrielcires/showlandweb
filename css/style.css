@@ -164,6 +164,13 @@ p {
 
 a {
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 hr {
@@ -199,6 +206,10 @@ hr {
 
 .center-obj {
     width: 100%;
+    text-align: center;
+}
+
+.txt-center {
     text-align: center;
 }
 
@@ -245,17 +256,6 @@ hr {
     position: relative;
 }
 
-/* .container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background: #111;
-} */
-
 /* LOADING */
 
 .loading {
@@ -273,7 +273,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    display: none;
+    /* display: none; */
 }
 
 .load-vector {
@@ -639,6 +639,11 @@ header.show-menu {
     background: -o-radial-gradient(center, ellipse cover, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
     background: -ms-radial-gradient(center, ellipse cover, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
     background: radial-gradient(ellipse at center, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
+    transition: all .3s ease;
+}
+
+.darklay:hover::before {
+    opacity: .5;
 }
 
 .swiper-container div .slider-txt {
@@ -682,7 +687,6 @@ header.show-menu {
     -ms-filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .8));
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-/* ------- */
 
 /* secciones home */
 
@@ -692,6 +696,7 @@ header.show-menu {
     padding: 0;
 }
 
+/* servicios */
 section#servicios {
     display: flex;
     justify-content: center;
@@ -722,15 +727,16 @@ section#servicios a{
     align-items:center;
 }
 
-.serv-cont-vid {
-    width: 100%;
-    height: auto;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content:center;
-    align-items:center;
+.serv-cap {
+    margin: 10px auto 0;
+    font-family: "Gotham";
+    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root .pad-top-safari {
+    padding-top: 20px;
 }
 
 .serv-cont img.serv-img {
@@ -765,19 +771,34 @@ section#servicios a{
     -webkit-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, .9));
     -ms-filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, .9));
 }
+/* video */
 
-.serv-cap {
-    margin: 10px auto 0;
-    font-family: "Gotham";
-    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.serv-cont-vid {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-_::-webkit-full-page-media,
-_:future,
-:root .pad-top-safari {
-    padding-top: 20px;
+.playerBox {
+    position: absolute;
+    z-index: 0;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    overflow: hidden;
+    opacity: 1;
+    user-select: none;
+    margin-top: 0px;
+    margin-left: 0 !important;
+    max-width: initial;
 }
-
 
 .fake-play {
     font-size: 80px;
@@ -1111,6 +1132,19 @@ footer a:hover img {
     transition: all .3s ease;
 }
 
+/* SUBSECCIONES */
+.sub-sep {
+    margin: 20px;
+}
+
+.sub-title {
+    margin: 20px 0 0
+}
+
+.sub-text {
+    font-family: "Gotham-light";
+}
+
 /* ANIM */
 .aos-animate.glitch {
     animation: scaleUpDown .5s .9s forwards cubic-bezier(0.165, 0.84, 0.44, 1.23);
@@ -1242,6 +1276,10 @@ footer a:hover img {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto 1fr;
     }
+    section#eventos {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+    }
     .sect-tle-out {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -1255,6 +1293,11 @@ footer a:hover img {
     .serv-img {
         width: 100px;
         height: 100px;
+        margin: auto;
+    }
+    .serv-img2 {
+        width: 200px;
+        height: 200px;
         margin: auto;
     }
     .serv-cap {

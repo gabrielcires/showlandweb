@@ -36,6 +36,7 @@ function ContactoOut(x) {
     c.classList.remove("show-contacto");
     x.classList.remove("fade-in");
 }
+// slider
 $(document).ready(function () {
     new Swiper('.swiper-container', {
         // Optional parameters
@@ -46,7 +47,7 @@ $(document).ready(function () {
             enabled: true,
         },
         autoplay: {
-            delay: 2500,
+            delay: 1500,
             disableOnInteraction: false,
         },
 
@@ -85,6 +86,11 @@ AOS.init({
     anchorPlacement: 'bottom-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 AOS.refresh()
+
+// video
+jQuery(function () {
+    jQuery("#videoShow").YTPlayer();
+});
 
 // formvalidation
 
