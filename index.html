@@ -9,13 +9,12 @@
     <meta name="description" content="Eventos y Espectáculos | Sonido e iluminación | Diseño y Comunicación">
     <meta http-equiv="author" content="Gabriel Cires López">
     <link rel="shortcut icon" href="assets/img/favicon.ico?" />
-
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="css/tiny-slider.css" type="text/css">
     <link rel="stylesheet" href="css/aos.css?" type="text/css">
     <link rel="stylesheet" href="css/swiper.css?" type="text/css">
+    <link href="css/YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css?" type="text/css">
 
 </head>
@@ -33,6 +32,7 @@
     </div>
 
     <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
+        <p class="menu-btn">MENÚ</p>
         <div class="menu-icon">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -40,13 +40,15 @@
         </div>
     </div>
 
-    <div id="contArrow" class="back-arrow" onclick="ContactoOut(this)">
-        <i class="fas fa-chevron-left"></i>
+    <div id="contArrow" class="back-arrow no-select" onclick="ContactoOut(this)">
+        <img src="assets/img/backarrow.svg" alt="">
     </div>
 
     <header id="menu">
+
         <ul id="menuCont">
-            <a class="no-select" href="">
+            <img class="show-home-menu" src="assets/img/showlh.svg" alt="">
+            <a class="no-select" href="index.html">
                 <li>
                     <i class="fas fa-home"></i> Home</li>
             </a>
@@ -55,7 +57,7 @@
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
                 <ul class="sub-sect" id="subMenu">
-                    <a class="no-select" href="">
+                    <a class="no-select" href="sections/eventos.html">
                         <li>Eventos y Espectáculos</li>
                     </a>
                     <a class="no-select" href="">
@@ -95,17 +97,22 @@
 
             <h2>Contacto</h2>
 
-            <form id="contactForm" novalidate class="contact-form" action="mail.php" method="POST">
+            <form id="contactForm" class="contact-form" method="POST">
 
                 <p class="form-text">Nombre*</p>
                 <input name="name" type="text" required data-value-missing="Campo obligatorio!">
+
                 <p class="form-text">Correo*</p>
                 <input name="email" type="email" required data-value-missing="Campo obligatorio!">
+
                 <p class="form-text">Asunto</p>
                 <input name="subject" type="text">
+
                 <p class="form-text">Mensaje*</p>
                 <textarea name="message" id="" cols="30" rows="6" required data-value-missing="Campo obligatorio!"></textarea>
+
                 <button class="submit-btn" type="submit">Enviar</button>
+
                 <div class="contact-info">
                     <p>
                         <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
@@ -121,101 +128,123 @@
 
     <div class="container">
         <div class="center-obj">
-            <img class="show-home" src="assets/img/showlh.svg" alt="" data-aos="zoom-out" data-aos-delay="3000">
-        </div>
+            <p style="margin: 50px auto 0">WEB EN CONSTRUCCIÓN</p>
+            <img class="show-home" src="assets/img/showlh.svg" alt="">
 
-        <div class="swiper-container dark-borders">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img class="img-fluid" src="assets/img/slide1.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/design.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide2.jpg" alt="">
+
+            <div class="swiper-container swiper-nomrg dark-borders">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img class="img-fluid first-slider" src="assets/img/slider/slide1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/design.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/sonido.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/eventos.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg" src="assets/img/slider/kids.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide6.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg-fa" src="assets/img/slider/facebook.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide7.jpg" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/sonido.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/sonorizacion.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/eventos.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide5.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider-txt">
-                        <img class="slider-svg" src="assets/img/kids.svg" alt="">
-                        <img class="img-fluid" src="assets/img/slide6.jpg" alt="">
-                    </div>
+                <!-- If we need scrollbar -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <section id="presentacion" data-aos="fade-in" data-aos-anchor-placement="top-center">
+            <div class="logobj-grid">
+                <div class="logobj-cont">
+                    <img class="load-vector first-wave" src="assets/img/wave1.svg" alt="">
+                    <img class="load-vector second-wave" src="assets/img/wave2.svg" alt="">
+                    <img class="load-vector third-wave" src="assets/img/wave3.svg" alt="">
+                    <img class="load-vector fourth-wave" src="assets/img/wave4.svg" alt="">
                 </div>
             </div>
-            <!-- If we need scrollbar -->
-            <div class="swiper-pagination"></div>
-        </div>
-        <section id="presentacion" data-aos="fade-in">
-            <h1 class="bdr-title mrg-bottom">¡Hola!</h1>
-            <p>Somos una empresa joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente.</p>
-            <p>En lo que a un buen servicio se refiere no descuidamos ningún detalle, llegaremos hasta dónde el cliente quiera
-                respetando su idea original. Nos implicamos al 100% en cada uno de nuestros departamentos con todo lo que
-                necesitas, da igual lo pequeño o grande que sea su evento, todo lo que está en nuestras manos se puede hacer
-                realidad.
-            </p>
-            <p class="nomrg-btm">Trabajamos día a día para hacernos un hueco entre las mejores empresas del sector, a día de hoy, nuestros clientes
-                están muy satisfechos y más de uno nos avalan a la hora de recomendarnos a más gente.</p>
+            <div class="presentobj-grid">
+                <h1 class="bdr-title mrg-bottom">¡Hola!</h1>
+                <p>Somos una empresa joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente.</p>
+                <p>En lo que a un buen servicio se refiere no descuidamos ningún detalle, llegaremos hasta dónde el cliente
+                    quiera respetando su idea original. Nos implicamos al 100% en cada uno de nuestros departamentos con
+                    todo lo que necesitas, da igual lo pequeño o grande que sea su evento, todo lo que está en nuestras manos
+                    se puede hacer realidad.
+                </p>
+                <p class="nomrg-btm">Trabajamos día a día para hacernos un hueco entre las mejores empresas del sector, a día de hoy, nuestros
+                    clientes están muy satisfechos y más de uno nos avalan a la hora de recomendarnos a más gente.</p>
+            </div>
         </section>
 
         <section id="servicios" class="ignore-mrg">
-            <div class="sect-tle-out" data-aos="fade-in">
+            <div class="sect-tle-out" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
                 <hr>
                 <div class="bdr-thin">
                     <h2 class="pad-top-safari">Servicios</h2>
                 </div>
                 <hr>
             </div>
-            <div class="serv-cont darklay" data-aos="fade-in">
-                <img class="img-fluid" src="assets/img/serv1.jpg" alt="">
-                <div class="serv-icon">
-                    <img class="serv-img" src="assets/img/corp-icon.svg" alt="">
-                    <p class="serv-cap">Eventos Corporativos</p>
+            <a href="../eventos.html">
+                <div class="serv-cont darklay" data-aos="fade-in">
+                    <img class="img-fluid" src="assets/img/serv1.jpg" alt="">
+                    <div class="serv-icon">
+                        <img class="serv-img" src="assets/img/corp-icon.svg" alt="">
+                        <p class="serv-cap">Eventos y Espectáculos</p>
+                    </div>
                 </div>
-            </div>
-            <div class="serv-cont darklay" data-aos="fade-in">
-                <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
-                <div class="serv-icon">
-                    <img class="serv-img" src="assets/img/sound-icon.svg" alt="">
-                    <p class="serv-cap">Sonido e Iluminación</p>
+            </a>
+            <a href="">
+                <div class="serv-cont darklay" data-aos="fade-in">
+                    <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
+                    <div class="serv-icon">
+                        <img class="serv-img" src="assets/img/sound-icon.svg" alt="">
+                        <p class="serv-cap">Sonido e Iluminación</p>
+                    </div>
                 </div>
-            </div>
-            <div class="serv-cont darklay" data-aos="fade-in">
-                <img class="img-fluid" src="assets/img/serv3.jpg" alt="">
-                <div class="serv-icon">
-                    <img class="serv-img" src="assets/img/design-icon.svg" alt="">
-                    <p class="serv-cap">Diseño y Comunicación</p>
+            </a>
+            <a href="">
+                <div class="serv-cont darklay" data-aos="fade-in">
+                    <img class="img-fluid" src="assets/img/serv3.jpg" alt="">
+                    <div class="serv-icon">
+                        <img class="serv-img" src="assets/img/design-icon.svg" alt="">
+                        <p class="serv-cap">Diseño y Comunicación</p>
+                    </div>
                 </div>
-            </div>
-            <div class="serv-cont darklay fake-vid" data-aos="fade-in">
-                <img class="img-fluid" src="assets/img/serv2.jpg" alt="">
-                <div class="serv-icon">
-                    <i class="fas fa-play fake-play"></i>
-                </div>
+            </a>
+        </section>
+        <section class="swiper-nomrg no-pad">
+            <div class="serv-cont-vid" data-aos="fade-in" id="videoShow" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=bpmIzR3CoZU',containment:'self', ratio: 16/9, optimizeDisplay: true, mute:true, startAt:0, opacity:1, showControls:true, optimizeDisplay: true, playOnlyIfVisible: true, anchor:'top, top'}">
             </div>
         </section>
 
         <section id="withUs" class="">
-            <div class="glitch" data-aos="" data-aos-anchor-placement="top-center">
+            <div class="glitch" data-aos="" data-aos-anchor-placement="bottom-bottom">
                 <img class="img-fluid glitch1" src="assets/img/withanim/all.svg" alt="">
                 <img class="img-fluid glitch2" src="assets/img/withanim/is.svg" alt="">
                 <img class="img-fluid glitch3" src="assets/img/withanim/posible.svg" alt="">
@@ -223,11 +252,11 @@
                 <img class="img-fluid glitch5" src="assets/img/withanim/us.svg" alt="">
             </div>
 
-            <p class="nomrg-bottom" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="top-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
+            <p class="nomrg-bottom withus-txt" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="center-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
                 que depender de varias empresas, nosotros te ofrecemos TODO para organizar el evento de tus sueños</p>
         </section>
 
-        <section id="contactoHome" class="ignore-mrg" data-aos="fade-in" ata-aos-anchor-placement="bottom-bottom" data-aos-offset="200">
+        <section id="contactoHome" class="ignore-mrg" data-aos="fade-in" ata-aos-anchor-placement="top-top" data-aos-offset="200">
             <div class="sect-tle-out">
                 <div class="bdr-thin">
                     <h2 class="pad-top-safari">Contacto</h2>
@@ -235,17 +264,23 @@
             </div>
 
             <div class="cont-home">
-                <form id="contactFormHome" novalidate class="contact-form" action="mail.php" method="POST">
+
+                <form id="contactFormHome" class="contact-form" method="POST" target="#contactoHome">
 
                     <p class="form-text">Nombre*</p>
                     <input name="name" type="text" required data-value-missing="Campo obligatorio!">
+
                     <p class="form-text">Correo*</p>
                     <input name="email" type="email" required data-value-missing="Campo obligatorio!">
+
                     <p class="form-text">Asunto</p>
                     <input name="subject" type="text">
+
                     <p class="form-text">Mensaje*</p>
                     <textarea name="message" id="" cols="30" rows="6" required data-value-missing="Campo obligatorio!"></textarea>
-                    <button class="submit-btn" type="submit">Enviar</button>
+
+                    <button class="submit-btn" type="submit" onclick="submitForm()">Enviar</button>
+
                     <div class="contact-info">
                         <p>
                             <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
@@ -261,12 +296,19 @@
         <section id="location" data-aos="fade-in">
 
             <div class="loc-cont">
-                <img class="loc-vector img-fluid" src="assets/img/showLog.svg" alt="">
-                <p class="location-mark">
-                    <i class="fas fa-map-marker-alt"></i>
-                </p>
-                <p>C/San Ignacio, 14 45600 | Talavera de laReina</p>
-                <div class="social-location">
+                <div class="loc-anim">
+                    <a href="https://goo.gl/maps/nvdGMq6E81k" target="_blank">
+                        <img class="loc-vector img-fluid" src="assets/img/showLog.svg" alt="">
+                        <p class="location-mark">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </p>
+                        <p class="loc-hide">C/San Ignacio, 14 45600 | Talavera de laReina</p>
+                        <p class="loc-go">Ver en Google Maps
+                            <img src="assets/img/backarrow.svg" alt="">
+                        </p>
+                    </a>
+                </div>
+                <div class="location social">
                     <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select" target="_blank">
                         <img class="img-fluid" src="assets/img/facebook.svg" alt="">
                     </a>
@@ -283,17 +325,26 @@
     </div>
     <footer>
         <div class="footer-cont" data-aos="fade-in">
-            <img class="img-fluid foot-svg" src="assets/img/footer1.svg" alt="">
-            <img class="img-fluid foot-svg" src="assets/img/footer2.svg" alt="">
+            <a href="https://www.facebook.com/SHOWLANDGROUP/" target="_blank">
+                <img class="img-fluid foot-svg" src="assets/img/footer1.svg" alt="">
+            </a>
+            <a href="https://www.facebook.com/PublitruckTalavera/" target="_blank">
+                <img class="img-fluid foot-svg" src="assets/img/footer2.svg" alt="">
+            </a>
             <img class="img-fluid foot-svg" src="assets/img/footer3.svg" alt="">
-            <img class="img-fluid foot-svg" src="assets/img/footer4.svg" alt="">
+            <a href="https://www.facebook.com/WOWGarageESP/" target="_blank">
+                <img class="img-fluid foot-svg" src="assets/img/footer4.svg" alt="">
+            </a>
         </div>
     </footer>
 
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="js/aos.js" type="text/javascript"></script>
     <script src="js/swiper.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script src="js/main.js?" type="text/javascript"></script>
+
 
 
 </body>

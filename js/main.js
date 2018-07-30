@@ -36,27 +36,37 @@ function ContactoOut(x) {
     c.classList.remove("show-contacto");
     x.classList.remove("fade-in");
 }
+// slider
+$(document).ready(function () {
+    new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        effect: 'fade',
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
 
-var mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    effect: 'fade',
-    keyboard: {
-        enabled: true,
-    },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    var mySwiper = document.querySelector('.swiper-container').swiper
 
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+    $(".swiper-container").mouseenter(function () {
+        mySwiper.autoplay.stop();
+    });
 
-})
+    $(".swiper-container").mouseleave(function () {
+        mySwiper.autoplay.start();
+    });
+});
 
 AOS.init({
     // Global settings
@@ -73,9 +83,28 @@ AOS.init({
     easing: 'ease', // default easing for AOS animations
     once: true, // whether animation should happen only once - while scrolling down
     mirror: true, // whether elements should animate out while scrolling past them
-    anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
+    anchorPlacement: 'bottom-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 AOS.refresh()
+
+// video
+jQuery(function () {
+    jQuery("#videoShow").YTPlayer();
+});
+
 // formvalidation
-// var form = document.getElementById("contactForm");
-// var isValidForm = form.checkValidity();
+
+function submitForm() {
+    $.ajax({
+        url: 'mail.php',
+        type: 'post',
+        data: $('#contactFormHome').serialize(),
+        success: function () {
+            alert("worked");
+        }
+    });
+
+    // $('contacFormHome').submit(function (evt) {
+    //     evt.preventDefault(); //prevents the default action
+    // }
+}
