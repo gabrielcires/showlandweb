@@ -162,6 +162,10 @@ p {
     color: white;
 }
 
+span {
+    transition: all .3s ease;
+}
+
 a {
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
@@ -881,7 +885,7 @@ section#contacto.show-contacto {
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px white inset;
+    box-shadow: 0 0 0 30px white inset;
     background-color: white !important;
     background-image: none !important;
 }
@@ -918,10 +922,12 @@ select:-webkit-autofill {
 
 .form-error {
     color: black;
+    font-family: "Gotham-bold";
 }
 
 .form-success {
-    color: gold;
+    transition: all .3s ease;
+    color: white;
     font-family: "Gotham-bold";
 }
 

@@ -5,12 +5,11 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
-    $formcontent="Correo: $email \n
-    De: $name \n
-    Asunto: $subject \n
-    $message";
-
-    $recipient = "gabrielcireslopez@gmail.com";
+    $mailTo = "gabrielcireslopez@gmail.com";
+            
+    $formcontent="
+    
+    Correo: $email \n\nDe: $name \n\nAsunto: $subject\n\n$message";
 
     $errorEmpty = false;
     $errorEmail = false;
@@ -23,7 +22,11 @@ if (isset($_POST['submit'])) {
         echo "<span class='form-error'>Introduce un correo válido!</span>";
         $errorEmail = true;
 
-    } else echo "<span class='form-success'>Correo enviado!</span>";
+    } else { 
+        mail($mailTo, $subject, $formcontent);
+        echo "<span class='form-success'>Correo enviado!</span>";
+    }
+
 }
 
 ?>
