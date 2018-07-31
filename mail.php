@@ -1,42 +1,49 @@
 <?php 
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-$subject = $_POST['subject'];
-$formcontent="Correo: $email \n
-De: $name \n
-Asunto: $subject \n
-$message";
-$recipient = "gabrielcireslopez@gmail.com";
-$mailheader = "De: $email \r\n";
-mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $formcontent="Correo: $email \n
+    De: $name \n
+    Asunto: $subject \n
+    $message";
 
-// -----------
+    $recipient = "gabrielcireslopez@gmail.com";
 
-// if(isset($_POST['contactSubmit'])){
-// 	$message = " ";
-// 	$name = $_POST["name"] ;
-// 	$email = $_POST["email"];
-// 	$formMessage = $_POST["message"];
-	
-	
-// 	$message .= "Full Name: " . $name . "\
-// ";
-// 	$message .= "Email Address: " . $email . "\
-// ";
-// 	$message .= "Comment: " . $formMessage . "\
-// ";
-	
-// 	$subject = "Contact Us";
-// 	$myEmail =" gabrielcireslopez@gmail.com";
-	
-// 	if (mail($myEmail, $subject, $message)){
-// 		$success = "Message successfully sent";
-// 	}else{
-// 		$success = "Message Sending Failed, try again";
-// 	}
-// }
+    $errorEmpty = false;
+    $errorEmail = false;
+
+    if (empty($name) || empty($email) || empty($message)) {
+        echo "<span class='form-error'>Rellena los campos obligatorios!</span>";
+        $errorEmpty = true;
+
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<span class='form-error'>Introduce un correo válido!</span>";
+        $errorEmail = true;
+
+    } else echo "<span class='form-success'>Correo enviado!</span>";
+}
 
 ?>
+
+<script>
+
+    $("#mailName, #mailEmail, #mailMessage, #mailSubject").removeClass("input-error");
+
+    var errorEmpty = "<?php echo $errorEmpty; ?>";
+    var errorEmail = "<?php echo $errorEmail; ?>";
+
+    if (errorEmpty == true) {
+        $("#mailName, #mailEmail, #mailMessage").addClass("input-error");
+    }
+    if (errorEmail == true) {
+        $("#mailEmail").addClass("input-error");
+    }
+    if (errorEmpty == false && errorEmail == false) {
+        $("#mailName, #mailEmail, #mailSubject, #mailMessage").val("");
+    }
+
+</script>
 

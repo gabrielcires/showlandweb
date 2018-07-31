@@ -91,20 +91,3 @@ AOS.refresh()
 jQuery(function () {
     jQuery("#videoShow").YTPlayer();
 });
-
-// formvalidation
-
-function submitForm() {
-    $.ajax({
-        url: 'mail.php',
-        type: 'post',
-        data: $('#contactFormHome').serialize(),
-        success: function () {
-            alert("worked");
-        }
-    });
-
-    // $('contacFormHome').submit(function (evt) {
-    //     evt.preventDefault(); //prevents the default action
-    // }
-}
