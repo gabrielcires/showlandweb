@@ -917,7 +917,6 @@ select:-webkit-autofill {
     margin: 5px auto 10px;
     border: none;
     resize: vertical;
-    padding: 0;
 }
 
 .submit-btn {
