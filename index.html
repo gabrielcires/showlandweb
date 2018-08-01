@@ -81,13 +81,13 @@
         </ul>
 
         <div id="social" class="social">
-            <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select" target="_blank">
+            <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="assets/img/facebook.svg" alt="">
             </a>
-            <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select" target="_blank">
+            <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="assets/img/youtube.svg" alt="">
             </a>
-            <a href="https://www.instagram.com/showlandgroup/" class="no-select" target="_blank">
+            <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="assets/img/instagram.svg" alt="">
             </a>
         </div>
@@ -96,21 +96,22 @@
 
             <h2>Contacto</h2>
 
-            <form class="contact-form" method="POST">
+            <form id="menuForm" class="contact-form" action="mail.php" method="POST">
 
                 <p class="form-text">Nombre*</p>
-                <input name="name" type="text" required data-value-missing="Campo obligatorio!">
+                <input class="mailName input-errors all-good" name="name" type="text">
 
                 <p class="form-text">Correo*</p>
-                <input name="email" type="email" required data-value-missing="Campo obligatorio!">
+                <input class="mailEmail input-errors all-good" name="email" type="email">
 
                 <p class="form-text">Asunto</p>
-                <input name="subject" type="text">
+                <input class="mailSubject" name="subject" type="text">
 
                 <p class="form-text">Mensaje*</p>
-                <textarea name="message" id="" cols="30" rows="6" required data-value-missing="Campo obligatorio!"></textarea>
+                <textarea class="mailMessage input-errors all-good" name="message" id="" cols="30" rows="6"></textarea>
 
                 <button class="submit-btn" type="submit">Enviar</button>
+                <p class="form-message"></p>
 
                 <div class="contact-info">
                     <p>
@@ -136,12 +137,19 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
+                        <div class="slider-txt">
+                            <img class="slider-svg-fa" src="assets/img/slider/facebook.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide7.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
                         <img class="img-fluid first-slider" src="assets/img/slider/slide1.jpg" alt="">
+
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/design.svg" alt="">
-                            <img class="img-fluid" src="assets/img/slider/slide2.jpg" alt="">
+                            <img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide4.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -152,14 +160,8 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt="">
-                            <img class="img-fluid" src="assets/img/slider/slide4.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/eventos.svg" alt="">
-                            <img class="img-fluid" src="assets/img/slider/slide5.jpg" alt="">
+                            <img class="slider-svg" src="assets/img/slider/design.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide2.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -170,8 +172,8 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg-fa" src="assets/img/slider/facebook.svg" alt="">
-                            <img class="img-fluid" src="assets/img/slider/slide7.jpg" alt="">
+                            <img class="slider-svg" src="assets/img/slider/eventos.svg" alt="">
+                            <img class="img-fluid" src="assets/img/slider/slide5.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -264,21 +266,21 @@
 
             <div class="cont-home">
 
-                <form class="contact-form" action="mail.php" method="POST">
+                <form id="homeContact" class="contact-form" action="mail.php" method="POST">
 
                     <p class="form-text">Nombre*</p>
-                    <input id="mailName" name="name" type="text">
+                    <input name="name" type="text" class="mailName input-errors all-good">
 
                     <p class="form-text">Correo*</p>
-                    <input id="mailEmail" name="email" type="email">
+                    <input name="email" type="email" class="mailEmail input-errors all-good">
 
                     <p class="form-text">Asunto</p>
-                    <input id="mailSubject" name="subject" type="text">
+                    <input class="mailSubject" name="subject" type="text">
 
                     <p class="form-text">Mensaje*</p>
-                    <textarea id="mailMessage" name="message" id="" cols="30" rows="6"></textarea>
+                    <textarea name="message" id="" cols="30" rows="6" class="mailMessage input-errors all-good"></textarea>
 
-                    <button id="mailSubmit" class="submit-btn" type="submit" name="submit">Enviar</button>
+                    <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                     <p class="form-message"></p>
 
                     <div class="contact-info">
@@ -309,13 +311,13 @@
                     </a>
                 </div>
                 <div class="location social">
-                    <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select" target="_blank">
+                    <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon-home" target="_blank">
                         <img class="img-fluid" src="assets/img/facebook.svg" alt="">
                     </a>
-                    <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select" target="_blank">
+                    <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon-home" target="_blank">
                         <img class="img-fluid" src="assets/img/youtube.svg" alt="">
                     </a>
-                    <a href="https://www.instagram.com/showlandgroup/" class="no-select" target="_blank">
+                    <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon-home" target="_blank">
                         <img class="img-fluid" src="assets/img/instagram.svg" alt="">
                     </a>
                 </div>
@@ -348,13 +350,31 @@
     <script>
         // formvalidation
         $(document).ready(function () {
-            $("form").submit(function (event) {
+
+
+            $("#homeContact").submit(function (event) {
                 event.preventDefault();
-                var name = $('#mailName').val();
-                var email = $('#mailEmail').val();
-                var subject = $('#mailSubject').val();
-                var message = $('#mailMessage').val();
-                var submit = $('#mailSubmit').val();
+                var name = $('.mailName').val();
+                var email = $('.mailEmail').val();
+                var subject = $('.mailSubject').val();
+                var message = $('.mailMessage').val();
+                var submit = $('.mailSubmit').val();
+                $('.form-message').load('mail.php', {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message,
+                    submit: submit
+                });
+            });
+            $("#menuForm").submit(function (event) {
+                event.preventDefault();
+                var name = $('.mailName').val();
+                var email = $('.mailEmail').val();
+                var subject = $('.mailSubject').val();
+                var message =
+                $('.mailMessage').val();
+                var submit = $('.mailSubmit').val();
                 $('.form-message').load('mail.php', {
                     name: name,
                     email: email,

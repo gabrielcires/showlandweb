@@ -7,15 +7,13 @@ if (isset($_POST['submit'])) {
     $message = $_POST['message'];
     $mailTo = "gabrielcireslopez@gmail.com";
             
-    $formcontent="
-    
-    Correo: $email \n\nDe: $name \n\nAsunto: $subject\n\n$message";
+    $formcontent="Correo: $email \n\nDe: $name \n\nAsunto: $subject\n\n$message";
 
     $errorEmpty = false;
     $errorEmail = false;
 
     if (empty($name) || empty($email) || empty($message)) {
-        echo "<span class='form-error'>Rellena los campos obligatorios!</span>";
+        echo "<span class='form-error'>Rellena los campos obligatorios!*</span>";
         $errorEmpty = true;
 
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -33,19 +31,19 @@ if (isset($_POST['submit'])) {
 
 <script>
 
-    $("#mailName, #mailEmail, #mailMessage, #mailSubject").removeClass("input-error");
+    $(".mailName, .mailEmail, .mailMessage").addClass("all-good");
 
     var errorEmpty = "<?php echo $errorEmpty; ?>";
     var errorEmail = "<?php echo $errorEmail; ?>";
 
     if (errorEmpty == true) {
-        $("#mailName, #mailEmail, #mailMessage").addClass("input-error");
+        $(".mailName, .mailEmail, .mailMessage").removeClass("all-good");
     }
     if (errorEmail == true) {
-        $("#mailEmail").addClass("input-error");
+        $(".mailEmail").removeClass("all-good");
     }
     if (errorEmpty == false && errorEmail == false) {
-        $("#mailName, #mailEmail, #mailSubject, #mailMessage").val("");
+        $(".mailName, .mailEmail, .mailSubject, .mailMessage").val("");
     }
 
 </script>
