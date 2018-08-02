@@ -5,6 +5,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+    // $mailTo = "info@showlandproducciones.es";
     $mailTo = "gabrielcireslopez@gmail.com";
             
     $formcontent="Correo: $email \n\nDe: $name \n\nAsunto: $subject\n\n$message";
@@ -22,9 +23,8 @@ if (isset($_POST['submit'])) {
 
     } else { 
         mail($mailTo, $subject, $formcontent);
-        echo "<span class='form-success'>Correo enviado!</span>";
+        echo "<span class='form-success'>!Correo enviado! Te responderemos cuanto antes.</span>";
     }
-
 }
 
 ?>

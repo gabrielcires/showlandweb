@@ -96,21 +96,21 @@
 
             <h2>Contacto</h2>
 
-            <form id="menuForm" class="contact-form" action="mail.php" method="POST">
+            <form id="menuForm" class="contact-form" action="mailMenu.php" method="POST">
 
                 <p class="form-text">Nombre*</p>
-                <input class="mailName input-errors all-good" name="name" type="text">
+                <input class="mailNameM input-errors all-good" name="nameM" type="text">
 
                 <p class="form-text">Correo*</p>
-                <input class="mailEmail input-errors all-good" name="email" type="email">
+                <input class="mailEmailM input-errors all-good" name="emailM" type="email">
 
                 <p class="form-text">Asunto</p>
-                <input class="mailSubject" name="subject" type="text">
+                <input class="mailSubjectM" name="subjectM" type="text">
 
                 <p class="form-text">Mensaje*</p>
-                <textarea class="mailMessage input-errors all-good" name="message" id="" cols="30" rows="6"></textarea>
+                <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
 
-                <button class="submit-btn" type="submit">Enviar</button>
+                <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
                 <p class="form-message"></p>
 
                 <div class="contact-info">
@@ -351,7 +351,6 @@
         // formvalidation
         $(document).ready(function () {
 
-
             $("#homeContact").submit(function (event) {
                 event.preventDefault();
                 var name = $('.mailName').val();
@@ -369,18 +368,17 @@
             });
             $("#menuForm").submit(function (event) {
                 event.preventDefault();
-                var name = $('.mailName').val();
-                var email = $('.mailEmail').val();
-                var subject = $('.mailSubject').val();
-                var message =
-                $('.mailMessage').val();
-                var submit = $('.mailSubmit').val();
-                $('.form-message').load('mail.php', {
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message,
-                    submit: submit
+                var nameM = $('.mailNameM').val();
+                var emailM = $('.mailEmailM').val();
+                var subjectM = $('.mailSubjectM').val();
+                var messageM = $('.mailMessageM').val();
+                var submitM = $('.mailSubmitM').val();
+                $('.form-message').load('mailMenu.php', {
+                    nameM: nameM,
+                    emailM: emailM,
+                    subjectM: subjectM,
+                    messageM: messageM,
+                    submitM: submitM
                 });
             });
         });
