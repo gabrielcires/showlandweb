@@ -339,6 +339,10 @@ hr {
     margin-left: -25px;
 }
 
+.inherit-mrg-top {
+    margin-top: 0 !important;
+}
+
 .mrg-bottom {
     margin-bottom: 30px;
 }
@@ -857,7 +861,6 @@ header.show-menu {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
-
 
 .swiper-container div .slider-txt {
     position: relative;
@@ -1507,6 +1510,11 @@ footer a:hover img {
 
 .sub-sep {
     margin: 20px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
 }
 
 .sub-title-cont {
@@ -1743,10 +1751,6 @@ footer a:hover img {
         -ms-grid-template-columns: 1fr 1fr;
         -ms-grid-template-columns: 1fr 1fr;
     }
-    section#blog {
-        display: flex;
-        justify-content: center;
-    }
     .sect-tle-out {
         grid-column-start: 1;
         grid-column-end: 4;
@@ -1784,7 +1788,8 @@ footer a:hover img {
         height: 100%;
     }
     .blog-cont {
-        max-width: 300px;
+        width: 100%;
+        max-width: 250px;
         height: 500px;
     }
     .blog-text {
@@ -1796,6 +1801,13 @@ footer a:hover img {
         -ms-transform: translateX(-50px);
         -o-transform: translateX(-50px);
     }
+    /* .blog-row .sub-sep:hover {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+    } */
     .blog-cont:hover .blog-text {
         opacity: 1;
         transform: translateX(0);
@@ -1812,18 +1824,15 @@ footer a:hover img {
         transform: scale(.95);
         opacity: 1;
     }
-
     .serv-cont:hover img {
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
     }
-
     .serv-cont:hover .serv-cap {
         opacity: 1;
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
-
     .dark-borders .slider-txt .slider-svg:hover {
         -webkit-transform: scale(.9);
         transform: scale(.9);
@@ -1870,6 +1879,20 @@ footer a:hover img {
         height: 20px;
         -webkit-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 5);
         transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 5);
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .blog-row {
+        display: flex;
+        justify-content: center;
+        margin-top: -200px;
+    }
+    .blog-row .sub-sep:nth-child(2n) {
+        margin-top: 100px;
+    }
+    .blog-row .sub-sep:nth-child(3n) {
+        margin-top: 200px;
     }
 }
 
