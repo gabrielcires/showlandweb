@@ -239,12 +239,12 @@
 /* color corporativo #e0013f */
 
 ::-moz-selection {
-    background: #e0013f;
+    background: #ff0048a1;
     color: white;
 }
 
 ::selection {
-    background: #e0013f;
+    background: #ff0048a1;
     color: white;
 }
 
