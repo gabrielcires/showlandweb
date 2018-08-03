@@ -5,8 +5,8 @@ if (isset($_POST['submitM'])) {
     $emailM = $_POST['emailM'];
     $subjectM = $_POST['subjectM'];
     $messageM = $_POST['messageM'];
-    // $mailTo = "info@showlandproducciones.es";
-    $mailTo = "gabrielcireslopez@gmail.com";
+    $mailTo = "info@showlandproducciones.es";
+    // $mailTo = "gabrielcireslopez@gmail.com";
             
     $formcontent="Correo: $emailM \n\nDe: $nameM \n\nAsunto: $subjectM\n\n$messageM";
 
