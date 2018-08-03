@@ -92,11 +92,12 @@ jQuery(function () {
     jQuery("#videoShow").YTPlayer();
 });
 
-$('a').click(function (e) {
-    e.preventDefault();
-    newLocation = this.href;
-    $('body').fadeOut('link-transition', newpage);
-});
-function newpage() {
-    window.location = newLocation;
-}
+// Link transition
+// $('a').click(function (e) {
+//     e.preventDefault();
+//     newLocation = this.href;
+//     $('body').fadeOut('link-transition', newpage);
+// });
+// function newpage() {
+//     window.location = newLocation;
+// }
