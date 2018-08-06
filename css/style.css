@@ -239,12 +239,12 @@
 /* color corporativo #e0013f */
 
 ::-moz-selection {
-    background: #ff0048a1;
+    background: #ff0048;
     color: white;
 }
 
 ::selection {
-    background: #ff0048a1;
+    background: #ff0048;
     color: white;
 }
 
@@ -1025,6 +1025,7 @@ _:future,
 .serv-cont-vid {
     width: 100%;
     height: auto;
+    max-height: 100vh;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -1552,6 +1553,23 @@ footer a:hover img {
 .serv-text p {
     width: 100%;
     max-width: 200px;
+}
+
+.service-desc {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 /* BLOG */

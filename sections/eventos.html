@@ -60,7 +60,7 @@
                 </ul>
             </li>
 
-            <a class="no-select" href="">
+            <a class="no-select" href="../blog/blog.html">
                 <li>
                     <i class="fas fa-book-open"></i> Blog</li>
             </a>
@@ -88,29 +88,30 @@
 
             <h2>Contacto</h2>
 
-            <form id="contactForm" class="contact-form" method="POST">
+            <form id="menuForm" class="contact-form" action="../mailMenu.php" method="POST">
 
                 <p class="form-text">Nombre*</p>
-                <input name="name" type="text" required data-value-missing="Campo obligatorio!">
+                <input class="mailNameM input-errors all-good" name="nameM" type="text">
 
                 <p class="form-text">Correo*</p>
-                <input name="email" type="email" required data-value-missing="Campo obligatorio!">
+                <input class="mailEmailM input-errors all-good" name="emailM" type="email">
 
                 <p class="form-text">Asunto</p>
-                <input name="subject" type="text">
+                <input class="mailSubjectM" name="subjectM" type="text">
 
                 <p class="form-text">Mensaje*</p>
-                <textarea name="message" id="" cols="30" rows="6" required data-value-missing="Campo obligatorio!"></textarea>
+                <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
 
-                <button class="submit-btn" type="submit">Enviar</button>
+                <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                <p class="form-message"></p>
 
                 <div class="contact-info">
                     <p>
                         <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
                     <p>
                         <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                    <p>
-                        <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p>
+                    <!-- <p>
+                        <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
                 </div>
             </form>
 
@@ -155,6 +156,72 @@
                 </p>
             </div>
         </section>
+        <section id="contactoHome" class="ignore-mrg" data-aos="fade-in" ata-aos-anchor-placement="top-top" data-aos-offset="200">
+            <div class="sect-tle-out">
+                <div class="bdr-thin">
+                    <h2 class="pad-top-safari">Contacto</h2>
+                </div>
+            </div>
+
+            <div class="cont-home">
+
+                <form id="homeContact" class="contact-form" action="../mail.php" method="POST">
+
+                    <p class="form-text">Nombre*</p>
+                    <input name="name" type="text" class="mailName input-errors all-good">
+
+                    <p class="form-text">Correo*</p>
+                    <input name="email" type="email" class="mailEmail input-errors all-good">
+
+                    <p class="form-text">Asunto</p>
+                    <input class="mailSubject" name="subject" type="text">
+
+                    <p class="form-text">Mensaje*</p>
+                    <textarea name="message" id="" cols="30" rows="6" class="mailMessage input-errors all-good"></textarea>
+
+                    <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
+                    <p class="form-message"></p>
+
+                    <div class="contact-info">
+                        <p>
+                            <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
+                        <p>
+                            <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
+                        <!-- <p>
+                            <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="location" data-aos="fade-in">
+
+            <div class="loc-cont">
+                <div class="loc-anim">
+                    <a href="https://goo.gl/maps/nvdGMq6E81k" target="_blank">
+                        <img class="loc-vector img-fluid" src="../assets/img/showLog.svg" alt="">
+                        <p class="location-mark">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </p>
+                        <p class="loc-hide">C/San Ignacio, 14 45600 | Talavera de laReina</p>
+                        <p class="loc-go">Ver en Google Maps
+                            <img src="../assets/img/backarrow.svg" alt="">
+                        </p>
+                    </a>
+                </div>
+                <div class="location social">
+                    <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon-home" target="_blank">
+                        <img class="img-fluid" src="../assets/img/facebook.svg" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon-home" target="_blank">
+                        <img class="img-fluid" src="../assets/img/youtube.svg" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon-home" target="_blank">
+                        <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </section>
     </div>
     <footer>
         <div class="footer-cont" data-aos="fade-in">
@@ -177,7 +244,42 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="../js/jquery.mb.YTPlayer.min.js"></script>
     <script src="../js/main.js?" type="text/javascript"></script>
+    <script>
+        // formvalidation
+        $(document).ready(function () {
 
+            $("#homeContact").submit(function (event) {
+                event.preventDefault();
+                var name = $('.mailName').val();
+                var email = $('.mailEmail').val();
+                var subject = $('.mailSubject').val();
+                var message = $('.mailMessage').val();
+                var submit = $('.mailSubmit').val();
+                $('.form-message').load('../mail.php', {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    message: message,
+                    submit: submit
+                });
+            });
+            $("#menuForm").submit(function (event) {
+                event.preventDefault();
+                var nameM = $('.mailNameM').val();
+                var emailM = $('.mailEmailM').val();
+                var subjectM = $('.mailSubjectM').val();
+                var messageM = $('.mailMessageM').val();
+                var submitM = $('.mailSubmitM').val();
+                $('.form-message').load('../mailMenu.php', {
+                    nameM: nameM,
+                    emailM: emailM,
+                    subjectM: subjectM,
+                    messageM: messageM,
+                    submitM: submitM
+                });
+            });
+        });
+    </script>
 
 
 </body>
