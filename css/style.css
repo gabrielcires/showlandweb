@@ -856,7 +856,7 @@ header.show-menu {
     left: 0;
     margin: auto;
     z-index: 100;
-    background: rgba(89, 89, 89, 0.25);
+    background: rgba(89, 89, 89, 0.5);
     background: radial-gradient(ellipse at center, rgba(89, 89, 89, 0.25) 0%, rgba(19, 19, 19, 0.67) 100%);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -1853,7 +1853,7 @@ footer a:hover img {
         -o-transform: translateX(0);
     }
     .darklay:hover::before {
-        opacity: .6;
+        opacity: .4;
     }
     .serv-cont:hover img.serv-img {
         -webkit-transform: scale(.95);
