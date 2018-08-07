@@ -20,13 +20,13 @@
 
 <body style="overflow-x: hidden!important">
 
-    <div class="loading">
+    <div id="loading" class="loading">
         <div class="wave-cover"></div>
         <div class="scale-cont">
-            <img class="load-vector first-wave" src="assets/img/wave1.svg" alt="">
-            <img class="load-vector second-wave" src="assets/img/wave2.svg" alt="">
-            <img class="load-vector third-wave" src="assets/img/wave3.svg" alt="">
-            <img class="load-vector fourth-wave" src="assets/img/wave4.svg" alt="">
+            <img rel="preload" class="load-vector first-wave" src="aload/wave1.svg" alt="">
+            <img rel="preload" class="load-vector second-wave" src="aload/wave2.svg" alt="">
+            <img rel="preload" class="load-vector third-wave" src="aload/wave3.svg" alt="">
+            <img rel="preload" class="load-vector fourth-wave" src="aload/wave4.svg" alt="">
         </div>
     </div>
 
@@ -147,13 +147,13 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt="">
+                            <a href=""><img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt=""></a>
                             <img class="img-fluid" src="assets/img/slider/slide4.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/sonido.svg" alt="">
+                            <a href=""><img class="slider-svg" src="assets/img/slider/sonido.svg" alt=""></a>
                             <img class="img-fluid" src="assets/img/slider/slide3.jpg" alt="">
                         </div>
                     </div>
@@ -165,13 +165,13 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/kids.svg" alt="">
+                            <a href=""><img class="slider-svg" src="assets/img/slider/kids.svg" alt=""></a>
                             <img class="img-fluid" src="assets/img/slider/slide6.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/eventos.svg" alt="">
+                            <a href=""><img class="slider-svg" src="assets/img/slider/eventos.svg" alt=""></a>
                             <img class="img-fluid" src="assets/img/slider/slide5.jpg" alt="">
                         </div>
                     </div>
@@ -183,10 +183,10 @@
         <section id="presentacion" data-aos="fade-in" data-aos-anchor-placement="top-center">
             <div class="logobj-grid">
                 <div class="logobj-cont">
-                    <img class="load-vector first-wave" src="assets/img/wave1.svg" alt="">
-                    <img class="load-vector second-wave" src="assets/img/wave2.svg" alt="">
-                    <img class="load-vector third-wave" src="assets/img/wave3.svg" alt="">
-                    <img class="load-vector fourth-wave" src="assets/img/wave4.svg" alt="">
+                    <img class="load-vector first-wave" src="aload/wave1.svg" alt="">
+                    <img class="load-vector second-wave" src="aload/wave2.svg" alt="">
+                    <img class="load-vector third-wave" src="aload/wave3.svg" alt="">
+                    <img class="load-vector fourth-wave" src="aload/wave4.svg" alt="">
                 </div>
             </div>
             <div class="presentobj-grid">
@@ -380,6 +380,23 @@
                 });
             });
         });
+
+        
+// Preload
+function preload(arrayOfImages) {
+    $(arrayOfImages).each(function () {
+        $('<img/>')[0].src = this;
+    });
+}
+
+// Usage:
+
+preload([
+    'aload/wave1.svg',
+    'aload/wave2.svg',
+    'aload/wave3.svg',
+    'aload/wave4.svg'
+]);
     </script>
 
 
