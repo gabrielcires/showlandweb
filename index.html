@@ -39,43 +39,51 @@
         </div>
     </div>
 
+    <a href="index.html" class="logo-fixed">
+        <img src="aload/iconologo.svg" class="logo-fixed" alt="">
+    </a>
+
     <div id="contArrow" class="back-arrow no-select" onclick="ContactoOut(this)">
         <img src="assets/img/backarrow.svg" alt="">
     </div>
 
-    <header id="menu">
+    <header id="menu" data-aos="" data-aos-offset="1000" data-aos-once="false">
 
         <ul id="menuCont">
             <img class="show-home-menu" src="assets/img/showlh.svg" alt="">
-            <a class="no-select" href="index.html">
-                <li>
+            <a class="no-select " href="index.html">
+                <li class="menu-txt-hov">
                     <i class="fas fa-home"></i> Home</li>
             </a>
-            <li class="no-pad" onclick="toggleSubMenu(this)">
-                <p class="serv-sect  no-pad-btm">
+            <li class="no-pad sub-sect-cont" onclick="toggleSubMenu(this)">
+                <p class="serv-sect no-pad-btm menu-txt-hov">
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
                 <ul class="sub-sect" id="subMenu">
                     <a class="" href="sections/eventos.html">
-                        <li class="no-select">Eventos y Espectáculos</li>
+                        <li class="no-select menu-txt-hov">Eventos y Espectáculos</li>
                     </a>
                     <a class="" href="sections/sonido.html">
-                        <li class="no-select">Sonido e Iluminación</li>
+                        <li class="no-select menu-txt-hov">Sonido e Iluminación</li>
                     </a>
                     <a class="" href="sections/diseno.html">
-                        <li class="no-select">Diseño y Comunicación</li>
+                        <li class="no-select menu-txt-hov">Diseño y Comunicación</li>
                     </a>
                 </ul>
             </li>
 
             <a class="no-select" href="blog/blog.html">
-                <li>
+                <li class="menu-txt-hov">
                     <i class="fas fa-book-open"></i> Blog</li>
             </a>
 
             <li class="no-pad">
                 <p class="serv-sect no-select" onclick="toggleContacto(this)">
                     <i class="fas fa-phone"></i> Contacto</p>
+                <a href="#contactoHome" class="serv-sect no-select">
+                    <p class="menu-txt-hov">
+                        <i class="fas fa-phone"></i> Contacto</p>
+                </a>
             </li>
 
         </ul>
@@ -127,9 +135,6 @@
 
     <div class="container">
         <div class="center-obj">
-            <p style="margin: 50px auto 0">WEB EN CONSTRUCCIÓN</p>
-            <img class="show-home" src="assets/img/showlh.svg" alt="">
-
 
             <div class="swiper-container swiper-nomrg dark-borders">
                 <!-- Additional required wrapper -->
@@ -142,36 +147,46 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img class="img-fluid first-slider" src="assets/img/slider/slide1.jpg" alt="">
+                        <img class="img-fluid" src="assets/img/slider/slide1.jpg" alt="">
 
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <a href=""><img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt=""></a>
+                            <a href="sections/siespectaculos.html">
+                                <img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt="">
+                            </a>
                             <img class="img-fluid" src="assets/img/slider/slide4.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <a href=""><img class="slider-svg" src="assets/img/slider/sonido.svg" alt=""></a>
+                            <a href="sections/sonido.html">
+                                <img class="slider-svg" src="assets/img/slider/sonido.svg" alt="">
+                            </a>
                             <img class="img-fluid" src="assets/img/slider/slide3.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/design.svg" alt="">
+                            <a href="sections/diseno.html">
+                                <img class="slider-svg" src="assets/img/slider/design.svg" alt="">
+                            </a>
                             <img class="img-fluid" src="assets/img/slider/slide2.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <a href=""><img class="slider-svg" src="assets/img/slider/kids.svg" alt=""></a>
+                            <a href="sections/espectaculos.html">
+                                <img class="slider-svg" src="assets/img/slider/kids.svg" alt="">
+                            </a>
                             <img class="img-fluid" src="assets/img/slider/slide6.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <a href=""><img class="slider-svg" src="assets/img/slider/eventos.svg" alt=""></a>
+                            <a href="sections/corp.html">
+                                <img class="slider-svg" src="assets/img/slider/eventos.svg" alt="">
+                            </a>
                             <img class="img-fluid" src="assets/img/slider/slide5.jpg" alt="">
                         </div>
                     </div>
@@ -252,7 +267,8 @@
                 <img class="img-fluid glitch5" src="assets/img/withanim/us.svg" alt="">
             </div>
 
-            <p class="nomrg-bottom withus-txt" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="center-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás que depender de varias empresas, nosotros te ofrecemos TODO para organizar el evento de tus sueños</p>
+            <p class="nomrg-bottom withus-txt" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="center-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás
+                que depender de varias empresas, nosotros te ofrecemos TODO para organizar el evento de tus sueños</p>
         </section>
 
         <section id="contactoHome" class="ignore-mrg swiper-nomrg" data-aos="fade-in" ata-aos-anchor-placement="top-top" data-aos-offset="200">
@@ -381,22 +397,22 @@
             });
         });
 
-        
-// Preload
-function preload(arrayOfImages) {
-    $(arrayOfImages).each(function () {
-        $('<img/>')[0].src = this;
-    });
-}
 
-// Usage:
+        // Preload
+        function preload(arrayOfImages) {
+            $(arrayOfImages).each(function () {
+                $('<img/>')[0].src = this;
+            });
+        }
 
-preload([
-    'aload/wave1.svg',
-    'aload/wave2.svg',
-    'aload/wave3.svg',
-    'aload/wave4.svg'
-]);
+        // Usage:
+
+        preload([
+            'aload/wave1.svg',
+            'aload/wave2.svg',
+            'aload/wave3.svg',
+            'aload/wave4.svg'
+        ]);
     </script>
 
 

@@ -30,56 +30,62 @@
             <div class="bar3"></div>
         </div>
     </div>
+    <a href="../index.html" class="logo-fixed">
+        <img src="../aload/iconologo.svg" class="logo-fixed" alt="">
+    </a>
 
     <div id="contArrow" class="back-arrow no-select" onclick="ContactoOut(this)">
         <img src="../assets/img/backarrow.svg" alt="">
     </div>
 
-    <header id="menu">
+    <header id="menu" data-aos="" data-aos-offset="1000" data-aos-once="false">
 
         <ul id="menuCont">
             <img class="show-home-menu" src="../assets/img/showlh.svg" alt="">
-            <a class="no-select" href="../index.html">
-                <li>
+            <a class="no-select " href="../index.html">
+                <li class="menu-txt-hov">
                     <i class="fas fa-home"></i> Home</li>
             </a>
-            <li class="no-pad" onclick="toggleSubMenu(this)">
-                <p class="serv-sect no-select no-pad-btm">
+            <li class="no-pad sub-sect-cont" onclick="toggleSubMenu(this)">
+                <p class="serv-sect no-pad-btm menu-txt-hov">
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
                 <ul class="sub-sect" id="subMenu">
-                    <a class="no-select" href="eventos.html">
-                        <li>Eventos y Espectáculos</li>
+                    <a class="" href="eventos.html">
+                        <li class="no-select menu-txt-hov">Eventos y Espectáculos</li>
                     </a>
-                    <a class="no-select" href="sonido.html">
-                        <li>Sonido e Iluminación</li>
+                    <a class="" href="sonido.html">
+                        <li class="no-select menu-txt-hov">Sonido e Iluminación</li>
                     </a>
-                    <a class="no-select" href="diseno.html">
-                        <li>Diseño y Comunicación</li>
+                    <a class="" href="diseno.html">
+                        <li class="no-select menu-txt-hov">Diseño y Comunicación</li>
                     </a>
                 </ul>
             </li>
 
             <a class="no-select" href="../blog/blog.html">
-                <li>
+                <li class="menu-txt-hov">
                     <i class="fas fa-book-open"></i> Blog</li>
             </a>
 
             <li class="no-pad">
                 <p class="serv-sect no-select" onclick="toggleContacto(this)">
                     <i class="fas fa-phone"></i> Contacto</p>
+                <a href="#contactoHome" class="serv-sect no-select">
+                    <p class="menu-txt-hov">
+                        <i class="fas fa-phone"></i> Contacto</p>
+                </a>
             </li>
 
         </ul>
-
         <div id="social" class="social">
-            <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select" target="_blank">
+            <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="../assets/img/facebook.svg" alt="">
             </a>
-            <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select" target="_blank">
+            <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="../assets/img/youtube.svg" alt="">
             </a>
-            <a href="https://www.instagram.com/showlandgroup/" class="no-select" target="_blank">
+            <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
             </a>
         </div>
