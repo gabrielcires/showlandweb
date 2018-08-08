@@ -463,7 +463,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    display: none;
+    /* display: none; */
 }
 
 .load-vector {
@@ -1814,6 +1814,9 @@ footer a:hover img {
         grid-template-columns: 1fr 1fr;
         -ms-grid-template-columns: 1fr 1fr;
         -ms-grid-template-columns: 1fr 1fr;
+    }
+    section.eventos-pad {
+        padding-top: 170px;
     }
     section#eventos.sub-eventos {
         display: grid;
