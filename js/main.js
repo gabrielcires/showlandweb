@@ -37,37 +37,71 @@ function ContactoOut(x) {
     x.classList.remove("fade-in");
 }
 // slider
-$(document).ready(function () {
-    new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        effect: 'fade',
-        keyboard: {
-            enabled: true,
-        },
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
+$(".first-slider").each(function (index, element) {
+    var $this = $(this);
+    $this.addClass("instance-" + index);
+    var swiper = new Swiper(".instance-" + index, {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            effect: 'fade',
+            keyboard: {
+                enabled: true,
+            },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
 
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-    var mySwiper = document.querySelector('.swiper-container').swiper
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+        }
 
-    $(".swiper-container").mouseenter(function () {
-        mySwiper.autoplay.stop();
     });
+       var mySwiper = document.querySelector('.swiper-container').swiper
 
-    $(".swiper-container").mouseleave(function () {
-        mySwiper.autoplay.start();
-    });
+       $(".swiper-container").mouseenter(function () {
+           mySwiper.autoplay.stop();
+       });
+
+       $(".swiper-container").mouseleave(function () {
+           mySwiper.autoplay.start();
+       });
+
 });
+$(".opinion-slider").each(function (index, element) {
+    var $this = $(this);
+    $this.addClass("instance-" + index);
+    var swiper = new Swiper(".instance-" + index, {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            effect: 'fade',
+            keyboard: {
+                enabled: true,
+            },
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
 
+            // If we need pagination
+
+    });
+       var mySwiper = document.querySelector('.swiper-container').swiper
+
+       $(".swiper-container").mouseenter(function () {
+           mySwiper.autoplay.stop();
+       });
+
+       $(".swiper-container").mouseleave(function () {
+           mySwiper.autoplay.start();
+       });
+
+});
+ 
 AOS.init({
     // Global settings
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
