@@ -1626,6 +1626,15 @@ footer a:hover img {
     -o-transition: all .3s ease;
 }
 
+.sub-sep2 {
+    margin: 20px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
 .sub-sep a {
     display: block;
 }
@@ -2166,6 +2175,9 @@ footer a:hover img {
     .snd-slider-txt {
         display: inherit;
     }
+    .sub-sep2 {
+    margin: 40px;
+}
     /* HEADER */
     header {
         width: 100vw;
@@ -2460,6 +2472,9 @@ footer a:hover img {
     }
     .cont-home .contact-form {
         padding: 50px 250px 90px;
+    }
+    .sub-sep2 {
+        margin: 80px;
     }
 }
 

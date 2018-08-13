@@ -141,53 +141,74 @@
             <p class="show-text">Una de las grandes ventajas de esta magnífica discoteca movil, es la gran variedad que ofrece:</p>
         </div>
         <section id="eventos" class="ignore-mrg no-pad sub-eventos swiper-nomrg">
-            <div class="sub-sep">
+            <div class="sub-sep2">
                 <div class="show-desc" data-aos="fade-in">
                     <img class="img-fluid" src="../assets/img/videomap-icon.svg" alt="">
                     <div class="serv-show-text">
-                        <h2 class="sub-title2">Identidad Corporativa</h2>
+                        <h2 class="sub-title2">VIDEOMAPPING</h2>
                         <div class="title-bar2 center-mrg"></div>
-                        <p class="">Logotipos</p>
+                        <p class="">El video mapping es un método de proyección sobre superficies irregulares, donde un video o contenido en 2D o 3D se adapta a la forma de la superficie creando espectáculos audiovisuales. ¡Te quedarás boquiabiert@!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-sep2">
+                <div class="show-desc" data-aos="fade-in">
+                    <img class="img-fluid" src="../assets/img/20k-icon.svg" alt="">
+                    <div class="serv-show-text">
+                        <h2 class="sub-title2">SONIDO 20KW</h2>
+                        <div class="title-bar2 center-mrg"></div>
+                        <p class="">Showland Club cuenta con un gran abanico de equipos de sonido con la mejor potencia y calidad de audio del mercado. Tenemos todo tipo de equipos adaptables para cada ocasión.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-sep2">
+                <div class="show-desc" data-aos="fade-in">
+                    <img class="img-fluid" src="../assets/img/djs-icon.svg" alt="">
+                    <div class="serv-show-text">
+                        <h2 class="sub-title2">2 DJS EN CABINA</h2>
+                        <div class="title-bar2 center-mrg"></div>
+                        <p class="">Nuestra discoteca móvil cuenta con hasta 2 Djs en cabina para dar un mejor espectáculo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-sep2">
+                <div class="show-desc" data-aos="fade-in">
+                    <img class="img-fluid" src="../assets/img/megatron-icon.svg" alt="">
+                    <div class="serv-show-text">
+                        <h2 class="sub-title2">MEGATRON</h2>
+                        <div class="title-bar2 center-mrg"></div>
+                        <p class="">El megatrón es tu "salvación" en medio de la noche, es una máquina que produce CO2. Cuando la temperatura sube entre la multitud el Megatroón te echara un chorro de aire refrescante muy placentero.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-sep2">
+                <div class="show-desc" data-aos="fade-in">
+                    <img class="img-fluid" src="../assets/img/iluminacion-icon.svg" alt="">
+                    <div class="serv-show-text">
+                        <h2 class="sub-title2">ILUMINACIÓN ESPECTACULAR</h2>
+                        <div class="title-bar2 center-mrg"></div>
+                        <p class="">Nuestro equipo cuenta con el mejor sistema de iluminación profesional, las luces te acompañaran al ritmo de la música.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-sep2">
+                <div class="show-desc" data-aos="fade-in">
+                    <img class="img-fluid" src="../assets/img/regalo-icon.svg" alt="">
+                    <div class="serv-show-text">
+                        <h2 class="sub-title2">REGALOS</h2>
+                        <div class="title-bar2 center-mrg"></div>
+                        <p class="">Showland Club cuida a su público y siempre lanzamos regalos para que no pare la fiesta.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contactoHome" class="ignore-mrg swiper-nomrg" data-aos="fade-in" ata-aos-anchor-placement="top-top" data-aos-offset="200">
-            <div class="sect-tle-out">
-                <div class="bdr-thin">
-                    <h2 class="pad-top-safari">Contacto</h2>
-                </div>
-            </div>
+        <section id="contLink">
 
-            <div class="cont-home">
-
-                <form id="homeContact" class="contact-form" action="../mail.php" method="POST">
-
-                    <p class="form-text">Nombre*</p>
-                    <input name="name" type="text" class="mailName input-errors all-good">
-
-                    <p class="form-text">Correo*</p>
-                    <input name="email" type="email" class="mailEmail input-errors all-good">
-
-                    <p class="form-text">Asunto</p>
-                    <input class="mailSubject" name="subject" type="text">
-
-                    <p class="form-text">Mensaje*</p>
-                    <textarea name="message" id="" cols="30" rows="6" class="mailMessage input-errors all-good"></textarea>
-
-                    <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
-                    <p class="form-message"></p>
-
-                    <div class="contact-info">
-                        <p>
-                            <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
-                        <p>
-                            <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                        <!-- <p>
-                            <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
-                    </div>
-                </form>
-            </div>
+            <h1 class="bdr-title mrg-bottom">Contacto</h1>
+            <p class="withus-txt">Pincha el icono y entra en nuestro área de cliente</p>
+            <a href="" class="contact-go">
+                <img class="img-fluid" src="assets/img/cont-icon.svg" alt="">
+            </a>
         </section>
         <section id="location" data-aos="fade-in">
 
@@ -243,22 +264,6 @@
     <script>
         // formvalidation
         $(document).ready(function () {
-
-            $("#homeContact").submit(function (event) {
-                event.preventDefault();
-                var name = $('.mailName').val();
-                var email = $('.mailEmail').val();
-                var subject = $('.mailSubject').val();
-                var message = $('.mailMessage').val();
-                var submit = $('.mailSubmit').val();
-                $('.form-message').load('../mail.php', {
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message,
-                    submit: submit
-                });
-            });
             $("#menuForm").submit(function (event) {
                 event.preventDefault();
                 var nameM = $('.mailNameM').val();

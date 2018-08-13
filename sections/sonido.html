@@ -159,42 +159,13 @@
                 equipos de videoproyección y pantallas LED para mejorar y acompañar tu evento.
             </p>
         </section>
-        <section id="contactoHome" class="ignore-mrg swiper-nomrg" data-aos="fade-in" ata-aos-anchor-placement="top-top" data-aos-offset="200">
-            <div class="sect-tle-out">
-                <div class="bdr-thin">
-                    <h2 class="pad-top-safari">Contacto</h2>
-                </div>
-            </div>
+        <section id="contLink">
 
-            <div class="cont-home">
-
-                <form id="homeContact" class="contact-form" action="../mail.php" method="POST">
-
-                    <p class="form-text">Nombre*</p>
-                    <input name="name" type="text" class="mailName input-errors all-good">
-
-                    <p class="form-text">Correo*</p>
-                    <input name="email" type="email" class="mailEmail input-errors all-good">
-
-                    <p class="form-text">Asunto</p>
-                    <input class="mailSubject" name="subject" type="text">
-
-                    <p class="form-text">Mensaje*</p>
-                    <textarea name="message" id="" cols="30" rows="6" class="mailMessage input-errors all-good"></textarea>
-
-                    <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
-                    <p class="form-message"></p>
-
-                    <div class="contact-info">
-                        <p>
-                            <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
-                        <p>
-                            <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                        <!-- <p>
-                            <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
-                    </div>
-                </form>
-            </div>
+            <h1 class="bdr-title mrg-bottom">Contacto</h1>
+            <p class="withus-txt">Pincha el icono y entra en nuestro área de cliente</p>
+            <a href="" class="contact-go">
+                <img class="img-fluid" src="assets/img/cont-icon.svg" alt="">
+            </a>
         </section>
         <section id="location" data-aos="fade-in">
 
@@ -250,22 +221,6 @@
     <script>
         // formvalidation
         $(document).ready(function () {
-
-            $("#homeContact").submit(function (event) {
-                event.preventDefault();
-                var name = $('.mailName').val();
-                var email = $('.mailEmail').val();
-                var subject = $('.mailSubject').val();
-                var message = $('.mailMessage').val();
-                var submit = $('.mailSubmit').val();
-                $('.form-message').load('../mail.php', {
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message,
-                    submit: submit
-                });
-            });
             $("#menuForm").submit(function (event) {
                 event.preventDefault();
                 var nameM = $('.mailNameM').val();
