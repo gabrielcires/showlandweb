@@ -14,6 +14,14 @@ function toggleSubMenu(x) {
     ad.classList.toggle("show-menu");
 }
 
+// toggle form
+function formExpand(x) {
+    $('.form-cont').removeClass('expanded');
+    setTimeout(function () { $('.form-cont').removeClass('noDisplay'); }, 300);
+    $(x).addClass("expanded");
+    setTimeout( function(){$(x).addClass("noDisplay");}, 300);
+}
+
 // toggle contacto
 var menuCont = document.getElementById("menuCont");
 var menuAnim = document.getElementById("menuAnim");
