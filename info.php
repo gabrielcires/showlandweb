@@ -3,12 +3,12 @@
 if (isset($_POST['submitM'])) {
     $nameM = $_POST['nameM'];
     $emailM = $_POST['emailM'];
-    $subjectM = $_POST['subjectM'];
+    $numberM = $_POST['numberM'];
     $messageM = $_POST['messageM'];
-    $mailTo = "info@showlandproducciones.es";
-    // $mailTo = "gabrielcireslopez@gmail.com";
+    // $mailTo = "info@showlandproducciones.es";
+    $mailTo = "gabrielcireslopez@gmail.com";
             
-    $formcontent="Correo: $emailM \n\nDe: $nameM \n\nAsunto: $subjectM\n\n$messageM";
+    $formcontent="Correo: $emailM \n\nDe: $nameM \n\nTelf: $numberM\n\n$messageM";
 
     $errorEmptyM = false;
     $errorEmailM = false;
@@ -22,7 +22,7 @@ if (isset($_POST['submitM'])) {
         $errorEmailM = true;
 
     } else { 
-        mail($mailTo, $subjectM, $formcontent);
+        mail($mailTo, $numberM, $formcontent);
         echo "<span class='form-success'>!Correo enviado! Te responderemos cuanto antes.</span>";
     }
 
@@ -32,19 +32,19 @@ if (isset($_POST['submitM'])) {
 
 <script>
 
-    $(".mailNameM, .mailEmailM, .mailMessageM").addClass("all-good");
+    $(".mailNameM, .mailEmailM, .mailNumberM").addClass("all-good");
 
     var errorEmptyM = "<?php echo $errorEmptyM; ?>";
     var errorEmailM = "<?php echo $errorEmailM; ?>";
 
     if (errorEmptyM == true) {
-        $(".mailNameM, .mailEmailM, .mailMessageM").removeClass("all-good");
+        $(".mailNameM, .mailEmailM, .mailNumberM").removeClass("all-good");
     }
     if (errorEmailM == true) {
         $(".mailEmailM").removeClass("all-good");
     }
     if (errorEmptyM == false && errorEmailM == false) {
-        $(".mailNameM, .mailEmailM, .mailSubject, .mailMessageM").val("");
+        $(".mailNameM, .mailEmailM, .mailNumberM").val("");
     }
 
 </script>

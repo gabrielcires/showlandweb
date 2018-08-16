@@ -19,31 +19,9 @@ function formExpand(x) {
     $('.form-cont').removeClass('expanded');
     setTimeout(function () { $('.form-cont').removeClass('noDisplay'); }, 300);
     $(x).addClass("expanded");
-    setTimeout( function(){$(x).addClass("noDisplay");}, 300);
+    setTimeout( function(){$(x).addClass("noDisplay");}, 350);
 }
 
-// toggle contacto
-var menuCont = document.getElementById("menuCont");
-var menuAnim = document.getElementById("menuAnim");
-var c = document.getElementById("contacto");
-var social = document.getElementById("social");
-
-function toggleContacto(x) {
-    var contArrow = document.getElementById("contArrow");
-    menuCont.classList.toggle("fade-out");
-    menuAnim.classList.toggle("fade-out");
-    social.classList.toggle("fade-out");
-    c.classList.toggle("show-contacto");
-    contArrow.classList.add("fade-in");
-}
-
-function ContactoOut(x) {
-    menuCont.classList.remove("fade-out");
-    menuAnim.classList.remove("fade-out");
-    social.classList.remove("fade-out");
-    c.classList.remove("show-contacto");
-    x.classList.remove("fade-in");
-}
 // slider
 $(".first-slider").each(function (index, element) {
     var $this = $(this);
@@ -123,7 +101,7 @@ AOS.init({
     delay: 0, // values from 0 to 3000, with step 50ms
     duration: 400, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    once: true, // whether animation should happen only once - while scrolling down
+    once: false, // whether animation should happen only once - while scrolling down
     mirror: true, // whether elements should animate out while scrolling past them
     anchorPlacement: 'bottom-bottom', // defines which position of the element regarding to window should trigger the animation
 });

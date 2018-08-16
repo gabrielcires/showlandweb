@@ -21,7 +21,6 @@
 </head>
 
 <body style="overflow-x: hidden!important" class="link-transition">
-
     <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
         <p class="menu-btn">MENÚ</p>
         <div class="menu-icon">
@@ -33,10 +32,6 @@
     <a href="../index.html" class="logo-fixed">
         <img src="../aload/iconologo.svg" class="logo-fixed" alt="">
     </a>
-
-    <div id="contArrow" class="back-arrow no-select" onclick="ContactoOut(this)">
-        <img src="../assets/img/backarrow.svg" alt="">
-    </div>
 
     <header id="menu" data-aos="" data-aos-offset="1000" data-aos-once="false">
 
@@ -71,9 +66,9 @@
             <li class="no-pad">
                 <p class="serv-sect no-select" onclick="toggleContacto(this)">
                     <i class="fas fa-phone"></i> Contacto</p>
-                <a href="#contactoHome" class="serv-sect no-select">
+                <a href="clientes.html" class="serv-sect no-select">
                     <p class="menu-txt-hov">
-                        <i class="fas fa-phone"></i> Contacto</p>
+                        <i class="fas fa-users"></i> Clientes</p>
                 </a>
             </li>
 
@@ -89,59 +84,132 @@
                 <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
             </a>
         </div>
-
-        <section id="contacto" class="">
-
-            <h2>Contacto</h2>
-
-            <form id="menuForm" class="contact-form" action="../mailMenu.php" method="POST">
-
-                <p class="form-text">Nombre*</p>
-                <input class="mailNameM input-errors all-good" name="nameM" type="text">
-
-                <p class="form-text">Correo*</p>
-                <input class="mailEmailM input-errors all-good" name="emailM" type="email">
-
-                <p class="form-text">Asunto</p>
-                <input class="mailSubjectM" name="subjectM" type="text">
-
-                <p class="form-text">Mensaje*</p>
-                <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
-
-                <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
-                <p class="form-message"></p>
-
-                <div class="contact-info">
-                    <p>
-                        <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
-                    <p>
-                        <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                    <!-- <p>
-                        <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
-                </div>
-            </form>
-
-        </section>
     </header>
 
     <div class="container">
 
         <section id="clientes" class="eventos-pad">
-            <div class="form-cont first-back firstForm" onclick="formExpand(this)">
-                <h1 class="form-title">Información y Presupuestos</h1>
-                <img class="form-back img-fluid" src="../assets/img/slider/info.jpg" alt="">
+            <div class="contact-info" data-aos="" data-aos-offset="400" data-aos-anchor-placement="bottom-bottom">
+                <div class="cont-fxd" data-aos="" data-aos-anchor-placement="top-center">
+                    <p>HORARIO AT. TELEFÓNICA</p>
+                    <p>M: 9:00 - 13:30</p>
+                    <p>T: 16.30 - 19:30</p>
+                    <div class="title-bar"></div>
+                    <p>HORARIO INSTALACIONES</p>
+                    <p>TALAVERA</p>
+                    <p>M: 9:00 - 13:30</p>
+                    <p>T: BAJO CITA PREVIA</p>
+                    <div class="title-bar"></div>
+                    <p>
+                        <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
+                    <p>
+                        <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
+                </div>
             </div>
-            <div class="form-cont firstForm" onclick="formExpand(this)">
-                <h1 class="form-title">Organización y Producción de Eventos</h1>
-                <img class="form-back img-fluid" src="../assets/img/slider/eventos.jpg" alt="">
-            </div>
-            <div class="form-cont firstForm" onclick="formExpand(this)">
-                <h1 class="form-title">Diseño, Comunicación y Artes Gráficas</h1>
-                <img class="form-back img-fluid" src="../assets/img/slider/design.jpg" alt="">
-            </div>
-            <div class="form-cont firstForm" onclick="formExpand(this)">
-                <h1 class="form-title">Incidencias</h1>
-                <img class="form-back img-fluid" src="../assets/img/slider/urgente.jpg" alt="">
+            <div class="form-grid">
+                <div class="form-cont first-back firstForm" onclick="formExpand(this)">
+                    <div class="form-first-layer">
+                        <h1 class="form-title">Información y Presupuestos</h1>
+                        <img class="form-back img-fluid" src="../assets/img/slider/info.jpg" alt="">
+                    </div>
+                    <div class="form-display">
+                        <form id="info" class="all-forms" action="../info.php" method="POST">
+
+                            <p class="form-text">Nombre<span>*</span></p>
+                            <input class="mailNameM input-errors all-good" name="nameM" type="text">
+
+                            <p class="form-text">Mail<span>*</span></p>
+                            <input class="mailEmailM input-errors all-good" name="emailM" type="email">
+
+                            <p class="form-text">Telf<span>*</span></p>
+                            <input class="mailNumberM input-errors all-good" name="numberM" type="tel">
+
+                            <p class="form-text">Adj. Archivos<span>*</span></p>
+                            <input class="mailFilesM input-errors all-good" name="filesM" type="file">
+
+                            <!-- <p class="form-text">Mensaje<span>*</span></p>
+                            <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea> -->
+
+                            <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                            <p class="form-message"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="form-cont firstForm" onclick="formExpand(this)">
+                    <div class="form-first-layer">
+                        <h1 class="form-title">Organización y Producción de Eventos</h1>
+                        <img class="form-back img-fluid" src="../assets/img/slider/eventos.jpg" alt="">
+                    </div>
+                    <div class="form-display">
+                        <form id="menuForm" class="all-forms" action="../mailMenu.php" method="POST">
+
+                            <p class="form-text">Nombre*</p>
+                            <input class="mailNameM input-errors all-good" name="nameM" type="text">
+
+                            <p class="form-text">Correo*</p>
+                            <input class="mailEmailM input-errors all-good" name="emailM" type="email">
+
+                            <p class="form-text">Asunto</p>
+                            <input class="mailnumberM" name="numberM" type="text">
+
+                            <p class="form-text">Mensaje*</p>
+                            <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
+
+                            <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                            <p class="form-message"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="form-cont firstForm" onclick="formExpand(this)">
+                    <div class="form-first-layer">
+                        <h1 class="form-title">Diseño, Comunicación y Artes Gráficas</h1>
+                        <img class="form-back img-fluid" src="../assets/img/slider/design.jpg" alt="">
+                    </div>
+                    <div class="form-display">
+                        <form id="menuForm" class="all-forms" action="../mailMenu.php" method="POST">
+
+                            <p class="form-text">Nombre*</p>
+                            <input class="mailNameM input-errors all-good" name="nameM" type="text">
+
+                            <p class="form-text">Correo*</p>
+                            <input class="mailEmailM input-errors all-good" name="emailM" type="email">
+
+                            <p class="form-text">Asunto</p>
+                            <input class="mailnumberM" name="numberM" type="text">
+
+                            <p class="form-text">Mensaje*</p>
+                            <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
+
+                            <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                            <p class="form-message"></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="form-cont firstForm" onclick="formExpand(this)">
+                    <div class="form-first-layer">
+                        <h1 class="form-title">Incidencias</h1>
+                        <img class="form-back img-fluid" src="../assets/img/slider/urgente.jpg" alt="">
+                    </div>
+                    <div class="form-display">
+                        <form id="menuForm" class="all-forms" action="../mailMenu.php" method="POST">
+
+                            <p class="form-text">Nombre*</p>
+                            <input class="mailNameM input-errors all-good" name="nameM" type="text">
+
+                            <p class="form-text">Correo*</p>
+                            <input class="mailEmailM input-errors all-good" name="emailM" type="email">
+
+                            <p class="form-text">Asunto</p>
+                            <input class="mailnumberM" name="numberM" type="text">
+
+                            <p class="form-text">Mensaje*</p>
+                            <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
+
+                            <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                            <p class="form-message"></p>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="location" data-aos="fade-in">
@@ -198,17 +266,17 @@
     <script>
         // formvalidation
         $(document).ready(function () {
-            $("#menuForm").submit(function (event) {
+            $("#info").submit(function (event) {
                 event.preventDefault();
                 var nameM = $('.mailNameM').val();
                 var emailM = $('.mailEmailM').val();
-                var subjectM = $('.mailSubjectM').val();
+                var numberM = $('.mailnumberM').val();
                 var messageM = $('.mailMessageM').val();
                 var submitM = $('.mailSubmitM').val();
                 $('.form-message').load('../mailMenu.php', {
                     nameM: nameM,
                     emailM: emailM,
-                    subjectM: subjectM,
+                    numberM: numberM,
                     messageM: messageM,
                     submitM: submitM
                 });
