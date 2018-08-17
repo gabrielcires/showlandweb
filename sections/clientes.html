@@ -106,7 +106,7 @@
                         <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
                 </div>
             </div>
-            <div class="form-grid">
+            <div class="form-grid" data-aos="fade-in">
                 <div class="form-cont first-back firstForm" onclick="formExpand(this)">
                     <div class="form-first-layer">
                         <h1 class="form-title">Información y Presupuestos</h1>
@@ -116,21 +116,19 @@
                         <form id="info" class="all-forms" action="../info.php" method="POST">
 
                             <p class="form-text">Nombre<span>*</span></p>
-                            <input class="mailNameM input-errors all-good" name="nameM" type="text">
+                            <input class="mailName input-errors all-good" name="name" type="text">
 
                             <p class="form-text">Mail<span>*</span></p>
-                            <input class="mailEmailM input-errors all-good" name="emailM" type="email">
+                            <input class="mailEmail input-errors all-good" name="email" type="email">
 
                             <p class="form-text">Telf<span>*</span></p>
-                            <input class="mailNumberM input-errors all-good" name="numberM" type="tel">
+                            <input class="mailNumber input-errors all-good" name="number" type="tel">
 
                             <p class="form-text">Adj. Archivos<span>*</span></p>
-                            <input class="mailFilesM input-errors all-good" name="filesM" type="file">
+                            <input id="file" class="input-file mailFiles input-errors all-good" name="files" type="file" data-multiple-caption="{count} files selected" multiple>
+                            <label class="input-file-label" for="file">Seleccione archivos</label>
 
-                            <!-- <p class="form-text">Mensaje<span>*</span></p>
-                            <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea> -->
-
-                            <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
                     </div>
@@ -141,21 +139,21 @@
                         <img class="form-back img-fluid" src="../assets/img/slider/eventos.jpg" alt="">
                     </div>
                     <div class="form-display">
-                        <form id="menuForm" class="all-forms" action="../mailMenu.php" method="POST">
+                        <form id="menuForm" class="all-forms" action="../mailenu.php" method="POST">
 
                             <p class="form-text">Nombre*</p>
-                            <input class="mailNameM input-errors all-good" name="nameM" type="text">
+                            <input class="mailName input-errors all-good" name="name" type="text">
 
                             <p class="form-text">Correo*</p>
-                            <input class="mailEmailM input-errors all-good" name="emailM" type="email">
+                            <input class="mailEmail input-errors all-good" name="email" type="email">
 
                             <p class="form-text">Asunto</p>
-                            <input class="mailnumberM" name="numberM" type="text">
+                            <input class="mailnumber" name="number" type="text">
 
                             <p class="form-text">Mensaje*</p>
-                            <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
+                            <textarea class="mailessage input-errors all-good" name="message" id="" cols="30" rows="6"></textarea>
 
-                            <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
                     </div>
@@ -166,21 +164,21 @@
                         <img class="form-back img-fluid" src="../assets/img/slider/design.jpg" alt="">
                     </div>
                     <div class="form-display">
-                        <form id="menuForm" class="all-forms" action="../mailMenu.php" method="POST">
+                        <form id="menuForm" class="all-forms" action="../mailenu.php" method="POST">
 
                             <p class="form-text">Nombre*</p>
-                            <input class="mailNameM input-errors all-good" name="nameM" type="text">
+                            <input class="mailName input-errors all-good" name="name" type="text">
 
                             <p class="form-text">Correo*</p>
-                            <input class="mailEmailM input-errors all-good" name="emailM" type="email">
+                            <input class="mailEmail input-errors all-good" name="email" type="email">
 
                             <p class="form-text">Asunto</p>
-                            <input class="mailnumberM" name="numberM" type="text">
+                            <input class="mailnumber" name="number" type="text">
 
                             <p class="form-text">Mensaje*</p>
-                            <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
+                            <textarea class="mailessage input-errors all-good" name="message" id="" cols="30" rows="6"></textarea>
 
-                            <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
                     </div>
@@ -191,21 +189,21 @@
                         <img class="form-back img-fluid" src="../assets/img/slider/urgente.jpg" alt="">
                     </div>
                     <div class="form-display">
-                        <form id="menuForm" class="all-forms" action="../mailMenu.php" method="POST">
+                        <form id="menuForm" class="all-forms" action="../mailenu.php" method="POST">
 
                             <p class="form-text">Nombre*</p>
-                            <input class="mailNameM input-errors all-good" name="nameM" type="text">
+                            <input class="mailName input-errors all-good" name="name" type="text">
 
                             <p class="form-text">Correo*</p>
-                            <input class="mailEmailM input-errors all-good" name="emailM" type="email">
+                            <input class="mailEmail input-errors all-good" name="email" type="email">
 
                             <p class="form-text">Asunto</p>
-                            <input class="mailnumberM" name="numberM" type="text">
+                            <input class="mailnumber" name="number" type="text">
 
                             <p class="form-text">Mensaje*</p>
-                            <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
+                            <textarea class="mailessage input-errors all-good" name="message" id="" cols="30" rows="6"></textarea>
 
-                            <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
+                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
                     </div>
@@ -216,13 +214,13 @@
 
             <div class="loc-cont">
                 <div class="loc-anim">
-                    <a href="https://goo.gl/maps/nvdGMq6E81k" target="_blank">
+                    <a href="https://goo.gl/maps/nvdGq6E81k" target="_blank">
                         <img class="loc-vector img-fluid" src="../assets/img/showLog.svg" alt="">
                         <p class="location-mark">
                             <i class="fas fa-map-marker-alt"></i>
                         </p>
                         <p class="loc-hide">C/San Ignacio, 14 45600 | Talavera de laReina</p>
-                        <p class="loc-go">Ver en Google Maps
+                        <p class="loc-go">Ver en Google aps
                             <img src="../assets/img/backarrow.svg" alt="">
                         </p>
                     </a>
@@ -268,22 +266,21 @@
         $(document).ready(function () {
             $("#info").submit(function (event) {
                 event.preventDefault();
-                var nameM = $('.mailNameM').val();
-                var emailM = $('.mailEmailM').val();
-                var numberM = $('.mailnumberM').val();
-                var messageM = $('.mailMessageM').val();
-                var submitM = $('.mailSubmitM').val();
-                $('.form-message').load('../mailMenu.php', {
-                    nameM: nameM,
-                    emailM: emailM,
-                    numberM: numberM,
-                    messageM: messageM,
-                    submitM: submitM
+                var name = $('.mailName').val();
+                var email = $('.mailEmail').val();
+                var number = $('.mailNumber').val();
+                var files = $('.mailFiles').val();
+                var submit = $('.mailSubmit').val();
+                $('.form-message').load('../info.php', {
+                    name: name,
+                    email: email,
+                    number: number,
+                    files: files,
+                    submit: submit
                 });
             });
         });
     </script>
-
 
 </body>
 
