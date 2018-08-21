@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     // $mailTo = "info@showlandproducciones.es";
     $mailTo = "gabrielcireslopez@gmail.com";
             
-    $formcontent="Correo: $email \n\nNombre: $name \n\nTelf: $number \n\n"$files;
+    $formcontent="Correo: $email \n\nNombre: $name \n\nTelf: $number \n\n$files";
 
     $errorEmpty = false;
     $errorEmail = false;
