@@ -120,7 +120,7 @@
                             </p>
                             <input class="mailName input-errors all-good" name="sender_name" type="text">
 
-                            <p class="form-text">Mail
+                            <p class="form-text">Email
                                 <span>*</span>
                             </p>
                             <input class="mailEmail input-errors all-good" name="sender_email" type="email">
@@ -133,11 +133,10 @@
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
-                            <input id="file" class="input-file mailFiles input-errors all-good" name="my_file" type="file" data-multiple-caption="{count} files selected"
-                                multiple>
+                            <input id="file" class="input-file mailFiles input-errors all-good" name="my_file" type="file" multiple>
                             <label class="input-file-label" for="file">Seleccione archivos</label>
 
-                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
+                            <button class="submit-btn mailSubmit" type="submit" name="submit_form">Enviar</button>
                             <p class="form-message"></p>
                         </form>
                     </div>
@@ -302,38 +301,23 @@
     <script src="../js/main.js?" type="text/javascript"></script>
     <script>
         // formvalidation
-        // $(document).ready(function () {
-        //     $("#info").submit(function (event) {
-        //         event.preventDefault();
-        //         var name = $('.mailName').val();
-        //         var email = $('.mailEmail').val();
-        //         var number = $('.mailNumber').val();
-        //         var files = $('.mailFiles').val();
-        //         var submit = $('.mailSubmit').val();
-        //         $('.form-message').load('../info.php', {
-        //             name: name,
-        //             email: email,
-        //             number: number,
-        //             files: files,
-        //             submit: submit
-        //         });
-        //     });
-            // $("#orgprod").submit(function (event) {
-            //     event.preventDefault();
-            //     var name = $('.mailName').val();
-            //     var email = $('.mailEmail').val();
-            //     var number = $('.mailNumber').val();
-            //     var files = $('.mailFiles').val();
-            //     var submit = $('.mailSubmit').val();
-            //     $('.form-message').load('../info.php', {
-            //         name: name,
-            //         email: email,
-            //         number: number,
-            //         files: files,
-            //         submit: submit
-            //     });
-            // });
-        // });
+        $(document).ready(function () {
+            $("#info").submit(function (event) {
+                event.preventDefault();
+                var sender_name = $('.mailName').val();
+                var sender_email = $('.mailEmail').val();
+                var sender_number = $('.mailNumber').val();
+                var my_file = $('.mailFiles').val();
+                var submit_form = $('.mailSubmit').val();
+                $('.form-message').load('../info.php', {
+                    name: sender_name,
+                    email: sender_email,
+                    number: sender_number,
+                    file: my_file,
+                    submit: submit_form
+                });
+            });
+        });
     </script>
 
 </body>
