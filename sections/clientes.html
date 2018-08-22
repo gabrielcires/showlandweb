@@ -113,27 +113,27 @@
                         <img class="form-back img-fluid" src="../assets/img/slider/info.jpg" alt="">
                     </div>
                     <div class="form-display">
-                        <form id="info" class="all-forms" action="../info.php" method="POST">
+                        <form id="info" class="all-forms" enctype="multipart/form-data" action="../info.php" method="POST">
 
                             <p class="form-text">Nombre
                                 <span>*</span>
                             </p>
-                            <input class="mailName input-errors all-good" name="name" type="text">
+                            <input class="mailName input-errors all-good" name="sender_name" type="text">
 
                             <p class="form-text">Mail
                                 <span>*</span>
                             </p>
-                            <input class="mailEmail input-errors all-good" name="email" type="email">
+                            <input class="mailEmail input-errors all-good" name="sender_email" type="email">
 
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
-                            <input class="mailNumber input-errors all-good" name="number" type="tel">
+                            <input class="mailNumber input-errors all-good" name="sender_number" type="tel">
 
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
-                            <input id="file" class="input-file mailFiles input-errors all-good" name="files" type="file" data-multiple-caption="{count} files selected"
+                            <input id="file" class="input-file mailFiles input-errors all-good" name="my_file" type="file" data-multiple-caption="{count} files selected"
                                 multiple>
                             <label class="input-file-label" for="file">Seleccione archivos</label>
 
@@ -302,22 +302,22 @@
     <script src="../js/main.js?" type="text/javascript"></script>
     <script>
         // formvalidation
-        $(document).ready(function () {
-            $("#info").submit(function (event) {
-                event.preventDefault();
-                var name = $('.mailName').val();
-                var email = $('.mailEmail').val();
-                var number = $('.mailNumber').val();
-                var files = $('.mailFiles').val();
-                var submit = $('.mailSubmit').val();
-                $('.form-message').load('../info.php', {
-                    name: name,
-                    email: email,
-                    number: number,
-                    files: files,
-                    submit: submit
-                });
-            });
+        // $(document).ready(function () {
+        //     $("#info").submit(function (event) {
+        //         event.preventDefault();
+        //         var name = $('.mailName').val();
+        //         var email = $('.mailEmail').val();
+        //         var number = $('.mailNumber').val();
+        //         var files = $('.mailFiles').val();
+        //         var submit = $('.mailSubmit').val();
+        //         $('.form-message').load('../info.php', {
+        //             name: name,
+        //             email: email,
+        //             number: number,
+        //             files: files,
+        //             submit: submit
+        //         });
+        //     });
             // $("#orgprod").submit(function (event) {
             //     event.preventDefault();
             //     var name = $('.mailName').val();
@@ -333,7 +333,7 @@
             //         submit: submit
             //     });
             // });
-        });
+        // });
     </script>
 
 </body>

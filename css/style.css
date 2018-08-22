@@ -398,7 +398,7 @@ hr {
 }
 
 .mrg-bottom {
-    margin-bottom: 30px!important;
+    margin-bottom: 30px !important;
 }
 
 .nomrg-btm {
@@ -412,7 +412,7 @@ hr {
 }
 
 .txt-center {
-    text-align: center;
+    text-align: center !important;
 }
 
 .txt-left {
@@ -1603,6 +1603,7 @@ footer a:hover img {
 }
 
 /* CLIENTES */
+
 .form-cont {
     width: 100%;
     height: 550px;
@@ -1768,14 +1769,13 @@ input.input-file {
 }
 
 .input-file-label {
-    width: 300px;
     margin: 20px 0;
     margin-left: 0;
     align-self: stretch;
     display: inline-block;
     background: #000;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
@@ -1854,9 +1854,9 @@ input.input-file {
     transition: all .3s ease;
 }
 
-.input-errors {
-    -webkit-box-shadow: inset 0 0 0px 3px #360000, inset 0 0 0 30px white;
-    box-shadow: inset 0 0 0px 3px #360000, inset 0 0 0 30px white;
+input.input-errors {
+    -webkit-box-shadow: inset 0 0 0px 3px #360000, inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 0px 3px #360000, inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -1994,12 +1994,10 @@ section#blog {
         border-right: 30px solid transparent;
         border-bottom: none;
     }
-
     .form-cont.expanded {
         width: 100%;
         height: 550px;
     }
-
     .form-display {
         margin: 50px;
     }
@@ -2331,7 +2329,7 @@ section#blog {
         -moz-transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
         -ms-transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
         -o-transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
-}
+    }
     .aos-animate.cont-fxd {
         position: fixed;
     }
@@ -2342,7 +2340,7 @@ section#blog {
         -moz-transform: translateX(-100px);
         -ms-transform: translateX(-100px);
         -o-transform: translateX(-100px);
-}
+    }
     /* HEADER */
     header {
         width: 100vw;
