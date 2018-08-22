@@ -1,20 +1,12 @@
 <?php 
 
-if($_POST && isset($_FILES['my_file']))
+if($_POST && isset($_FILES['my_file']) || isset($_POST['submit_form']))
 {
-
-
-    
     //Capture POST data from HTML form and Sanitize them, 
     $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING); //sender name
     $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING); //sender email used in "reply-to" header
     $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING); //get subject from HTML form
     $subject = "Formulario de Información y Presupuestos";
-    /* //don't forget to validate empty fields 
-    if(strlen($sender_name)<1){
-        die('Name is too short or empty!');
-    } 
-    */
     
     $recipient_email    = 'gabrielcireslopez@gmail.com'; //recipient email (most cases it is your personal email)
 
@@ -58,7 +50,7 @@ if($_POST && isset($_FILES['my_file']))
     $errorEmpty = false;
     $errorEmail = false;
 
-    if (strlen($sender_name)<1 || strlen($sender_email)<1 || strlen($sender_number)<1) {
+    if (empty($sender_name) || empty($sender_email) || empty($sender_number)) {
         echo "<span class='form-error'>Rellena los campos obligatorios!*</span>";
         $errorEmpty = true;
 
