@@ -4,10 +4,11 @@ if($_POST && isset($_FILES['my_file']) || isset($_POST['submit_form']))
 {
     //Capture POST data from HTML form and Sanitize them, 
     $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING); //sender name
-    $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING); //sender email used in "reply-to" header
+    // $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING); //sender email used in "reply-to" header
+    $sender_email = filter_var($_POST["sender_email"], FILTER_VALIDATE_EMAIL); //sender email used in "reply-to" header
     $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING); //get subject from HTML form
     $subject = "Formulario de Información y Presupuestos";
-    
+
     $recipient_email    = 'gabrielcireslopez@gmail.com'; //recipient email (most cases it is your personal email)
 
     //Get uploaded file data
@@ -29,13 +30,13 @@ if($_POST && isset($_FILES['my_file']) || isset($_POST['submit_form']))
         $headers .= "From:".$sender_email."\r\n"; 
         $headers .= "Reply-To: ".$sender_email."" . "\r\n";
         $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n"; 
-        
+
         //plain text 
         $body = "--$boundary\r\n";
         $body .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
         $body .= "Content-Transfer-Encoding: base64\r\n\r\n"; 
         $body .= chunk_split(base64_encode($message)); 
-        
+
         //attachment
         $body .= "--$boundary\r\n";
         $body .="Content-Type: $file_type; name=".$file_name."\r\n";
@@ -44,7 +45,7 @@ if($_POST && isset($_FILES['my_file']) || isset($_POST['submit_form']))
         $body .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
         $body .= $encoded_content; 
         $body .= $formcontent; 
-        
+
     $formcontent="Nombre: $sender_name \n\nTelf: $sender_number";
 
     $errorEmpty = false;
@@ -80,7 +81,7 @@ if($_POST && isset($_FILES['my_file']) || isset($_POST['submit_form']))
         $(".mailEmail").removeClass("all-good");
     }
     if (errorEmpty == false && errorEmail == false) {
-        $(".mailName, .mailEmail, .mailNumber").val("");
+        $(".mailName, .mailEmail, .mailNumber, .mailFiles").val("");
     }
 
 </script>

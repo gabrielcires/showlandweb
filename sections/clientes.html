@@ -120,6 +120,10 @@
                             </p>
                             <input class="mailName input-errors all-good" name="sender_name" type="text">
 
+                            <p class="form-text">Empresa
+                            </p>
+                            <input class="mailName all-good" name="sender_name" type="text">
+
                             <p class="form-text">Email
                                 <span>*</span>
                             </p>
@@ -133,10 +137,10 @@
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
-                            <input id="file" class="input-file mailFiles input-errors all-good" name="my_file" type="file" multiple>
+                            <input id="file" class="input-file mailFiles input-errors all-good" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
                             <label class="input-file-label" for="file">Seleccione archivos</label>
 
-                            <button class="submit-btn mailSubmit" type="submit" name="submit_form">Enviar</button>
+                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
                     </div>
@@ -308,13 +312,13 @@
                 var sender_email = $('.mailEmail').val();
                 var sender_number = $('.mailNumber').val();
                 var my_file = $('.mailFiles').val();
-                var submit_form = $('.mailSubmit').val();
+                var submit = $('.mailSubmit').val();
                 $('.form-message').load('../info.php', {
-                    name: sender_name,
-                    email: sender_email,
-                    number: sender_number,
-                    file: my_file,
-                    submit: submit_form
+                    sender_name: sender_name,
+                    sender_email: sender_email,
+                    sender_number: sender_number,
+                    my_file: my_file,
+                    submit_form: submit
                 });
             });
         });
