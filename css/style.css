@@ -2397,7 +2397,7 @@ section#blog {
         margin-top: 35px;
         position: fixed;
         z-index: 2001;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, .8);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
     }
     .aos-animate #menuCont {
         margin-top: 20px;

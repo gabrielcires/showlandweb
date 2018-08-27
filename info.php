@@ -50,7 +50,6 @@ if($_POST && isset($_FILES['my_file']) || isset($_POST['submit_form']))
         $body .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
         $body .= $encoded_content; 
         
-
     $errorEmpty = false;
     $errorEmail = false;
 
