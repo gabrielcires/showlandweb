@@ -1,18 +1,17 @@
 <?php 
 
-if($_POST && isset($_FILES['my_file']) || isset($_POST['submit_form']))
+if(isset($_FILES['my_file']) && isset($_POST['submit_form']))
 {
 
-    //Capture POST data from HTML form and Sanitize them, 
-    $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING); //sender name
-    $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING); //sender email used in "reply-to" header
-    $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING); //get subject from HTML form
+    $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING);
+    $empresa    = filter_var($_POST["empresa"], FILTER_SANITIZE_STRING);
+    $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING);
+    $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING);
     $subject = "Formulario de Información y Presupuestos";
 
-    $recipient_email    = 'gabrielcireslopez@gmail.com'; //recipient email (most cases it is your personal email)
+    $recipient_email    = 'gabrielcireslopez@gmail.com'; 
 
     //Get uploaded file data
-    // $my_file          = $_FILES['my_file'];
     $file_tmp_name    = $_FILES['my_file']['tmp_name'];
     $file_name        = $_FILES['my_file']['name'];
     $file_size        = $_FILES['my_file']['size'];
@@ -20,7 +19,7 @@ if($_POST && isset($_FILES['my_file']) || isset($_POST['submit_form']))
     $file_error       = $_FILES['my_file']['error'];
 
     strtolower(end(explode('.',$file_name)));
-    $formcontent="Nombre: $sender_name \n\nTelf: $sender_number";
+    $formcontent="Nombre: $sender_name \n\nEmpresa: $empresa \n\nTelf: $sender_number";
 
     //read from the uploaded file & base64_encode content for the mail
     $handle = fopen($file_tmp_name, "r");

@@ -122,7 +122,7 @@
 
                             <p class="form-text">Empresa
                             </p>
-                            <input class="mailName all-good" name="sender_name" type="text">
+                            <input class="mailEmpresa input-errors all-good" name="empresa" type="text">
 
                             <p class="form-text">Email
                                 <span>*</span>
@@ -152,29 +152,29 @@
                     </div>
                     <div class="form-display">
                         <form id="orgprod" class="all-forms" action="../info.php" method="POST">
-                        
+
                             <p class="form-text">Nombre
                                 <span>*</span>
                             </p>
                             <input class="mailName input-errors all-good" name="name" type="text">
-                        
+
                             <p class="form-text">Mail
                                 <span>*</span>
                             </p>
                             <input class="mailEmail input-errors all-good" name="email" type="email">
-                        
+
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
                             <input class="mailNumber input-errors all-good" name="number" type="tel">
-                        
+
                             <p class="form-text">Adj. Archivos
                                 <span>*</span>
                             </p>
                             <input id="file" class="input-file mailFiles input-errors all-good" name="files" type="file" data-multiple-caption="{count} files selected"
                                 multiple>
                             <label class="input-file-label" for="file">Seleccione archivos</label>
-                        
+
                             <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
@@ -187,29 +187,29 @@
                     </div>
                     <div class="form-display">
                         <form id="design" class="all-forms" action="../info.php" method="POST">
-                        
+
                             <p class="form-text">Nombre
                                 <span>*</span>
                             </p>
                             <input class="mailName input-errors all-good" name="name" type="text">
-                        
+
                             <p class="form-text">Mail
                                 <span>*</span>
                             </p>
                             <input class="mailEmail input-errors all-good" name="email" type="email">
-                        
+
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
                             <input class="mailNumber input-errors all-good" name="number" type="tel">
-                        
+
                             <p class="form-text">Adj. Archivos
                                 <span>*</span>
                             </p>
                             <input id="file" class="input-file mailFiles input-errors all-good" name="files" type="file" data-multiple-caption="{count} files selected"
                                 multiple>
                             <label class="input-file-label" for="file">Seleccione archivos</label>
-                        
+
                             <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
@@ -222,29 +222,29 @@
                     </div>
                     <div class="form-display">
                         <form id="incid" class="all-forms" action="../info.php" method="POST">
-                        
+
                             <p class="form-text">Nombre
                                 <span>*</span>
                             </p>
                             <input class="mailName input-errors all-good" name="name" type="text">
-                        
+
                             <p class="form-text">Mail
                                 <span>*</span>
                             </p>
                             <input class="mailEmail input-errors all-good" name="email" type="email">
-                        
+
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
                             <input class="mailNumber input-errors all-good" name="number" type="tel">
-                        
+
                             <p class="form-text">Adj. Archivos
                                 <span>*</span>
                             </p>
                             <input id="file" class="input-file mailFiles input-errors all-good" name="files" type="file" data-multiple-caption="{count} files selected"
                                 multiple>
                             <label class="input-file-label" for="file">Seleccione archivos</label>
-                        
+
                             <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
@@ -305,30 +305,28 @@
     <script src="../js/form.js"></script>
     <script src="../js/main.js?" type="text/javascript"></script>
     <script>
-
-        $(document).ready(function() { 
-            // bind 'myForm' and provide a simple callback function 
-            $('#info').ajaxForm(function() { 
-                
-            }); 
-        });
-         
         // formvalidation
         $(document).ready(function () {
+            $('#info').ajaxForm(function () {});
+            $('#orgprod').ajaxForm(function () {});
+            $('#design').ajaxForm(function () {});
+            $('#incid').ajaxForm(function () {});
             $("#info").submit(function (event) {
                 event.preventDefault();
                 var sender_name = $('.mailName').val();
+                var empresa = $('.mailEmpresa').val();
                 var sender_email = $('.mailEmail').val();
                 var sender_number = $('.mailNumber').val();
                 var my_file = $('.mailFiles').val();
                 var submit = $('.mailSubmit').val();
-                $('.form-message').load('../info.php', {
-                    sender_name: sender_name,
-                    sender_email: sender_email,
-                    sender_number: sender_number,
-                    my_file: my_file,
-                    submit_form: submit,
-                });
+                    $('.form-message').load('../info.php', {
+                        sender_name: sender_name,
+                        empresa: empresa,
+                        sender_email: sender_email,
+                        sender_number: sender_number,
+                        my_file: my_file,
+                        submit_form: submit,
+                    });
             });
         });
     </script>
