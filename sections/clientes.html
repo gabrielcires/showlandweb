@@ -137,15 +137,15 @@
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
-                            <input id="file" class="mailFiles input-file input-errors all-good" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
-                            <label class="input-file-label" for="file">Seleccione archivos</label>
-
+                            <input id="file" class="mailFiles input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
+                            <label class="input-file-label mailLabel input-errors all-good" for="file">Seleccione archivos</label>
+                            <p class="file-message good">Por favor, introduce un archivo*</p>
                             <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
                     </div>
                 </div>
-                <div class="form-cont firstForm" onclick="formExpand(this)">
+                <!-- <div class="form-cont firstForm" onclick="formExpand(this)">
                     <div class="form-first-layer">
                         <h1 class="form-title">Organización y Producción de Eventos</h1>
                         <img class="form-back img-fluid" src="../assets/img/slider/eventos.jpg" alt="">
@@ -248,39 +248,39 @@
                             <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
                             <p class="form-message"></p>
                         </form>
-                    </div>
-                </div>
+                    </div> -->
             </div>
-        </section>
-        <section id="location" data-aos="fade-in">
+    </div>
+    </section>
+    <section id="location" data-aos="fade-in">
 
-            <div class="loc-cont">
-                <div class="loc-anim">
-                    <a href="https://goo.gl/maps/nvdGq6E81k" target="_blank">
-                        <img class="loc-vector img-fluid" src="../assets/img/showLog.svg" alt="">
-                        <p class="location-mark">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </p>
-                        <p class="loc-hide">C/San Ignacio, 14 45600 | Talavera de laReina</p>
-                        <p class="loc-go">Ver en Google aps
-                            <img src="../assets/img/backarrow.svg" alt="">
-                        </p>
-                    </a>
-                </div>
-                <div class="location social">
-                    <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon-home" target="_blank">
-                        <img class="img-fluid" src="../assets/img/facebook.svg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon-home" target="_blank">
-                        <img class="img-fluid" src="../assets/img/youtube.svg" alt="">
-                    </a>
-                    <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon-home" target="_blank">
-                        <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
-                    </a>
-                </div>
+        <div class="loc-cont">
+            <div class="loc-anim">
+                <a href="https://goo.gl/maps/nvdGq6E81k" target="_blank">
+                    <img class="loc-vector img-fluid" src="../assets/img/showLog.svg" alt="">
+                    <p class="location-mark">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </p>
+                    <p class="loc-hide">C/San Ignacio, 14 45600 | Talavera de laReina</p>
+                    <p class="loc-go">Ver en Google aps
+                        <img src="../assets/img/backarrow.svg" alt="">
+                    </p>
+                </a>
             </div>
+            <div class="location social">
+                <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon-home" target="_blank">
+                    <img class="img-fluid" src="../assets/img/facebook.svg" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon-home" target="_blank">
+                    <img class="img-fluid" src="../assets/img/youtube.svg" alt="">
+                </a>
+                <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon-home" target="_blank">
+                    <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
+                </a>
+            </div>
+        </div>
 
-        </section>
+    </section>
     </div>
     <footer>
         <div class="footer-cont" data-aos="fade-in">
@@ -306,27 +306,34 @@
     <script src="../js/main.js?" type="text/javascript"></script>
     <script>
         // formvalidation
+
         $(document).ready(function () {
-            $('#info').ajaxForm(function () {});
-            $('#orgprod').ajaxForm(function () {});
-            $('#design').ajaxForm(function () {});
-            $('#incid').ajaxForm(function () {});
             $("#info").submit(function (event) {
-                event.preventDefault();
                 var sender_name = $('.mailName').val();
                 var empresa = $('.mailEmpresa').val();
                 var sender_email = $('.mailEmail').val();
                 var sender_number = $('.mailNumber').val();
                 var my_file = $('.mailFiles').val();
                 var submit = $('.mailSubmit').val();
-                    $('.form-message').load('../info.php', {
-                        sender_name: sender_name,
-                        empresa: empresa,
-                        sender_email: sender_email,
-                        sender_number: sender_number,
-                        my_file: my_file,
-                        submit_form: submit,
-                    });
+                $('.form-message').load('../info.php', {
+                    sender_name: sender_name,
+                    empresa: empresa,
+                    sender_email: sender_email,
+                    sender_number: sender_number,
+                    my_file: my_file,
+                    submit_form: submit,
+                });
+
+                var form = $(this);
+                var url = form.attr('action');
+
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    url: url,
+                    data: form
+                });
+
+                event.preventDefault();
             });
         });
     </script>

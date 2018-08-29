@@ -1,4 +1,3 @@
-
 // toggle menu
 function toggleMenu(x) {
     var menu = document.getElementById("menu");
@@ -17,9 +16,13 @@ function toggleSubMenu(x) {
 // toggle form
 function formExpand(x) {
     $('.form-cont').removeClass('expanded');
-    setTimeout(function () { $('.form-cont').removeClass('noDisplay'); }, 300);
+    setTimeout(function () {
+        $('.form-cont').removeClass('noDisplay');
+    }, 300);
     $(x).addClass("expanded");
-    setTimeout( function(){$(x).addClass("noDisplay");}, 350);
+    setTimeout(function () {
+        $(x).addClass("noDisplay");
+    }, 350);
 }
 
 // slider
@@ -27,67 +30,67 @@ $(".first-slider").each(function (index, element) {
     var $this = $(this);
     $this.addClass("instance-" + index);
     var swiper = new Swiper(".instance-" + index, {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            effect: 'fade',
-            keyboard: {
-                enabled: true,
-            },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        effect: 'fade',
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         }
 
     });
-       var mySwiper = document.querySelector('.swiper-container').swiper
+    var mySwiper = document.querySelector('.swiper-container').swiper
 
-       $(".swiper-container").mouseenter(function () {
-           mySwiper.autoplay.stop();
-       });
+    $(".swiper-container").mouseenter(function () {
+        mySwiper.autoplay.stop();
+    });
 
-       $(".swiper-container").mouseleave(function () {
-           mySwiper.autoplay.start();
-       });
+    $(".swiper-container").mouseleave(function () {
+        mySwiper.autoplay.start();
+    });
 
 });
 $(".opinion-slider").each(function (index, element) {
     var $this = $(this);
     $this.addClass("instance-" + index);
     var swiper = new Swiper(".instance-" + index, {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            effect: 'fade',
-            keyboard: {
-                enabled: true,
-            },
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-            },
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        effect: 'fade',
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
 
-            // If we need pagination
+        // If we need pagination
 
     });
-       var mySwiper = document.querySelector('.swiper-container').swiper
+    var mySwiper = document.querySelector('.swiper-container').swiper
 
-       $(".swiper-container").mouseenter(function () {
-           mySwiper.autoplay.stop();
-       });
+    $(".swiper-container").mouseenter(function () {
+        mySwiper.autoplay.stop();
+    });
 
-       $(".swiper-container").mouseleave(function () {
-           mySwiper.autoplay.start();
-       });
+    $(".swiper-container").mouseleave(function () {
+        mySwiper.autoplay.start();
+    });
 
 });
- 
+
 AOS.init({
     // Global settings
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function

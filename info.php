@@ -1,16 +1,13 @@
 <?php 
 
-if(isset($_FILES['my_file']) && isset($_POST['submit_form']))
-{
-
     $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING);
     $empresa    = filter_var($_POST["empresa"], FILTER_SANITIZE_STRING);
     $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING);
     $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING);
     $subject = "Formulario de Información y Presupuestos";
-
+    
     $recipient_email    = 'gabrielcireslopez@gmail.com'; 
-
+    
     //Get uploaded file data
     $file_tmp_name    = $_FILES['my_file']['tmp_name'];
     $file_name        = $_FILES['my_file']['name'];
@@ -65,24 +62,23 @@ if(isset($_FILES['my_file']) && isset($_POST['submit_form']))
         echo "<span class='form-success'>!Correo enviado! Te responderemos cuanto antes.</span>";
     };
 
-}
 ?>
 
 <script>
 
-    $(".mailName, .mailEmail, .mailNumber").addClass("all-good");
+    $(".mailName, .mailEmail, .mailNumber, .mailLabel").addClass("all-good");
 
     var errorEmpty = "<?php echo $errorEmpty; ?>";
     var errorEmail = "<?php echo $errorEmail; ?>";
 
     if (errorEmpty == true) {
-        $(".mailName, .mailEmail, .mailNumber").removeClass("all-good");
+        $(".mailName, .mailEmail, .mailNumber, .mailLabel").removeClass("all-good");
     }
     if (errorEmail == true) {
         $(".mailEmail").removeClass("all-good");
     }
     if (errorEmpty == false && errorEmail == false) {
-        $(".mailName, .mailEmail, .mailNumber").val("");
+        $(".mailName, .mailEmail, .mailNumber, .mailLabel").val("");
     }
 
 </script>

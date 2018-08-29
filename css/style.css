@@ -1847,11 +1847,34 @@ input.input-file {
     font-family: "Gotham-bold";
 }
 
-.input-errors.all-good {
+input.input-errors.all-good {
     -webkit-box-shadow: inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
     box-shadow: inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+}
+
+.mailLabel.input-errors.all-good {
+    color: white;
+}
+.mailLabel.input-errors {
+    color: #e0013f;
+}
+
+.file-message.good {
+    color: black;
+    opacity: 0;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.file-message {
+    color: black;
+    opacity: 1;
+    margin: 0 auto;
 }
 
 input.input-errors {
