@@ -63,23 +63,3 @@
     };
 
 ?>
-
-<script>
-
-    $(".mailName, .mailEmail, .mailNumber, .mailLabel").addClass("all-good");
-
-    var errorEmpty = "<?php echo $errorEmpty; ?>";
-    var errorEmail = "<?php echo $errorEmail; ?>";
-
-    if (errorEmpty == true) {
-        $(".mailName, .mailEmail, .mailNumber, .mailLabel").removeClass("all-good");
-    }
-    if (errorEmail == true) {
-        $(".mailEmail").removeClass("all-good");
-    }
-    if (errorEmpty == false && errorEmail == false) {
-        $(".mailName, .mailEmail, .mailNumber, .mailLabel").val("");
-    }
-
-</script>
-

@@ -118,7 +118,7 @@
                             <p class="form-text">Nombre
                                 <span>*</span>
                             </p>
-                            <input class="mailName input-errors all-good" name="sender_name" type="text">
+                            <input id="name" class="mailName input-errors all-good" name="sender_name" type="text" required>
 
                             <p class="form-text">Empresa
                             </p>
@@ -127,18 +127,18 @@
                             <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input class="mailEmail input-errors all-good" name="sender_email" type="email">
+                            <input id="email" class="mailEmail input-errors all-good" name="sender_email" type="email" required>
 
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
-                            <input class="mailNumber input-errors all-good" name="sender_number" type="tel">
+                            <input class="mailNumber input-errors all-good" name="sender_number" type="tel" required>
 
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
                             <input id="file" class="mailFiles input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file"
-                                type="file">
+                                type="file" required>
                             <label class="input-file-label mailLabel input-errors all-good" for="file">Seleccione
                                 archivos</label>
                             <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
@@ -308,56 +308,38 @@
     <script src="../js/main.js?" type="text/javascript"></script>
     <script>
         // formvalidation
-
         $(document).ready(function () {
+            
+            //Validations
+            var name = document.getElementById("name");
+            name.addEventListener("keyup", function (event) {
+                if (name.validity.valueMissing) {
+                    name.setCustomValidity("Introduce un nombre!");
+                } else {
+                    name.setCustomValidity("");
+                }
+            });
+
+            var email = document.getElementById("email");
+            email.addEventListener("keyup", function (event) {
+                if (email.validity.valueMissing) {
+                    email.setCustomValidity("Introduce un correo!");
+                } else if (email.validity.typeMismatch) {
+                    email.setCustomValidity("Introduce un correo válido!");
+                } else {
+                    email.setCustomValidity("");
+                }
+            });
             $("#info").submit(function (e) {
                 e.preventDefault();
-                e.stopImmediatePropagation();
                 var form = $(this);
                 $(form).ajaxSubmit({
                     type: "POST",
                     url: "../info.php",
                     data: form
                 });
-                var sender_name = $('.mailName').val();
-                var empresa = $('.mailEmpresa').val();
-                var sender_email = $('.mailEmail').val();
-                var sender_number = $('.mailNumber').val();
-                var my_file = $('.mailFiles').val();
-                var submit = $('.mailSubmit').val();
-                // $('.form-message').load('../info.php', {
-                //     sender_name: sender_name,
-                //     empresa: empresa,
-                //     sender_email: sender_email,
-                //     sender_number: sender_number,
-                //     my_file: my_file,
-                //     submit_form: submit,
-                // });
                 return false;
             });
-            // $("#orgprod").submit(function (e) {
-            //     e.preventDefault();
-            //     e.stopImmediatePropagation();
-            //     var form = $(this);
-            //     $(form).ajaxSubmit({
-            //         type: "POST",
-            //         url: "../info.php",
-            //         data: form
-            //     });
-            //     var sender_name = $('.mailName').val();
-            //     var sender_email = $('.mailEmail').val();
-            //     var sender_number = $('.mailNumber').val();
-            //     var my_file = $('.mailFiles').val();
-            //     var submit = $('.mailSubmit').val();
-            //     $('.form-message').load('../info.php', {
-            //         sender_name: sender_name,
-            //         sender_email: sender_email,
-            //         sender_number: sender_number,
-            //         my_file: my_file,
-            //         submit_form: submit,
-            //     });
-            //     return false;
-            // });
         });
     </script>
 
