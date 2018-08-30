@@ -656,10 +656,6 @@ header a {
     font-size: 1em;
 }
 
-header li.no-pad a.serv-sect.no-select {
-    display: none;
-}
-
 .serv-sect {
     font-size: 1em;
     color: white;
@@ -1267,12 +1263,6 @@ _:future,
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 }
 
-.cont-home input {
-    margin: 5px 0 40px;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-}
-
 .cont-home .contact-info {
     margin-top: 20px;
 }
@@ -1650,6 +1640,9 @@ footer a:hover img {
     width: fit-content;
     max-width: 500px;
     text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     height: fit-content;
     position: absolute;
     margin: auto;
@@ -1847,19 +1840,19 @@ input.input-file {
     font-family: "Gotham-bold";
 }
 
-input.input-errors.all-good {
+input {
     -webkit-box-shadow: inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
     box-shadow: inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
-
-.mailLabel.input-errors.all-good {
+/* 
+.mailLabel.input-errors. {
     color: white;
 }
 .mailLabel.input-errors {
     color: #e0013f;
-}
+} */
 
 .file-message.good {
     color: black;
@@ -1882,6 +1875,15 @@ input.input-errors {
     box-shadow: inset 0 0 0px 3px #360000, inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+}
+
+.error {
+    color: black;
+    padding: 0;
+}
+
+.error.active {
+    padding: 0.3em;
 }
 
 .contact-info {
@@ -2480,12 +2482,6 @@ section#blog {
         width: 100%;
         display: block;
         font-size: 1em;
-    }
-    header li.no-pad p.serv-sect.no-select {
-        display: none;
-    }
-    header li.no-pad a.serv-sect.no-select {
-        display: inherit;
     }
     .show-home-menu {
         width: 300px;

@@ -64,8 +64,6 @@
             </a>
 
             <li class="no-pad">
-                <p class="serv-sect no-select" onclick="toggleContacto(this)">
-                    <i class="fas fa-phone"></i> Contacto</p>
                 <a href="clientes.html" class="serv-sect no-select">
                     <p class="menu-txt-hov">
                         <i class="fas fa-users"></i> Clientes</p>
@@ -117,32 +115,32 @@
 
                             <p class="form-text">Nombre
                                 <span>*</span>
+                                <span class="error" aria-live="polite"></span>
                             </p>
-                            <input id="name" class="mailName input-errors all-good" name="sender_name" type="text" required>
+                            <input id="name" class="" name="sender_name" type="text" required>
 
                             <p class="form-text">Empresa
                             </p>
-                            <input class="mailEmpresa input-errors all-good" name="empresa" type="text">
+                            <input class="" name="empresa" type="text">
 
                             <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input id="email" class="mailEmail input-errors all-good" name="sender_email" type="email" required>
+                            <input id="email" class="" name="sender_email" type="email" required>
 
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
-                            <input class="mailNumber input-errors all-good" name="sender_number" type="tel" required>
+                            <input class="" name="sender_number" type="tel" required>
 
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
-                            <input id="file" class="mailFiles input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file"
-                                type="file" required>
-                            <label class="input-file-label mailLabel input-errors all-good" for="file">Seleccione
+                            <label class="input-file-label" for="file">Seleccione
                                 archivos</label>
+                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file"
+                                required>
                             <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
-                            <p class="form-message"></p>
                         </form>
                     </div>
                 </div>
@@ -156,28 +154,32 @@
 
                             <p class="form-text">Nombre
                                 <span>*</span>
+                                <span class="error" aria-live="polite"></span>
                             </p>
-                            <input class="mailName input-errors all-good" name="name" type="text">
+                            <input id="name" class="" name="sender_name" type="text" required>
 
-                            <p class="form-text">Mail
+                            <p class="form-text">Empresa
+                            </p>
+                            <input class="" name="empresa" type="text">
+
+                            <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input class="mailEmail input-errors all-good" name="email" type="email">
+                            <input id="email" class="" name="sender_email" type="email" required>
 
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
-                            <input class="mailNumber input-errors all-good" name="number" type="tel">
+                            <input class="" name="sender_number" type="tel" required>
 
-                            <p class="form-text">Adj. Archivos
+                            <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
-                            <input id="file" class="input-file mailFiles input-errors all-good" name="files" type="file"
-                                data-multiple-caption="{count} files selected" multiple>
-                            <label class="input-file-label" for="file">Seleccione archivos</label>
-
-                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
-                            <p class="form-message"></p>
+                            <label class="input-file-label" for="file">Seleccione
+                                archivos</label>
+                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file"
+                                required>
+                            <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -191,28 +193,32 @@
 
                             <p class="form-text">Nombre
                                 <span>*</span>
+                                <span class="error" aria-live="polite"></span>
                             </p>
-                            <input class="mailName input-errors all-good" name="name" type="text">
+                            <input id="name" class="" name="sender_name" type="text" required>
 
-                            <p class="form-text">Mail
+                            <p class="form-text">Empresa
+                            </p>
+                            <input class="" name="empresa" type="text">
+
+                            <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input class="mailEmail input-errors all-good" name="email" type="email">
+                            <input id="email" class="" name="sender_email" type="email" required>
 
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
-                            <input class="mailNumber input-errors all-good" name="number" type="tel">
+                            <input class="" name="sender_number" type="tel" required>
 
-                            <p class="form-text">Adj. Archivos
+                            <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
-                            <input id="file" class="input-file mailFiles input-errors all-good" name="files" type="file"
-                                data-multiple-caption="{count} files selected" multiple>
-                            <label class="input-file-label" for="file">Seleccione archivos</label>
-
-                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
-                            <p class="form-message"></p>
+                            <label class="input-file-label" for="file">Seleccione
+                                archivos</label>
+                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file"
+                                type="file" required>
+                            <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -226,28 +232,32 @@
 
                             <p class="form-text">Nombre
                                 <span>*</span>
+                                <span class="error" aria-live="polite"></span>
                             </p>
-                            <input class="mailName input-errors all-good" name="name" type="text">
+                            <input id="name" class="" name="sender_name" type="text" required>
 
-                            <p class="form-text">Mail
+                            <p class="form-text">Empresa
+                            </p>
+                            <input class="" name="empresa" type="text">
+
+                            <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input class="mailEmail input-errors all-good" name="email" type="email">
+                            <input id="email" class="" name="sender_email" type="email" required>
 
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
-                            <input class="mailNumber input-errors all-good" name="number" type="tel">
+                            <input class="" name="sender_number" type="tel" required>
 
-                            <p class="form-text">Adj. Archivos
+                            <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                                 <span>*</span>
                             </p>
-                            <input id="file" class="input-file mailFiles input-errors all-good" name="files" type="file"
-                                data-multiple-caption="{count} files selected" multiple>
-                            <label class="input-file-label" for="file">Seleccione archivos</label>
-
-                            <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
-                            <p class="form-message"></p>
+                            <label class="input-file-label" for="file">Seleccione
+                                archivos</label>
+                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file"
+                                type="file" required>
+                            <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
                         </form>
                     </div>
                 </div>
@@ -319,26 +329,15 @@
                 });
                 return false;
             });
-            
-            //Validations
-            var name = document.getElementById('name');
-            name.addEventListener("keyup", function (event) {
-                if (name.validity.valueMissing) {
-                    name.setCustomValidity("Introduce un nombre!");
-                } else {
-                    name.setCustomValidity("");
-                }
-            });
-    
-            var email = document.getElementById("email");
-            email.addEventListener("keyup", function (event) {
-                if (email.validity.valueMissing) {
-                    email.setCustomValidity("Introduce un correo!");
-                } else if (email.validity.typeMismatch) {
-                    email.setCustomValidity("Introduce un correo válido!");
-                } else {
-                    email.setCustomValidity("");
-                }
+            $("#info").submit(function (e) {
+                e.preventDefault();
+                var form = $(this);
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    url: "../info.php",
+                    data: form
+                });
+                return false;
             });
         });
     </script>

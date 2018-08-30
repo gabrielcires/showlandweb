@@ -45,21 +45,8 @@
         $body .="Content-Transfer-Encoding: base64\r\n";
         $body .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
         $body .= $encoded_content; 
-        
-    $errorEmpty = false;
-    $errorEmail = false;
 
-    if (empty($sender_name) || empty($sender_email) || empty($sender_number)) {
-        echo "<span class='form-error'>Rellena los campos obligatorios!*</span>";
-        $errorEmpty = true;
-
-    } elseif (!filter_var($sender_email, FILTER_VALIDATE_EMAIL)) {
-        echo "<span class='form-error'>Introduce un correo válido!</span>";
-        $errorEmail = true;
-
-    } else { 
         $sentMail = @mail($recipient_email, $subject, $body, $headers);
-        echo "<span class='form-success'>!Correo enviado! Te responderemos cuanto antes.</span>";
-    };
+
 
 ?>

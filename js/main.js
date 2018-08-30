@@ -114,3 +114,55 @@ AOS.refresh()
 jQuery(function () {
     jQuery("#videoShow").YTPlayer();
 });
+
+//Validations
+$(document).ready(function () {
+    var invalidClassName = 'input-errors'
+    var inputs = document.querySelectorAll('input')
+    inputs.forEach(function (input) {
+        // Add a css class on submit when the input is invalid.
+        input.addEventListener('invalid', function () {
+            input.classList.add(invalidClassName)
+        })
+
+        // Remove the class when the input becomes valid.
+        // 'input' will fire each time the user types
+        input.addEventListener('input', function () {
+            if (input.validity.valid) {
+                input.classList.remove(invalidClassName)
+            }
+        })
+    })
+
+    const customMessages = {
+        valueMissing: 'Rellena este campo!', // `required` attr
+        emailMismatch: 'Introduce un correo válido' // Invalid email
+    }
+
+    function getCustomMessage(type, validity) {
+        if (validity.typeMismatch) {
+            return customMessages[`${type}Mismatch`]
+        } else {
+            for (const invalidKey in customMessages) {
+                if (validity[invalidKey]) {
+                    return customMessages[invalidKey]
+                }
+            }
+        }
+    }
+
+    var inputs = document.querySelectorAll('input, select, textarea')
+    inputs.forEach(function (input) {
+        // Each time the user types or submits, this will
+        // check validity, and set a custom message if invalid.
+        function checkValidity() {
+            const message = input.validity.valid ?
+                null :
+                getCustomMessage(input.type, input.validity, customMessages)
+            input.setCustomValidity(message || '')
+        }
+        input.addEventListener('input', checkValidity)
+        input.addEventListener('invalid', checkValidity)
+    })
+
+});
