@@ -309,27 +309,6 @@
     <script>
         // formvalidation
         $(document).ready(function () {
-            
-            //Validations
-            var name = document.getElementById("name");
-            name.addEventListener("keyup", function (event) {
-                if (name.validity.valueMissing) {
-                    name.setCustomValidity("Introduce un nombre!");
-                } else {
-                    name.setCustomValidity("");
-                }
-            });
-
-            var email = document.getElementById("email");
-            email.addEventListener("keyup", function (event) {
-                if (email.validity.valueMissing) {
-                    email.setCustomValidity("Introduce un correo!");
-                } else if (email.validity.typeMismatch) {
-                    email.setCustomValidity("Introduce un correo válido!");
-                } else {
-                    email.setCustomValidity("");
-                }
-            });
             $("#info").submit(function (e) {
                 e.preventDefault();
                 var form = $(this);
@@ -339,6 +318,27 @@
                     data: form
                 });
                 return false;
+            });
+            
+            //Validations
+            var name = document.getElementById('name');
+            name.addEventListener("keyup", function (event) {
+                if (name.validity.valueMissing) {
+                    name.setCustomValidity("Introduce un nombre!");
+                } else {
+                    name.setCustomValidity("");
+                }
+            });
+    
+            var email = document.getElementById("email");
+            email.addEventListener("keyup", function (event) {
+                if (email.validity.valueMissing) {
+                    email.setCustomValidity("Introduce un correo!");
+                } else if (email.validity.typeMismatch) {
+                    email.setCustomValidity("Introduce un correo válido!");
+                } else {
+                    email.setCustomValidity("");
+                }
             });
         });
     </script>
