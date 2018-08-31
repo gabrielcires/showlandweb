@@ -113,11 +113,12 @@
                     <div class="form-display">
                         <form id="info" class="all-forms" enctype="multipart/form-data">
 
+                            <p class="form-text2">Información y presupuestos
+                            </p>
                             <p class="form-text">Nombre
                                 <span>*</span>
-                                <span class="error" aria-live="polite"></span>
                             </p>
-                            <input id="name" class="" name="sender_name" type="text" required>
+                            <input class="" name="sender_name" type="text" required>
 
                             <p class="form-text">Empresa
                             </p>
@@ -126,7 +127,7 @@
                             <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input id="email" class="" name="sender_email" type="email" required>
+                            <input class="" name="sender_email" type="email" required>
 
                             <p class="form-text">Telf
                                 <span>*</span>
@@ -134,14 +135,13 @@
                             <input class="" name="sender_number" type="tel" required>
 
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
-                                <span>*</span>
                             </p>
                             <label class="input-file-label" for="file">Seleccione
                                 archivos</label>
-                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file"
-                                required>
+                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
                             <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
                         </form>
+                        <p class="msg1"></p>
                     </div>
                 </div>
                 <div class="form-cont firstForm" onclick="formExpand(this)">
@@ -151,12 +151,12 @@
                     </div>
                     <div class="form-display">
                         <form id="orgprod" class="all-forms">
-
+                            <p class="form-text2">Organización y Producción de Eventos
+                            </p>
                             <p class="form-text">Nombre
                                 <span>*</span>
-                                <span class="error" aria-live="polite"></span>
                             </p>
-                            <input id="name" class="" name="sender_name" type="text" required>
+                            <input class="" name="sender_name" type="text" required>
 
                             <p class="form-text">Empresa
                             </p>
@@ -165,7 +165,7 @@
                             <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input id="email" class="" name="sender_email" type="email" required>
+                            <input class="" name="sender_email" type="email" required>
 
                             <p class="form-text">Telf
                                 <span>*</span>
@@ -173,14 +173,13 @@
                             <input class="" name="sender_number" type="tel" required>
 
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
-                                <span>*</span>
                             </p>
-                            <label class="input-file-label" for="file">Seleccione
+                            <label class="input-file-label" for="file2">Seleccione
                                 archivos</label>
-                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file"
-                                required>
+                            <input id="file2" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
                             <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
                         </form>
+                        <p class="msg2"></p>
                     </div>
                 </div>
                 <div class="form-cont firstForm" onclick="formExpand(this)">
@@ -190,12 +189,12 @@
                     </div>
                     <div class="form-display">
                         <form id="design" class="all-forms">
-
+                            <p class="form-text2">Diseño, Comunicación y Artes Gráficas
+                            </p>
                             <p class="form-text">Nombre
                                 <span>*</span>
-                                <span class="error" aria-live="polite"></span>
                             </p>
-                            <input id="name" class="" name="sender_name" type="text" required>
+                            <input class="" name="sender_name" type="text" required>
 
                             <p class="form-text">Empresa
                             </p>
@@ -204,7 +203,7 @@
                             <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input id="email" class="" name="sender_email" type="email" required>
+                            <input class="" name="sender_email" type="email" required>
 
                             <p class="form-text">Telf
                                 <span>*</span>
@@ -212,53 +211,109 @@
                             <input class="" name="sender_number" type="tel" required>
 
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
-                                <span>*</span>
                             </p>
-                            <label class="input-file-label" for="file">Seleccione
+                            <label class="input-file-label" for="file3">Seleccione
                                 archivos</label>
-                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file"
-                                type="file" required>
+                            <input id="file3" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
                             <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
                         </form>
+                        <p class="msg3"></p>
                     </div>
                 </div>
-                <div class="form-cont firstForm" onclick="formExpand(this)">
+                <div class="form-cont" onclick="formExpand(this)">
+                    <div class="form-first-layer">
+                        <h1 class="form-title">Media (Videos)</h1>
+                        <img class="form-back img-fluid" src="../assets/img/slider/media.jpg" alt="">
+                    </div>
+                    <div class="form-display">
+                        <form id="media" class="all-forms">
+                            <p class="form-text2">Media (Videos)
+                            </p>
+                            <p class="form-text">Nombre
+                                <span>*</span>
+                            </p>
+                            <input class="" name="sender_name" type="text" required>
+
+                            <p class="form-text">Empresa
+                            </p>
+                            <input class="" name="empresa" type="text">
+
+                            <p class="form-text">Email
+                                <span>*</span>
+                            </p>
+                            <input class="" name="sender_email" type="email" required>
+
+                            <p class="form-text">Telf
+                                <span>*</span>
+                            </p>
+                            <input class="" name="sender_number" type="tel" required>
+
+                            <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
+                            </p>
+                            <label class="input-file-label" for="file4">Seleccione
+                                archivos</label>
+                            <input id="file4" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
+                            <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
+                        </form>
+                        <p class="msg4"></p>
+                    </div>
+                </div>
+                <div class="form-cont lastForm" onclick="formExpand(this)">
                     <div class="form-first-layer">
                         <h1 class="form-title">Incidencias</h1>
                         <img class="form-back img-fluid" src="../assets/img/slider/urgente.jpg" alt="">
                     </div>
                     <div class="form-display">
                         <form id="incid" class="all-forms">
-
-                            <p class="form-text">Nombre
+                            <p class="form-text2">Incidencias
+                            </p>
+                            <p class="form-text">Nombre Contacto
                                 <span>*</span>
-                                <span class="error" aria-live="polite"></span>
                             </p>
-                            <input id="name" class="" name="sender_name" type="text" required>
-
-                            <p class="form-text">Empresa
-                            </p>
-                            <input class="" name="empresa" type="text">
+                            <input class="" name="sender_name" type="text" required>
 
                             <p class="form-text">Email
                                 <span>*</span>
                             </p>
-                            <input id="email" class="" name="sender_email" type="email" required>
+                            <input class="" name="sender_email" type="email" required>
 
-                            <p class="form-text">Telf
+                            <p class="form-text">Telf Contacto
                                 <span>*</span>
                             </p>
                             <input class="" name="sender_number" type="tel" required>
 
-                            <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
+                            <p class="form-text">Nombre Empresa
+                            </p>
+                            <input class="" name="empresa" type="text">
+
+                            <p class="form-text">Nombre Establecimiento
                                 <span>*</span>
                             </p>
-                            <label class="input-file-label" for="file">Seleccione
+                            <input class="" name="sender_est" type="text" required>
+
+                            <p class="form-text">Población
+                                <span>*</span>
+                            </p>
+                            <input class="" name="sender_place" type="text" required>
+
+                            <p class="form-text">Descripción Incidencia
+                            </p>
+                            <textarea class="" name="description" type="text" cols="30" rows="10"></textarea>
+
+                            <div class="check-parent">
+                                <p class="form-text check-text">Urgente 24h
+                                </p>
+                                <div><input class="subject-list" type="checkbox" name="checking" value="Si"><span class="check-span">Si</span></div>
+                                <div><input class="subject-list" type="checkbox" name="checking" value="No"><span class="check-span">No</span></div>
+                            </div>
+                            <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
+                            </p>
+                            <label class="input-file-label" for="file5">Seleccione
                                 archivos</label>
-                            <input id="file" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file"
-                                type="file" required>
+                            <input id="file5" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
                             <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
                         </form>
+                        <p class="msg5"></p>
                     </div>
                 </div>
             </div>
@@ -324,18 +379,68 @@
                 var form = $(this);
                 $(form).ajaxSubmit({
                     type: "POST",
-                    url: "../info.php",
-                    data: form
+                    url: "info.php",
+                    data: form,
+                    success: function (response) {
+                        var message = "Enviado correctamente!";
+                        $('.msg1').html(message);
+                    }
                 });
                 return false;
             });
-            $("#info").submit(function (e) {
+            $("#orgprod").submit(function (e) {
                 e.preventDefault();
                 var form = $(this);
                 $(form).ajaxSubmit({
                     type: "POST",
-                    url: "../info.php",
-                    data: form
+                    url: "org.php",
+                    data: form,
+                    success: function (response) {
+                        var message = "Enviado correctamente!";
+                        $('.msg2').html(message);
+                    }
+                });
+                return false;
+            });
+            $("#design").submit(function (e) {
+                e.preventDefault();
+                var form = $(this);
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    url: "design.php",
+                    data: form,
+                    success: function (response) {
+                        var message = "Enviado correctamente!";
+                        $('.msg3').html(message);
+                    }
+                });
+                return false;
+            });
+            $("#media").submit(function (e) {
+                e.preventDefault();
+                var form = $(this);
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    url: "media.php",
+                    data: form,
+                    success: function (response) {
+                        var message = "Enviado correctamente!";
+                        $('.msg4').html(message);
+                    }
+                });
+                return false;
+            });
+            $("#incid").submit(function (e) {
+                e.preventDefault();
+                var form = $(this);
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    url: "inci.php",
+                    data: form,
+                    success: function (response) {
+                        var message = "Enviado correctamente!";
+                        $('.msg5').html(message);
+                    }
                 });
                 return false;
             });

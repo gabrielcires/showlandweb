@@ -1612,7 +1612,11 @@ footer a:hover img {
 }
 
 .form-cont.expanded {
-    height: 600px;
+    height: 700px;
+}
+
+.form-cont.lastForm.expanded {
+    height: 1200px;
 }
 
 .form-cont .form-back {
@@ -1664,7 +1668,9 @@ footer a:hover img {
     height: auto;
     margin: 20px 20px;
     text-align: center;
-    display: flex;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     flex-wrap: wrap;
     position: absolute;
     top: 0;
@@ -1743,11 +1749,47 @@ footer a:hover img {
     transition: all .3s ease;
 }
 
+.check-parent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.all-forms input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    text-align: left;
+    margin-left: 0; 
+    margin-bottom: 0; 
+}
+
+.check-span {
+    color: white;
+    margin: 20px;
+    margin-left: 5px;
+}
+
+.form-text.check-text {
+    display: inline-block;
+    width: auto;
+    margin-right: 20px;
+}
+
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset, 1px 1px 3px rgba(0, 0, 0, .5);
     box-shadow: 0 0 0 30px white inset, 1px 1px 3px rgba(0, 0, 0, .5);
+    background-color: white !important;
+    background-image: none !important;
+}
+
+.all-forms input[type="checkbox"] {
+    -webkit-box-shadow:none;
+    box-shadow:none;
     background-color: white !important;
     background-image: none !important;
 }
@@ -1822,6 +1864,15 @@ input.input-file {
     text-transform: uppercase;
     font-size: .8em;
     letter-spacing: 3px;
+}
+
+.form-text2 {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: "Gotham-bold";
+    text-transform: uppercase;
+    font-size: 1.1em;
 }
 
 .form-text span {
@@ -2021,7 +2072,7 @@ section#blog {
     }
     .form-cont.expanded {
         width: 100%;
-        height: 650px;
+        height: 750px;
     }
     .form-display {
         margin: 50px;
@@ -2493,13 +2544,6 @@ section#blog {
         -moz-transition: all .3s ease;
         -ms-transition: all .3s ease;
         -o-transition: all .3s ease;
-    }
-    .serv-sect {
-        font-size: 1em;
-        color: white;
-        margin: 0;
-        padding: 20px 0;
-        cursor: pointer;
     }
     .cancel {
         color: #222 !important;

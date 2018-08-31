@@ -115,10 +115,14 @@ jQuery(function () {
     jQuery("#videoShow").YTPlayer();
 });
 
+$('.subject-list').on('change', function () {
+    $('.subject-list').not(this).prop('checked', false);
+});
+
 //Validations
 $(document).ready(function () {
     var invalidClassName = 'input-errors'
-    var inputs = document.querySelectorAll('input')
+    var inputs = document.querySelectorAll('input', 'textarea')
     inputs.forEach(function (input) {
         // Add a css class on submit when the input is invalid.
         input.addEventListener('invalid', function () {
