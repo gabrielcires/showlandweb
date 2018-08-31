@@ -1,4 +1,3 @@
-
 // toggle menu
 function toggleMenu(x) {
     var menu = document.getElementById("menu");
@@ -14,31 +13,23 @@ function toggleSubMenu(x) {
     ad.classList.toggle("show-menu");
 }
 
-// toggle contacto
-var menuCont = document.getElementById("menuCont");
-var menuAnim = document.getElementById("menuAnim");
-var c = document.getElementById("contacto");
-var social = document.getElementById("social");
-
-function toggleContacto(x) {
-    var contArrow = document.getElementById("contArrow");
-    menuCont.classList.toggle("fade-out");
-    menuAnim.classList.toggle("fade-out");
-    social.classList.toggle("fade-out");
-    c.classList.toggle("show-contacto");
-    contArrow.classList.add("fade-in");
+// toggle form
+function formExpand(x) {
+    $('.form-cont').removeClass('expanded');
+    setTimeout(function () {
+        $('.form-cont').removeClass('noDisplay');
+    }, 300);
+    $(x).addClass("expanded");
+    setTimeout(function () {
+        $(x).addClass("noDisplay");
+    }, 350);
 }
 
-function ContactoOut(x) {
-    menuCont.classList.remove("fade-out");
-    menuAnim.classList.remove("fade-out");
-    social.classList.remove("fade-out");
-    c.classList.remove("show-contacto");
-    x.classList.remove("fade-in");
-}
 // slider
-$(document).ready(function () {
-    new Swiper('.swiper-container', {
+$(".first-slider").each(function (index, element) {
+    var $this = $(this);
+    $this.addClass("instance-" + index);
+    var swiper = new Swiper(".instance-" + index, {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -55,7 +46,8 @@ $(document).ready(function () {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
-        },
+        }
+
     });
     var mySwiper = document.querySelector('.swiper-container').swiper
 
@@ -66,6 +58,37 @@ $(document).ready(function () {
     $(".swiper-container").mouseleave(function () {
         mySwiper.autoplay.start();
     });
+
+});
+$(".opinion-slider").each(function (index, element) {
+    var $this = $(this);
+    $this.addClass("instance-" + index);
+    var swiper = new Swiper(".instance-" + index, {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        effect: 'fade',
+        keyboard: {
+            enabled: true,
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+
+        // If we need pagination
+
+    });
+    var mySwiper = document.querySelector('.swiper-container').swiper
+
+    $(".swiper-container").mouseenter(function () {
+        mySwiper.autoplay.stop();
+    });
+
+    $(".swiper-container").mouseleave(function () {
+        mySwiper.autoplay.start();
+    });
+
 });
 
 AOS.init({
@@ -81,7 +104,7 @@ AOS.init({
     delay: 0, // values from 0 to 3000, with step 50ms
     duration: 400, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
-    once: true, // whether animation should happen only once - while scrolling down
+    once: false, // whether animation should happen only once - while scrolling down
     mirror: true, // whether elements should animate out while scrolling past them
     anchorPlacement: 'bottom-bottom', // defines which position of the element regarding to window should trigger the animation
 });
@@ -90,4 +113,60 @@ AOS.refresh()
 // video
 jQuery(function () {
     jQuery("#videoShow").YTPlayer();
+});
+
+$('.subject-list').on('change', function () {
+    $('.subject-list').not(this).prop('checked', false);
+});
+
+//Validations
+$(document).ready(function () {
+    var invalidClassName = 'input-errors'
+    var inputs = document.querySelectorAll('input', 'textarea')
+    inputs.forEach(function (input) {
+        // Add a css class on submit when the input is invalid.
+        input.addEventListener('invalid', function () {
+            input.classList.add(invalidClassName)
+        })
+
+        // Remove the class when the input becomes valid.
+        // 'input' will fire each time the user types
+        input.addEventListener('input', function () {
+            if (input.validity.valid) {
+                input.classList.remove(invalidClassName)
+            }
+        })
+    })
+
+    const customMessages = {
+        valueMissing: 'Rellena este campo!', // `required` attr
+        emailMismatch: 'Introduce un correo válido' // Invalid email
+    }
+
+    function getCustomMessage(type, validity) {
+        if (validity.typeMismatch) {
+            return customMessages[`${type}Mismatch`]
+        } else {
+            for (const invalidKey in customMessages) {
+                if (validity[invalidKey]) {
+                    return customMessages[invalidKey]
+                }
+            }
+        }
+    }
+
+    var inputs = document.querySelectorAll('input, select, textarea')
+    inputs.forEach(function (input) {
+        // Each time the user types or submits, this will
+        // check validity, and set a custom message if invalid.
+        function checkValidity() {
+            const message = input.validity.valid ?
+                null :
+                getCustomMessage(input.type, input.validity, customMessages)
+            input.setCustomValidity(message || '')
+        }
+        input.addEventListener('input', checkValidity)
+        input.addEventListener('invalid', checkValidity)
+    })
+
 });

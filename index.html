@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Showland</title>
-    <meta name="description" content="Eventos y Espectáculos | Sonido e iluminación | Diseño y Comunicación">
+    <meta name="description" content="Eventos Corporativos | Sonido e iluminación | Artes Gráficas | Tecnología y Comunicación">
     <meta http-equiv="author" content="graphik.es">
     <link rel="shortcut icon" href="assets/img/favicon.ico?" />
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
@@ -39,43 +39,45 @@
         </div>
     </div>
 
-    <div id="contArrow" class="back-arrow no-select" onclick="ContactoOut(this)">
-        <img src="assets/img/backarrow.svg" alt="">
-    </div>
+    <a href="index.html" class="logo-fixed">
+        <img src="aload/iconologo.svg" class="logo-fixed" alt="">
+    </a>
 
-    <header id="menu">
+    <header id="menu" data-aos="" data-aos-offset="1000" data-aos-once="false">
 
         <ul id="menuCont">
             <img class="show-home-menu" src="assets/img/showlh.svg" alt="">
-            <a class="no-select" href="index.html">
-                <li>
+            <a class="no-select " href="index.html">
+                <li class="menu-txt-hov">
                     <i class="fas fa-home"></i> Home</li>
             </a>
-            <li class="no-pad" onclick="toggleSubMenu(this)">
-                <p class="serv-sect  no-pad-btm">
+            <li class="no-pad sub-sect-cont" onclick="toggleSubMenu(this)">
+                <p class="serv-sect no-pad-btm menu-txt-hov">
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
                 <ul class="sub-sect" id="subMenu">
                     <a class="" href="sections/eventos.html">
-                        <li class="no-select">Eventos y Espectáculos</li>
+                        <li class="no-select menu-txt-hov">Eventos y Espectáculos</li>
                     </a>
                     <a class="" href="sections/sonido.html">
-                        <li class="no-select">Sonido e Iluminación</li>
+                        <li class="no-select menu-txt-hov">Sonido e Iluminación</li>
                     </a>
                     <a class="" href="sections/diseno.html">
-                        <li class="no-select">Diseño y Comunicación</li>
+                        <li class="no-select menu-txt-hov">Diseño y Comunicación</li>
                     </a>
                 </ul>
             </li>
 
             <a class="no-select" href="blog/blog.html">
-                <li>
+                <li class="menu-txt-hov">
                     <i class="fas fa-book-open"></i> Blog</li>
             </a>
 
             <li class="no-pad">
-                <p class="serv-sect no-select" onclick="toggleContacto(this)">
-                    <i class="fas fa-phone"></i> Contacto</p>
+                <a href="sections/clientes.html" class="serv-sect no-select">
+                    <p class="menu-txt-hov">
+                        <i class="fas fa-users"></i> Clientes</p>
+                </a>
             </li>
 
         </ul>
@@ -90,125 +92,68 @@
                 <img class="img-fluid" src="assets/img/instagram.svg" alt="">
             </a>
         </div>
-
-        <section id="contacto" class="">
-
-            <h2>Contacto</h2>
-
-            <form id="menuForm" class="contact-form" action="mailMenu.php" method="POST">
-
-                <p class="form-text">Nombre*</p>
-                <input class="mailNameM input-errors all-good" name="nameM" type="text">
-
-                <p class="form-text">Correo*</p>
-                <input class="mailEmailM input-errors all-good" name="emailM" type="email">
-
-                <p class="form-text">Asunto</p>
-                <input class="mailSubjectM" name="subjectM" type="text">
-
-                <p class="form-text">Mensaje*</p>
-                <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
-
-                <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
-                <p class="form-message"></p>
-
-                <div class="contact-info">
-                    <p>
-                        <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
-                    <p>
-                        <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                    <!-- <p>
-                        <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
-                </div>
-            </form>
-
-        </section>
     </header>
 
     <div class="container">
         <div class="center-obj">
-            <p style="margin: 50px auto 0">WEB EN CONSTRUCCIÓN</p>
-            <img class="show-home" src="assets/img/showlh.svg" alt="">
 
-
-            <div class="swiper-container swiper-nomrg dark-borders">
+            <div class="swiper-container first-slider swiper-nomrg dark-borders">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg-fa" src="assets/img/slider/facebook.svg" alt="">
-                            <img class="img-fluid" src="assets/img/slider/slide7.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="img-fluid first-slider" src="assets/img/slider/slide1.jpg" alt="">
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider-txt">
-                            <a href=""><img class="slider-svg" src="assets/img/slider/sonorizacion.svg" alt=""></a>
-                            <img class="img-fluid" src="assets/img/slider/slide4.jpg" alt="">
+                            <a href="sections/eventos.html">
+                                <img class="slider-svg" src="assets/img/slider/eventos.svg" alt="">
+                            </a>
+                            <img class="img-fluid" src="assets/img/slider/slide5.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <a href=""><img class="slider-svg" src="assets/img/slider/sonido.svg" alt=""></a>
+                            <a href="sections/sonido.html">
+                                <img class="slider-svg" src="assets/img/slider/sonido.svg" alt="">
+                            </a>
                             <img class="img-fluid" src="assets/img/slider/slide3.jpg" alt="">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slider-txt">
-                            <img class="slider-svg" src="assets/img/slider/design.svg" alt="">
+                            <a href="sections/diseno.html">
+                                <img class="slider-svg" src="assets/img/slider/design.svg" alt="">
+                            </a>
                             <img class="img-fluid" src="assets/img/slider/slide2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider-txt">
-                            <a href=""><img class="slider-svg" src="assets/img/slider/kids.svg" alt=""></a>
-                            <img class="img-fluid" src="assets/img/slider/slide6.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider-txt">
-                            <a href=""><img class="slider-svg" src="assets/img/slider/eventos.svg" alt=""></a>
-                            <img class="img-fluid" src="assets/img/slider/slide5.jpg" alt="">
                         </div>
                     </div>
                 </div>
                 <!-- If we need scrollbar -->
-                <div class="swiper-pagination"></div>
+                <div class="first-container swiper-pagination"></div>
             </div>
         </div>
         <section id="presentacion" data-aos="fade-in" data-aos-anchor-placement="top-center">
             <div class="logobj-grid">
-                <div class="logobj-cont">
-                    <img class="load-vector first-wave" src="aload/wave1.svg" alt="">
-                    <img class="load-vector second-wave" src="aload/wave2.svg" alt="">
-                    <img class="load-vector third-wave" src="aload/wave3.svg" alt="">
-                    <img class="load-vector fourth-wave" src="aload/wave4.svg" alt="">
-                </div>
+                <img class="img-fluid" src="assets/img/homeimage.png" alt="">
             </div>
             <div class="presentobj-grid">
                 <h1 class="bdr-title mrg-bottom">¡Hola!</h1>
-                <p>Somos una empresa joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente.</p>
-                <p>En lo que a un buen servicio se refiere no descuidamos ningún detalle, llegaremos hasta dónde el cliente
-                    quiera respetando su idea original. Nos implicamos al 100% en cada uno de nuestros departamentos con
-                    todo lo que necesitas, da igual lo pequeño o grande que sea su evento, todo lo que está en nuestras manos
-                    se puede hacer realidad.
+                <p>Somos un equipo joven y profesional, cuyo objetivo principal es la satisfacción de nuestro cliente. Aunamos
+                    creatividad, responsabilidad y una involucración personal de todo el equipo para alcanzar un único objetivo:
+                    dar vida a tu idea.</p>
+                <p>En lo que a un buen servicio se refiere, no descuidamos ningún detalle. No hay límites, solo metas. Cada
+                    uno de nuestros departamentos se implicará al 100% con todo lo que necesitas… no importa la magnitud
+                    de tu evento, tenemos soluciones a medida para ti.
                 </p>
-                <p class="nomrg-btm">Trabajamos día a día para hacernos un hueco entre las mejores empresas del sector, a día de hoy, nuestros
-                    clientes están muy satisfechos y más de uno nos avalan a la hora de recomendarnos a más gente.</p>
+                <p class="nomrg-btm">Trabajamos día a día para abrirnos hueco entre las mejores empresas del sector, a día de hoy, lo estamos
+                    consiguiendo. Y esto es gracias a ti. A clientes como tú que avalan cada día nuestra labor.</p>
             </div>
         </section>
 
+
+        <div class="txt-left">
+            <h1 class="bdr-title pad-top-safari">Nuestros SERVICIOS</h1>
+        </div>
         <section id="servicios" class="ignore-mrg">
             <div class="sect-tle-out" data-aos="fade-in" data-aos-anchor-placement="bottom-bottom">
-                <hr>
-                <div class="bdr-thin">
-                    <h2 class="pad-top-safari">Servicios</h2>
-                </div>
-                <hr>
             </div>
             <a href="sections/eventos.html">
                 <div class="serv-cont darklay" data-aos="fade-in">
@@ -237,13 +182,32 @@
                     </div>
                 </div>
             </a>
+
         </section>
+        <div class="servobj-grid">
+            <h1 class="bdr-title mrg-bottom">¿Qué es SHOWLAND?</h1>
+            <p>SHOWLAND GROUP es un grupo de empresas dedicado a la organización y producción integral de eventos y espectáculos.
+                Cuenta con un amplio abanico de servicios que contemplan algunos como:</p>
+            <ul>
+                <li>
+                    <span>- </span>Instalación, alquiler y venta de equipos de sonido e iluminación y material audiovisual.</li>
+                <li>
+                    <span>- </span>Producciones artísticas (espectáculos, artistas, entretenimiento…)</li>
+                <li>
+                    <span>- </span>Acondicionamiento de espacios y escenografías</li>
+                <li>
+                    <span>- </span>Diseño y comunicación integral.</li>
+                <li>
+                    <span>- </span>Artes gráficas.</li>
+            </ul>
+        </div>
         <section class="swiper-nomrg no-pad">
             <div class="serv-cont-vid" data-aos="fade-in" id="videoShow" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=bpmIzR3CoZU',containment:'self', ratio: 16/9, optimizeDisplay: true, mute:true, startAt:0, opacity:1, showControls: false, optimizeDisplay: true, playOnlyIfVisible: false, anchor:'top, top'}">
             </div>
         </section>
 
         <section id="withUs" class="">
+            <h1 class="bdr-title mrg-bottom">Nuestro LEMA</h1>
             <div class="glitch" data-aos="" data-aos-anchor-placement="bottom-bottom">
                 <img class="img-fluid glitch1" src="assets/img/withanim/all.svg" alt="">
                 <img class="img-fluid glitch2" src="assets/img/withanim/is.svg" alt="">
@@ -252,45 +216,42 @@
                 <img class="img-fluid glitch5" src="assets/img/withanim/us.svg" alt="">
             </div>
 
-            <p class="nomrg-bottom withus-txt" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="center-center" data-aos-offset="0">Showland destaca por organizar tu evento de principio a fin con todos sus componentes. Con Showland no tendrás que depender de varias empresas, nosotros te ofrecemos TODO para organizar el evento de tus sueños</p>
+            <p class="nomrg-bottom withus-txt" data-aos="fade-in" data-aos-delay="1250" ata-aos-anchor-placement="center-center" data-aos-offset="0">Muchos habréis visto a nuestros trabajadores con este lema a la espalda; otros habréis visto publicaciones con
+                el hastag #Allispossiblewithus… pero ¿a qué se debe? Os lo contamos: Nuestros propios clientes lo afirman:
+                “tenéis soluciones para todo”. Por esta razón implantamos un eslogan que nos definiese al 100%.</p>
         </section>
+        <div class="snd-slider-txt">
+            <h1 class="bdr-title mrg-bottom">Nuestros CLIENTES</h1>
+            <p class="withus-txt">“Un cliente satisfecho es la mejor estrategia de todas”, por ello, aquí os lo cuentan ellos mismos:</p>
+        </div>
 
-        <section id="contactoHome" class="ignore-mrg swiper-nomrg" data-aos="fade-in" ata-aos-anchor-placement="top-top" data-aos-offset="200">
-            <div class="sect-tle-out">
-                <div class="bdr-thin">
-                    <h2 class="pad-top-safari">Contacto</h2>
+        <section id="sndSlider" class="swiper-nomrg">
+
+            <div class="swiper-container opinion-slider dark-borders">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/slider/boca1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/slider/boca2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/slider/boca3.png" alt="">
+                    </div>
                 </div>
             </div>
 
-            <div class="cont-home">
+        </section>
 
-                <form id="homeContact" class="contact-form" action="mail.php" method="POST">
+        <section id="contLink">
 
-                    <p class="form-text">Nombre*</p>
-                    <input name="name" type="text" class="mailName input-errors all-good">
-
-                    <p class="form-text">Correo*</p>
-                    <input name="email" type="email" class="mailEmail input-errors all-good">
-
-                    <p class="form-text">Asunto</p>
-                    <input class="mailSubject" name="subject" type="text">
-
-                    <p class="form-text">Mensaje*</p>
-                    <textarea name="message" id="" cols="30" rows="6" class="mailMessage input-errors all-good"></textarea>
-
-                    <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
-                    <p class="form-message"></p>
-
-                    <div class="contact-info">
-                        <p>
-                            <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
-                        <p>
-                            <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                        <!-- <p>
-                            <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
-                    </div>
-                </form>
-            </div>
+            <h1 class="bdr-title mrg-bottom">Contacto</h1>
+            <p class="withus-txt">Pincha el icono y entra en nuestro área de cliente</p>
+            <a href="sections/clientes.html" class="contact-go">
+                <img class="img-fluid" src="assets/img/cont-icon.svg" alt="">
+            </a>
         </section>
 
         <section id="location" data-aos="fade-in">
@@ -346,57 +307,21 @@
     <script src="js/main.js?" type="text/javascript"></script>
 
     <script>
-        // formvalidation
-        $(document).ready(function () {
-
-            $("#homeContact").submit(function (event) {
-                event.preventDefault();
-                var name = $('.mailName').val();
-                var email = $('.mailEmail').val();
-                var subject = $('.mailSubject').val();
-                var message = $('.mailMessage').val();
-                var submit = $('.mailSubmit').val();
-                $('.form-message').load('mail.php', {
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message,
-                    submit: submit
-                });
+        // Preload
+        function preload(arrayOfImages) {
+            $(arrayOfImages).each(function () {
+                $('<img/>')[0].src = this;
             });
-            $("#menuForm").submit(function (event) {
-                event.preventDefault();
-                var nameM = $('.mailNameM').val();
-                var emailM = $('.mailEmailM').val();
-                var subjectM = $('.mailSubjectM').val();
-                var messageM = $('.mailMessageM').val();
-                var submitM = $('.mailSubmitM').val();
-                $('.form-message').load('mailMenu.php', {
-                    nameM: nameM,
-                    emailM: emailM,
-                    subjectM: subjectM,
-                    messageM: messageM,
-                    submitM: submitM
-                });
-            });
-        });
+        }
 
-        
-// Preload
-function preload(arrayOfImages) {
-    $(arrayOfImages).each(function () {
-        $('<img/>')[0].src = this;
-    });
-}
+        // Usage:
 
-// Usage:
-
-preload([
-    'aload/wave1.svg',
-    'aload/wave2.svg',
-    'aload/wave3.svg',
-    'aload/wave4.svg'
-]);
+        preload([
+            'aload/wave1.svg',
+            'aload/wave2.svg',
+            'aload/wave3.svg',
+            'aload/wave4.svg'
+        ]);
     </script>
 
 

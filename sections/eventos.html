@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Showland</title>
     <meta name="description" content="Eventos y Espectáculos | Sonido e iluminación | Diseño y Comunicación">
-    <meta http-equiv="author" content="Gabriel Cires López">
+    <meta http-equiv="author" content="Graphik">
     <link rel="shortcut icon" href="../assets/img/favicon.ico?" />
 
     <link rel="stylesheet" href="../css/normalize.css" type="text/css">
@@ -30,97 +30,64 @@
             <div class="bar3"></div>
         </div>
     </div>
+    <a href="../index.html" class="logo-fixed">
+        <img src="../aload/iconologo.svg" class="logo-fixed" alt="">
+    </a>
 
-    <div id="contArrow" class="back-arrow no-select" onclick="ContactoOut(this)">
-        <img src="../assets/img/backarrow.svg" alt="">
-    </div>
-
-    <header id="menu">
+    <header id="menu" data-aos="" data-aos-offset="1000" data-aos-once="false">
 
         <ul id="menuCont">
             <img class="show-home-menu" src="../assets/img/showlh.svg" alt="">
-            <a class="no-select" href="../index.html">
-                <li>
+            <a class="no-select " href="../index.html">
+                <li class="menu-txt-hov">
                     <i class="fas fa-home"></i> Home</li>
             </a>
-            <li class="no-pad" onclick="toggleSubMenu(this)">
-                <p class="serv-sect no-select no-pad-btm">
+            <li class="no-pad sub-sect-cont" onclick="toggleSubMenu(this)">
+                <p class="serv-sect no-pad-btm menu-txt-hov">
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
                 <ul class="sub-sect" id="subMenu">
-                    <a class="no-select" href="eventos.html">
-                        <li>Eventos y Espectáculos</li>
+                    <a class="" href="eventos.html">
+                        <li class="no-select menu-txt-hov">Eventos y Espectáculos</li>
                     </a>
-                    <a class="no-select" href="sonido.html">
-                        <li>Sonido e Iluminación</li>
+                    <a class="" href="sonido.html">
+                        <li class="no-select menu-txt-hov">Sonido e Iluminación</li>
                     </a>
-                    <a class="no-select" href="diseno.html">
-                        <li>Diseño y Comunicación</li>
+                    <a class="" href="diseno.html">
+                        <li class="no-select menu-txt-hov">Diseño y Comunicación</li>
                     </a>
                 </ul>
             </li>
 
             <a class="no-select" href="../blog/blog.html">
-                <li>
+                <li class="menu-txt-hov">
                     <i class="fas fa-book-open"></i> Blog</li>
             </a>
 
             <li class="no-pad">
-                <p class="serv-sect no-select" onclick="toggleContacto(this)">
-                    <i class="fas fa-phone"></i> Contacto</p>
+                <a href="clientes.html" class="serv-sect no-select">
+                    <p class="menu-txt-hov">
+                        <i class="fas fa-users"></i> Clientes</p>
+                </a>
             </li>
 
         </ul>
-
         <div id="social" class="social">
-            <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select" target="_blank">
+            <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="../assets/img/facebook.svg" alt="">
             </a>
-            <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select" target="_blank">
+            <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="../assets/img/youtube.svg" alt="">
             </a>
-            <a href="https://www.instagram.com/showlandgroup/" class="no-select" target="_blank">
+            <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon" target="_blank">
                 <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
             </a>
         </div>
-
-        <section id="contacto" class="">
-
-            <h2>Contacto</h2>
-
-            <form id="menuForm" class="contact-form" action="../mailMenu.php" method="POST">
-
-                <p class="form-text">Nombre*</p>
-                <input class="mailNameM input-errors all-good" name="nameM" type="text">
-
-                <p class="form-text">Correo*</p>
-                <input class="mailEmailM input-errors all-good" name="emailM" type="email">
-
-                <p class="form-text">Asunto</p>
-                <input class="mailSubjectM" name="subjectM" type="text">
-
-                <p class="form-text">Mensaje*</p>
-                <textarea class="mailMessageM input-errors all-good" name="messageM" id="" cols="30" rows="6"></textarea>
-
-                <button class="submit-btn mailSubmitM" type="submitM" name="submitM">Enviar</button>
-                <p class="form-message"></p>
-
-                <div class="contact-info">
-                    <p>
-                        <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
-                    <p>
-                        <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                    <!-- <p>
-                        <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
-                </div>
-            </form>
-
-        </section>
     </header>
 
     <div class="container">
 
-        <section id="eventos" class="ignore-mrg">
+        <section id="eventos" class="ignore-mrg eventos-pad">
             <div class="sub-sep">
                 <a href="corp.html">
                     <div class="serv-cont darklay" data-aos="fade-in">
@@ -151,43 +118,15 @@
                 todos los servicios necesarios para que este no pase desapercibido. Nos esforzamos por hacer que nuestros
                 clientes queden completamente satisfechos, siempre atendiendolos con la profesionalidad que se merecen.
             </p>
+
         </section>
-        <section id="contactoHome" class="ignore-mrg swiper-nomrg" data-aos="fade-in" ata-aos-anchor-placement="top-top" data-aos-offset="200">
-            <div class="sect-tle-out">
-                <div class="bdr-thin">
-                    <h2 class="pad-top-safari">Contacto</h2>
-                </div>
-            </div>
+        <section id="contLink">
 
-            <div class="cont-home">
-
-                <form id="homeContact" class="contact-form" action="../mail.php" method="POST">
-
-                    <p class="form-text">Nombre*</p>
-                    <input name="name" type="text" class="mailName input-errors all-good">
-
-                    <p class="form-text">Correo*</p>
-                    <input name="email" type="email" class="mailEmail input-errors all-good">
-
-                    <p class="form-text">Asunto</p>
-                    <input class="mailSubject" name="subject" type="text">
-
-                    <p class="form-text">Mensaje*</p>
-                    <textarea name="message" id="" cols="30" rows="6" class="mailMessage input-errors all-good"></textarea>
-
-                    <button class="submit-btn mailSubmit" type="submit" name="submit">Enviar</button>
-                    <p class="form-message"></p>
-
-                    <div class="contact-info">
-                        <p>
-                            <i class="fas fa-envelope"></i> info@showlandproducciones.es</p>
-                        <p>
-                            <i class="fas fa-phone-square"></i> (+34) 925 71 98 76</p>
-                        <!-- <p>
-                            <i class="fas fa-mobile-alt"></i> (+34) 677 13 32 21</p> -->
-                    </div>
-                </form>
-            </div>
+            <h1 class="bdr-title mrg-bottom">Contacto</h1>
+            <p class="withus-txt">Pincha el icono y entra en nuestro área de cliente</p>
+            <a href="clientes.html" class="contact-go">
+                <img class="img-fluid" src="../assets/img/cont-icon.svg" alt="">
+            </a>
         </section>
         <section id="location" data-aos="fade-in">
 
@@ -240,43 +179,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="../js/jquery.mb.YTPlayer.min.js"></script>
     <script src="../js/main.js?" type="text/javascript"></script>
-    <script>
-        // formvalidation
-        $(document).ready(function () {
-
-            $("#homeContact").submit(function (event) {
-                event.preventDefault();
-                var name = $('.mailName').val();
-                var email = $('.mailEmail').val();
-                var subject = $('.mailSubject').val();
-                var message = $('.mailMessage').val();
-                var submit = $('.mailSubmit').val();
-                $('.form-message').load('../mail.php', {
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message,
-                    submit: submit
-                });
-            });
-            $("#menuForm").submit(function (event) {
-                event.preventDefault();
-                var nameM = $('.mailNameM').val();
-                var emailM = $('.mailEmailM').val();
-                var subjectM = $('.mailSubjectM').val();
-                var messageM = $('.mailMessageM').val();
-                var submitM = $('.mailSubmitM').val();
-                $('.form-message').load('../mailMenu.php', {
-                    nameM: nameM,
-                    emailM: emailM,
-                    subjectM: subjectM,
-                    messageM: messageM,
-                    submitM: submitM
-                });
-            });
-        });
-    </script>
-
 
 </body>
 
