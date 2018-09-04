@@ -103,6 +103,15 @@
     }
 }
 
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+}
+    50% {
+        opacity: 1;
+}
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -864,6 +873,12 @@ header.show-menu {
     position: relative;
 }
 
+.swiper-img {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+
 .opinion-slider {
     width: calc(100% + 50px);
     height: auto;
@@ -1381,8 +1396,29 @@ footer a:hover img {
     flex-grow: 1;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
-    -webkit-transform: scale(.9);
-    transform: scale(.9);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.footer-txt {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    opacity: .7;
+    font-size: .8em;
+}
+
+.footer-txt span {
+    color: #e0013f;
+
 }
 
 .footer-cont {
@@ -1654,7 +1690,7 @@ footer a:hover img {
     bottom: 0;
     left: 0;
     right: 0;
-    font-size: 2em;
+    font-size: 1.4em;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
     transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
     -webkit-transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -1662,6 +1698,16 @@ footer a:hover img {
     -ms-transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
     -o-transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
     z-index: 10
+}
+
+.form-title span {
+    width: 100%;
+    display: block;
+    font-size: .6em;
+    font-family: "Gotham-light";
+    margin-top: 10px;
+    animation: blink .3s infinite ease;
+    -webkit-animation: blink 2s infinite ease;
 }
 
 .form-display {
