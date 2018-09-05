@@ -161,38 +161,38 @@
                                 <span>*</span>
                             </p>
                             <input class="" name="sender_name" type="text" required>
-                            
+
                             <p class="form-text">Empresa
                             </p>
                             <input class="" name="empresa" type="text">
-                            
+
                             <p class="form-text">Email
                                 <span>*</span>
                             </p>
                             <input class="" name="sender_email" type="email" required>
-                            
+
                             <p class="form-text">Telf
                                 <span>*</span>
                             </p>
                             <input class="" name="sender_number" type="tel" required>
-                            
+
                             <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
                             </p>
                             <label class="input-file-label" for="file2">Seleccione
                                 archivos</label>
-                                <input id="file2" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
-                                <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
-                            </form>
-                            <p class="msg2"></p>
-                        </div>
+                            <input id="file2" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
+                            <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
+                        </form>
+                        <p class="msg2"></p>
                     </div>
-                    <div class="form-cont firstForm" onclick="formExpand(this)">
-                            <div class="form-first-layer">
-                                <div class="form-title">
-                                    <h1 class="">Diseño, Comunicación y Artes Gráficas<span>Abrir Formulario</span></h1>
-                                </div>
-                                <img class="form-back img-fluid" src="../assets/img/slider/design.jpg" alt="">
-                            </div>
+                </div>
+                <div class="form-cont firstForm" onclick="formExpand(this)">
+                    <div class="form-first-layer">
+                        <div class="form-title">
+                            <h1 class="">Diseño, Comunicación y Artes Gráficas<span>Abrir Formulario</span></h1>
+                        </div>
+                        <img class="form-back img-fluid" src="../assets/img/slider/design.jpg" alt="">
+                    </div>
                     <div class="form-display">
                         <form id="design" class="all-forms">
                             <p class="form-text2">Diseño, Comunicación y Artes Gráficas
@@ -229,8 +229,8 @@
                 <div class="form-cont" onclick="formExpand(this)">
                     <div class="form-first-layer">
                         <div class="form-title">
-                                    <h1 class="">Media (Videos)<span>Abrir Formulario</span></h1>
-                                </div>
+                            <h1 class="">Media (Videos)<span>Abrir Formulario</span></h1>
+                        </div>
                         <img class="form-back img-fluid" src="../assets/img/slider/media.jpg" alt="">
                     </div>
                     <div class="form-display">
@@ -269,8 +269,8 @@
                 <div class="form-cont lastForm" onclick="formExpand(this)">
                     <div class="form-first-layer">
                         <div class="form-title">
-                                    <h1 class="">Incidencias<span>Abrir Formulario</span></h1>
-                                </div>
+                            <h1 class="">Incidencias<span>Abrir Formulario</span></h1>
+                        </div>
                         <img class="form-back img-fluid" src="../assets/img/slider/urgente.jpg" alt="">
                     </div>
                     <div class="form-display">
@@ -328,19 +328,27 @@
                 </div>
             </div>
         </section>
-        <section id="location" data-aos="fade-in">
+        <section id="location">
 
             <div class="loc-cont">
-                <div class="loc-anim">
+                <div class="loc-anim" data-aos="fade-in">
                     <a href="https://goo.gl/maps/nvdGMq6E81k" target="_blank">
-                        <img class="loc-vector img-fluid" src="../assets/img/showLog.svg" alt="">
+                        <div class="loc-img-back do1">
+                            <img class="loc-vector img-fluid" src="../assets/img/showLog.svg" alt="">
+                        </div>
                         <p class="location-mark">
                             <i class="fas fa-map-marker-alt"></i>
                         </p>
-                        <p class="loc-hide">C/San Ignacio, 14 45600 | Talavera de laReina</p>
-                        <p class="loc-go">Ver en Google aps
-                            <img src="../assets/img/backarrow.svg" alt="">
+                        <p class="loc-txt">C/ San Ignacio, 14 45600 | Talavera de la Reina</p>
+                    </a>
+                    <a href="https://goo.gl/maps/kdkhfUFxJ5C2" target="_blank">
+                        <div class="loc-img-back do2">
+                            <img class="loc-vector img-fluid" src="../assets/img/showLog.svg" alt="">
+                        </div>
+                        <p class="location-mark">
+                            <i class="fas fa-map-marker-alt"></i>
                         </p>
+                        <p class="loc-txt">C/ de Velazquez, 15, 1ºD 28001 | Madrid</p>
                     </a>
                 </div>
                 <div class="location social">
@@ -361,7 +369,7 @@
     </div>
     <footer>
         <div class="footer-cont" data-aos="fade-in">
-            <p class="footer-txt">Diseñado por <span>SHOWLAND</span></p>
+            <p class="footer-txt">© 2018, <span>SHOWLAND</span>. Todos los derechos reservados.</p>
             <a href="https://www.facebook.com/SHOWLANDGROUP/" target="_blank">
                 <img class="img-fluid foot-svg" src="../assets/img/footer1.svg" alt="">
             </a>
