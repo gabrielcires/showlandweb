@@ -532,7 +532,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    display: none;
+    /* display: none; */
 }
 
 .load-vector {
@@ -738,7 +738,7 @@ header a {
     -ms-flex-pack: center;
     justify-content: center;
     position: fixed;
-    top: 0;
+    top: 50px;
     right: 20px;
     z-index: 4000;
     -webkit-transition: all .3s ease;
@@ -846,11 +846,11 @@ header.show-menu {
 }
 
 .logo-fixed {
-    width: 70px;
+    width: 50px;
     height: auto;
     position: fixed;
-    top: 5px;
-    left: 20px;
+    top: 10px;
+    right: 12px;
     z-index: 2000;
     filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, .4));
     -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, .4));
@@ -1552,72 +1552,60 @@ footer a:hover img {
     z-index: 3000;
     height: 500px;
     width: 320px;
-    transition: all .3s ease;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
+    border: 0 solid rgb(66, 103, 177);
+    background: rgb(66, 103, 177);
+    border-top-width: 10px;
+    transition: all .5s cubic-bezier(.53,.02,.25,.86);
+    transform: translateY(100%);
 }   
 
 .face-btn-cont .face-btn {
     position: absolute;
-    bottom: 20px;
-    left: -50px;
+    top: -50px;
+    right: 0px;
     color: white;
     display: flex;
+    padding: 5px 10px;
+    padding-bottom: 50px;
+    background: rgba(66, 103, 177, 1);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
     cursor: pointer;
-    transition: all .5s ease;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 5.55);
     text-shadow: 0 0 3px rgba(0, 0, 0, .5)
 }
 
 .face-btn-cont.expand .face-btn {
-    transform: translateX(-80%) rotate(180deg);
-    -webkit-transform: translateX(-80%) rotate(180deg);
-    -moz-transform: translateX(-80%) rotate(180deg);
-    -ms-transform: translateX(-80%) rotate(180deg);
-    -o-transform: translateX(-80%) rotate(180deg);
+    transform: translateY(-5px);
 }
 
 .face-btn-cont .face-btn p {
+    font-family: "Gotham-bold";
     margin: 0;
     margin-left: 10px;
     transition: all .8s ease;
-    -webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -ms-transition: all .8s ease;
-    -o-transition: all .8s ease;
 }
 
-.face-btn-cont.expand .face-btn p {
+/* .face-btn-cont.expand .face-btn p {
     transform: rotate(-180deg);
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -ms-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
-}
+} */
 
 .face-btn-cont .face-btn i {
     font-size: 30px;
+    transform: rotate(90deg);
+    transition: all .3s ease;
+}
+
+.face-btn-cont.expand .face-btn i {
+    transform: rotate(-90deg);
 }
 
 .face-btn img {
@@ -1625,11 +1613,11 @@ footer a:hover img {
 }
 
 .face-btn-cont.expand {
-    transform: translateX(0%);
-    -webkit-transform: translateX(0%);
-    -moz-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
 }
 
 .face-btn-cont .face-cont {
@@ -1836,6 +1824,10 @@ section#vidSect {
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     overflow: hidden;
+}
+
+.form-cont .form-display p {
+    color: black!important;
 }
 
 .form-cont.expanded {
@@ -2771,7 +2763,7 @@ section#blog {
         margin-top: 20px;
     }
     #menu.aos-animate {
-        background: rgba(0, 0, 0, .7);
+        background: rgba(0, 0, 0, .5);
     }
     #menu.aos-animate .show-home-menu {
         width: 200px;
@@ -2859,6 +2851,7 @@ section#blog {
     .menu-btn {
         margin: 0 0 0 5px;
         font-family: "Gotham";
+        font-size: 1em;
         -webkit-transition: all .3s ease;
         transition: all .3s ease;
         text-shadow: 0 1px 8px rgba(0, 0, 0, .5);

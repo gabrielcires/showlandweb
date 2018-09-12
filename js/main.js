@@ -145,7 +145,7 @@ $(document).ready(function () {
 
     const customMessages = {
         valueMissing: 'Rellena este campo!', // `required` attr
-        emailMismatch: 'Introduce un correo válido' // Invalid email
+        emailMismatch: 'Introduce un correo válido!' // Invalid email
     }
 
     function getCustomMessage(type, validity) {
