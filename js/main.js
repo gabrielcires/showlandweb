@@ -1,3 +1,8 @@
+// toggle face
+function toggleFace(x) {
+    var face = document.getElementById("faceCont");
+    face.classList.toggle("expand");
+}
 // toggle menu
 function toggleMenu(x) {
     var menu = document.getElementById("menu");
@@ -90,7 +95,7 @@ $(".opinion-slider").each(function (index, element) {
     });
 
 });
-
+window.addEventListener('load', AOS.refresh);
 AOS.init({
     // Global settings
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Showland</title>
-    <meta name="description" content="Eventos y Espectáculos | Sonido e iluminación | Diseño y Comunicación">
+    <title>Contacto Clientes</title>
+    <meta name="description" content="Informate sobre todo lo que ofrecemos y ponte en contacto con nosotros">
     <meta http-equiv="author" content="Graphik">
     <link rel="shortcut icon" href="../assets/img/favicon.ico?" />
 
@@ -266,6 +266,46 @@
                         <p class="msg4"></p>
                     </div>
                 </div>
+                <div class="form-cont" onclick="formExpand(this)">
+                    <div class="form-first-layer">
+                        <div class="form-title">
+                            <h1 class="">Formación<span>Abrir Formulario</span></h1>
+                        </div>
+                        <img class="form-back img-fluid" src="../assets/img/slider/formacion.jpg" alt="">
+                    </div>
+                    <div class="form-display">
+                        <form id="formacion" class="all-forms">
+                            <p class="form-text2">Formación
+                            </p>
+                            <p class="form-text">Nombre
+                                <span>*</span>
+                            </p>
+                            <input class="" name="sender_name" type="text" required>
+
+                            <p class="form-text">Empresa
+                            </p>
+                            <input class="" name="empresa" type="text">
+
+                            <p class="form-text">Email
+                                <span>*</span>
+                            </p>
+                            <input class="" name="sender_email" type="email" required>
+
+                            <p class="form-text">Telf
+                                <span>*</span>
+                            </p>
+                            <input class="" name="sender_number" type="tel" required>
+
+                            <p class="form-text">Adj. Archivos (.jpg, .png, .pdf)
+                            </p>
+                            <label class="input-file-label" for="file4">Seleccione
+                                archivos</label>
+                            <input id="file4" class="input-file" accept=".png, .jpg, .jpeg, .pdf" name="my_file" type="file">
+                            <button class="submit-btn mailSubmit" name="submit_form" type="submit">Enviar</button>
+                        </form>
+                        <p class="msg4"></p>
+                    </div>
+                </div>
                 <div class="form-cont lastForm" onclick="formExpand(this)">
                     <div class="form-first-layer">
                         <div class="form-title">
@@ -441,6 +481,20 @@
                 $(form).ajaxSubmit({
                     type: "POST",
                     url: "media.php",
+                    data: form,
+                    success: function (response) {
+                        var message = "Enviado correctamente!";
+                        $('.msg4').html(message);
+                    }
+                });
+                return false;
+            });
+            $("#formacion").submit(function (e) {
+                e.preventDefault();
+                var form = $(this);
+                $(form).ajaxSubmit({
+                    type: "POST",
+                    url: "formacion.php",
                     data: form,
                     success: function (response) {
                         var message = "Enviado correctamente!";
