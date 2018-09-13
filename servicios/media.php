@@ -2,14 +2,12 @@
 
 $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING);
 $empresa    = filter_var($_POST["empresa"], FILTER_SANITIZE_STRING);
-$sender_est = filter_var($_POST["sender_est"], FILTER_SANITIZE_STRING);
-$sender_place = filter_var($_POST["sender_place"], FILTER_SANITIZE_STRING);
 $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING);
-$description = filter_var($_POST["description"], FILTER_SANITIZE_STRING);
-$checking = filter_var($_POST["checking"], FILTER_SANITIZE_STRING);
 $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING);
-$subject = "Formulario de Incidencias";
-$recipient_email = 'gabrielcireslopez@gmail.com'; 
+$subject = "Formulario de Media";
+$recipient_email = 'info@showlandproducciones.es';  
+    
+    
     
     //Get uploaded file data
     $file_tmp_name    = $_FILES['my_file']['tmp_name'];
@@ -19,7 +17,7 @@ $recipient_email = 'gabrielcireslopez@gmail.com';
     $file_error       = $_FILES['my_file']['error'];
 
     strtolower(end(explode('.',$file_name)));
-    $formcontent="Nombre de contacto: $sender_name \nTelf de contacto: $sender_number \n\nEmpresa: $empresa \nEstablecimiento: $sender_place \n\nPoblacon: $sender_place \nUrgente 24h: $checking \n\nDescripcon: $description";
+    $formcontent="Nombre: $sender_name \n\nEmpresa: $empresa \n\nTelf: $sender_number";
 
     //read from the uploaded file & base64_encode content for the mail
     $handle = fopen($file_tmp_name, "r");
@@ -49,6 +47,8 @@ $recipient_email = 'gabrielcireslopez@gmail.com';
         $body .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
         $body .= $encoded_content; 
 
+        $first_form = $_POST["first_submit"];
+        $second_form = $_POST["second_submit"];
         $sentMail = @mail($recipient_email, $subject, $body, $headers);
 
 

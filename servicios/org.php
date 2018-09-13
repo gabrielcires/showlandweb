@@ -4,8 +4,8 @@ $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING);
 $empresa    = filter_var($_POST["empresa"], FILTER_SANITIZE_STRING);
 $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING);
 $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING);
-$subject = "Formulario de Diseño, Comunicación y Artes Gráficas";
-$recipient_email = 'gabrielcireslopez@gmail.com'; 
+$subject = "Formulario de Organización y Producción de Eventos";
+$recipient_email = 'info@showlandproducciones.es'; 
     
     
     
@@ -47,7 +47,7 @@ $recipient_email = 'gabrielcireslopez@gmail.com';
         $body .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
         $body .= $encoded_content; 
 
-        $first_form = $_POST["first_submit"];
-        $second_form = $_POST["second_submit"];
         $sentMail = @mail($recipient_email, $subject, $body, $headers);
+
+
 ?>

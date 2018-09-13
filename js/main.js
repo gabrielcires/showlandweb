@@ -1,3 +1,8 @@
+// toggle face
+function toggleFace(x) {
+    var face = document.getElementById("faceCont");
+    face.classList.toggle("expand");
+}
 // toggle menu
 function toggleMenu(x) {
     var menu = document.getElementById("menu");
@@ -49,15 +54,6 @@ $(".first-slider").each(function (index, element) {
         }
 
     });
-    var mySwiper = document.querySelector('.swiper-container').swiper
-
-    $(".swiper-container").mouseenter(function () {
-        mySwiper.autoplay.stop();
-    });
-
-    $(".swiper-container").mouseleave(function () {
-        mySwiper.autoplay.start();
-    });
 
 });
 $(".opinion-slider").each(function (index, element) {
@@ -72,7 +68,7 @@ $(".opinion-slider").each(function (index, element) {
             enabled: true,
         },
         autoplay: {
-            delay: 1500,
+            delay: 5000,
             disableOnInteraction: false,
         },
 
@@ -90,7 +86,7 @@ $(".opinion-slider").each(function (index, element) {
     });
 
 });
-
+window.addEventListener('load', AOS.refresh);
 AOS.init({
     // Global settings
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -140,7 +136,7 @@ $(document).ready(function () {
 
     const customMessages = {
         valueMissing: 'Rellena este campo!', // `required` attr
-        emailMismatch: 'Introduce un correo válido' // Invalid email
+        emailMismatch: 'Introduce un correo válido!' // Invalid email
     }
 
     function getCustomMessage(type, validity) {
