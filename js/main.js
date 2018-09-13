@@ -54,15 +54,6 @@ $(".first-slider").each(function (index, element) {
         }
 
     });
-    var mySwiper = document.querySelector('.swiper-container').swiper
-
-    $(".swiper-container").mouseenter(function () {
-        mySwiper.autoplay.stop();
-    });
-
-    $(".swiper-container").mouseleave(function () {
-        mySwiper.autoplay.start();
-    });
 
 });
 $(".opinion-slider").each(function (index, element) {
@@ -77,7 +68,7 @@ $(".opinion-slider").each(function (index, element) {
             enabled: true,
         },
         autoplay: {
-            delay: 1500,
+            delay: 5000,
             disableOnInteraction: false,
         },
 
