@@ -1,3 +1,5 @@
+// ipad y iphone :active fix con onclick="void(0)" en objetos a animar
+document.addEventListener("touchstart", function () {}, false);
 // toggle face
 function toggleFace(x) {
     var face = document.getElementById("faceCont");
@@ -40,19 +42,12 @@ $(".first-slider").each(function (index, element) {
         loop: true,
         effect: 'fade',
         keyboard: {
-            enabled: true,
+            enabled: false,
         },
         autoplay: {
             delay: 1500,
             disableOnInteraction: false,
         },
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        }
-
     });
 
 });
