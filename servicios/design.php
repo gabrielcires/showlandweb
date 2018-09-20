@@ -5,7 +5,7 @@ $empresa    = filter_var($_POST["empresa"], FILTER_SANITIZE_STRING);
 $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING);
 $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING);
 $subject = "Formulario de Diseño, Comunicación y Artes Gráficas";
-$recipient_email = 'info@showlandproducciones.es'; 
+$recipient_email = 'web@showland.es'; 
     
     
     

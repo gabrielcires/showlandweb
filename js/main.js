@@ -1,3 +1,5 @@
+// ipad y iphone :active fix con onclick="void(0)" en objetos a animar
+document.addEventListener("touchstart", function () {}, false);
 // toggle face
 function toggleFace(x) {
     var face = document.getElementById("faceCont");
@@ -11,12 +13,20 @@ function toggleMenu(x) {
 }
 
 // toggle submenu
-function toggleSubMenu(x) {
-    var subMenu = document.getElementById("subMenu");
-    var ad = document.getElementById("arrowDown");
-    subMenu.classList.toggle("show-menu");
-    ad.classList.toggle("show-menu");
-}
+// function toggleSubMenu(x) {
+//     var subMenu = document.getElementById("subMenu");
+//     var ad = document.getElementById("arrowDown");
+//     subMenu.classList.toggle("show-menu");
+//     ad.classList.toggle("show-menu");
+// }
+$('#subSec').hover(
+    function () {
+        var subMenu = document.getElementById("subMenu");
+        var ad = document.getElementById("arrowDown");
+        subMenu.classList.toggle("show-menu");
+        ad.classList.toggle("show-menu");
+    }
+)
 
 // toggle form
 function formExpand(x) {
@@ -50,7 +60,7 @@ $(".first-slider").each(function (index, element) {
         // If we need pagination
         pagination: {
             el: '.swiper-pagination',
-            clickable: true,
+            clickable: false,
         }
 
     });
@@ -165,4 +175,35 @@ $(document).ready(function () {
         input.addEventListener('invalid', checkValidity)
     })
 
+});
+
+// Cookies
+window.cookieconsent.initialise({
+    container: document.getElementById("cookieCont"),
+    palette: {
+        popup: {
+            background: 'transparent',
+            text: '#fff',
+            link: '#e0013f'
+        },
+        button: {
+            background: "#aa0000"
+        },
+    },
+    content: {
+        header: 'Usamos COOKIES!',
+        message: 'Utilizamos cookies propios y de terceros para asegurar una mejor experiencia de usuario en nuestra web. ¿Te parece bien?',
+        link: 'Más información',
+        href: 'http://cookiesandyou.com',
+        dismiss: '¡Vale!',
+        policy: 'Ver Política de Cookies.',
+    },
+    revokable: true,
+    onStatusChange: function (status) {
+        this.hasConsented($('#cookieCont').addClass('cookie-out'));
+    },
+    law: {
+        regionalLaw: false,
+    },
+    location: true,
 });

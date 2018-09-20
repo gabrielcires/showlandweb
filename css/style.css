@@ -1,22 +1,4 @@
-@font-face {
-    font-family: 'Gotham';
-    src: url(gothammedium.ttf);
-}
-
-@font-face {
-    font-family: 'Gotham-light';
-    src: url(Gotham-Light.otf);
-}
-
-@font-face {
-    font-family: 'Gotham-bold';
-    src: url(Gotham-Bold.otf);
-}
-
-@font-face {
-    font-family: 'Gotham-black';
-    src: url(Gotham-Black.otf);
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,900');
 
 @-webkit-keyframes goRight {
     0% {
@@ -147,31 +129,31 @@
 
 @keyframes meneo {
     0% {
-        transform: translateY(0px)
+        transform: translate(-100%, 100%)
+    }
+    55% {
+        transform: translate(-100%, 100%)
     }
     60% {
-        transform: translateY(0px)
+        transform: translate(-100%, calc(100% - 20px))
+    }
+    65% {
+        transform: translate(-100%, 100%)
     }
     70% {
-        transform: translateY(0px)
+        transform: translate(-100%, calc(100% - 20px))
     }
     75% {
-        transform: rotate(-15deg)
+        transform: translate(-100%, 100%)
     }
     80% {
-        transform: rotate(15deg)
+        transform: translate(-100%, calc(100% - 20px))
     }
     85% {
-        transform: rotate(-15deg)
-    }
-    90% {
-        transform: rotate(15deg)
-    }
-    95% {
-        transform: rotate(-15deg)
+        transform: translate(-100%, 100%)
     }
     100% {
-        transform: rotate(0)
+        transform: translate(-100%, 100%)
     }
 }
 
@@ -366,7 +348,7 @@ html {
 body {
     height: auto;
     background: black;
-    font-family: "Gotham";
+    font-family: "Monserrat", sans-serif;
     position: relative;
 }
 
@@ -403,7 +385,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Gotham';
+    font-family: 'Montserrat', sans-serif;
     color: white;
     margin: 0;
     font-size: 1.5em;
@@ -412,7 +394,7 @@ h6 {
 
 p {
     font-size: 1.1em;
-    font-family: "Gotham-light";
+    font-family: "Montserrat", sans-serif;
     margin: 0 0 30px;
     color: white;
 }
@@ -557,12 +539,13 @@ hr {
 .servobj-grid ul {
     font-size: 1.1em;
     list-style: none;
-    font-family: "gotham-light";
+    font-family: "Montserrat", sans-serif;
 }
 
 .servobj-grid ul span {
     color: #e0013f;
-    font-family: "gotham-bold"
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 .bdr-thin {
@@ -701,7 +684,8 @@ header {
 
 header p,
 header a {
-    font-family: 'Gotham-bold';
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: bold; */
 }
 
 header ul {
@@ -765,7 +749,8 @@ header a {
 
 .cancel {
     color: #222 !important;
-    font-family: "gotham-bold"
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 .down-arrow {
@@ -783,7 +768,7 @@ header a {
 
 .menu-btn {
     margin: 0 0 0 5px;
-    font-family: "Gotham";
+    font-family: "Montserrat", sans-serif;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
@@ -815,7 +800,7 @@ header a {
     -ms-flex-pack: center;
     justify-content: center;
     position: fixed;
-    top: 50px;
+    top: 10px;
     right: 0;
     z-index: 4000;
     -webkit-transition: all .3s ease;
@@ -914,44 +899,46 @@ header.show-menu {
     max-width: 50px;
 }
 
-.social a:hover {
+.social a:hover,
+.social a:active {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 
 .logo-fixed {
-    width: 50px;
+    width: 70px;
     height: auto;
     position: fixed;
-    bottom: 25px;
+    bottom: 10px;
     right: 0;
     left: 0;
+    display: block;
     margin: auto;
-    margin-bottom: 12px;
     z-index: 2000;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, .6));
     -ms-filter: drop-shadow(0 0 3px rgba(0, 0, 0, .6));
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-    color: #B71351;
+    color: rgb(185, 51, 102);
     letter-spacing: 4px;
     font-size: .7em;
-    font-family: "gotham-black";
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
     text-align: center;
-    padding-left: 4px;
-    transition: transform .3s ease;
+    transform: translate(0);
+    transition: all .3s ease;
 }
 
 .logo-fixed:active {
-    transform: scale(.8);
+    transform: scale(.8) translate(0);
 }
 
 .logo-fixed img {
-    margin-bottom: -15px;
-    margin-left: -2px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0;
 }
 
 /* HOME */
-
 .show-home-menu {
     display: inherit;
     width: calc(100% - 50px);
@@ -1183,7 +1170,7 @@ section#servicios a {
 
 .serv-cap {
     margin: 10px auto 0;
-    font-family: "Gotham";
+    font-family: "Montserrat" sans-serif;
     -webkit-transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -1260,6 +1247,10 @@ _:future,
     pointer-events: none;
 }
 
+.inline-YTPlayer {
+    max-width: 100% !important;
+}
+
 .playerBox {
     position: absolute;
     z-index: 0;
@@ -1329,7 +1320,8 @@ _:future,
     cursor: pointer;
 }
 
-.back-arrow:hover {
+.back-arrow:hover,
+.back-arrow:active {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     -webkit-transition: -webkit-transform .1s ease;
@@ -1359,7 +1351,7 @@ _:future,
     text-align: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    font-family: 'Gotham-light';
+    font-family: "Montserrat", sans-serif;
     -webkit-transition: all .4s ease;
     transition: all .4s ease;
     overflow: hidden;
@@ -1489,7 +1481,11 @@ section#location {
 .loc-anim a:hover .do1.loc-img-back::before,
 .loc-anim a:hover .do1.loc-img-back::after,
 .loc-anim a:hover .do2.loc-img-back::before,
-.loc-anim a:hover .do2.loc-img-back::after {
+.loc-anim a:hover .do2.loc-img-back::after,
+.loc-anim a:active .do1.loc-img-back::before,
+.loc-anim a:active .do1.loc-img-back::after,
+.loc-anim a:active .do2.loc-img-back::before,
+.loc-anim a:active .do2.loc-img-back::after {
     visibility: visible;
     animation-play-state: running;
 }
@@ -1549,7 +1545,8 @@ footer a {
     overflow: hidden;
 }
 
-footer a:hover img {
+footer a:hover img,
+footer a:active img {
     display: block;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -1628,7 +1625,9 @@ footer a:hover img {
     right: 0;
     bottom: 0;
     z-index: 3000;
-    height: 500px;
+    height: 70vh;
+    min-height: 200px;
+    max-height: 500px;
     width: 320px;
     border: 0 solid rgb(66, 103, 177);
     background: rgb(66, 103, 177);
@@ -1644,7 +1643,7 @@ footer a:hover img {
     color: white;
     border-top-left-radius: 10px;
     padding: 10px 20px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     background: rgba(255, 255, 255, .2);
     box-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
     justify-content: center;
@@ -1680,10 +1679,6 @@ footer a:hover img {
 
 .face-btn-cont.expand {
     transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -o-transform: translateY(0%);
 }
 
 .face-btn-cont .face-cont {
@@ -1703,24 +1698,32 @@ footer a:hover img {
     position: fixed;
     bottom: 55px;
     margin: auto;
-    height: 550px;
-    width: 320px;
-    left: 140px;
+    height: 320px;
+    width: 300px;
+    left: 65px;
     display: flex;
     align-items: center;
     z-index: 4000;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(34, 34, 34, .6);
     border-top-right-radius: 10px;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
+    text-shadow: 0 0 2px rgba(0, 0, 0, .8);
     padding: 0 10px;
     transform: translate(-100%, 100%);
     transition: all .5s ease;
+    animation: meneo 3.5s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-.cookie-cont:hover {
-    bottom: 0;
-    left: 0;
+.cookie-cont:hover,
+.cookie-cont:active {
+    bottom: 300px;
+    left: 320px;
     transform: translate(0%, 0%);
+    animation-play-state: paused;
+}
+
+.cookie-cont.cookie-out {
+    animation-play-state: paused;
 }
 
 .cookie-show {
@@ -1728,7 +1731,7 @@ footer a:hover img {
     top: 0;
     margin: auto;
     height: 50px;
-    width: 120px;
+    width: 130px;
     right: 0;
     display: flex;
     align-items: center;
@@ -1740,7 +1743,8 @@ footer a:hover img {
     display: block;
     width: 80px;
     font-size: .7em;
-    font-family: "gotham-bold";
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, .8);
     margin: 0 10px;
     margin-left: 0;
@@ -1752,9 +1756,65 @@ footer a:hover img {
     display: block;
     height: 30px;
     width: auto;
-    margin: auto;
-    animation: meneo 3.5s 1s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
+    margin-left: auto;
+    margin-right: 10px;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, .5));
+}
+
+.cc-window.cc-banner.cc-type-info.cc-theme-block.cc-bottom {
+    background: transparent;
+    margin: 60px 0;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+a.cc-link {
+    font-weight: bold;
+    display: block;
+}
+
+a.cc-link:hover {
+    padding-left: 10px;
+}
+
+div.cc-compliance {
+    margin-top: 20px;
+    display: flex;
+}
+
+div.cc-compliance a.cc-dismiss {
+    align-self: flex-end;
+    margin-left: auto;
+    padding: 5px;
+    font-weight: bold;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+div.cc-compliance a.cc-dismiss:hover {
+    background: transparent;
+    border: 3px solid #e0013f;
+    color: #e0013f;
+}
+
+div.cc-revoke {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    transition: all .3s ease;
+}
+
+div.cc-revoke:hover {
+    color: #e0013f;
 }
 
 /* SUBSECCIONES */
@@ -1795,19 +1855,21 @@ footer a:hover img {
 }
 
 .sub-text {
-    font-family: "Gotham-light";
+    font-family: "Montserrat", sans-serif;
     grid-column-start: 1;
     grid-column-end: 4;
 }
 
 .sub-text span {
-    font-family: "Gotham-bold";
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     margin-bottom: 5px;
     display: block;
 }
 
 .sub-text b {
-    font-family: "Gotham-bold";
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 .vertical-bar {
@@ -1929,9 +1991,9 @@ footer a:hover img {
     /* margin: auto; */
 }
 
-section#vidSect {
+/* section#vidSect {
     display: none;
-}
+} */
 
 /* CLIENTES */
 
@@ -1939,7 +2001,7 @@ section#vidSect {
     width: 100%;
     height: 550px;
     position: relative;
-    background: white;
+    background: #f1f1f1;
     margin: 5px auto;
     margin-left: 0;
     transition: all .3s ease;
@@ -2011,7 +2073,7 @@ section#vidSect {
     width: 100%;
     display: block;
     font-size: .6em;
-    font-family: "Gotham-light";
+    font-family: "Montserrat", sans-serif;
     margin-top: 10px;
     animation: blink .3s infinite ease;
     -webkit-animation: blink 2s infinite ease;
@@ -2048,7 +2110,8 @@ section#vidSect {
     opacity: 1;
 }
 
-.form-cont:hover {
+.form-cont:hover,
+.form-cont:active {
     border-right: 30px solid #99002b;
 }
 
@@ -2078,7 +2141,7 @@ section#vidSect {
 
 .contact-txt {
     letter-spacing: 2px;
-    font-family: "gotham-bold";
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     word-spacing: 5px;
     margin: 0;
@@ -2103,7 +2166,8 @@ section#vidSect {
     -o-transition: all .3s ease;
 }
 
-.contact-go:hover {
+.contact-go:hover,
+.contact-go:active {
     transform: scale(.9);
     -webkit-transform: scale(.9);
     -moz-transform: scale(.9);
@@ -2203,7 +2267,8 @@ input.input-file {
     -o-transition: all .3s ease;
 }
 
-.input-file-label:hover {
+.input-file-label:hover,
+.input-file-label:active {
     background: #96002a;
     /* width: 320px; */
 }
@@ -2225,7 +2290,8 @@ input.input-file {
     background: #ff0048;
     color: white;
     border: 0;
-    font-family: "Gotham-bold";
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: .8em;
     letter-spacing: 3px;
@@ -2237,7 +2303,8 @@ input.input-file {
     -o-transition: all .2s ease-in-out;
 }
 
-.submit-btn:hover {
+.submit-btn:hover,
+.submit-btn:active {
     background: #96002a;
     width: calc(100% - 20px);
 }
@@ -2246,7 +2313,8 @@ input.input-file {
     margin: 0;
     width: 100%;
     text-align: left;
-    font-family: "Gotham-bold";
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: .8em;
     letter-spacing: 3px;
@@ -2257,7 +2325,8 @@ input.input-file {
     margin-bottom: 20px;
     width: 100%;
     text-align: center;
-    font-family: "Gotham-bold";
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 1.1em;
     color: black;
@@ -2270,14 +2339,16 @@ input.input-file {
 
 .form-error {
     color: black;
-    font-family: "Gotham-bold";
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 .form-success {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
     color: white;
-    font-family: "Gotham-bold";
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
 input {
@@ -2393,7 +2464,7 @@ section#blog {
 
 .blog-text {
     width: 100%;
-    font-family: "Gotham-light";
+    font-family: "Montserrat", sans-serif;
     /* text-shadow: 0 0 2px rgba(0, 0, 0, .8); */
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
@@ -2538,6 +2609,10 @@ section#blog {
         flex-grow: 1;
         -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+    }
+
+    .cookie-cont {
+        left: 150px;
     }
 
     .cookie-cont p {
@@ -2701,7 +2776,8 @@ section#blog {
         -ms-transform: translateY(-10px);
         -o-transform: translateY(-10px);
     } */
-    .blog-cont:hover .blog-text {
+    .blog-cont:hover .blog-text,
+    .blog-cont:active .blog-text {
         opacity: 1;
         transform: translateX(0);
         -webkit-transform: translateX(0);
@@ -2719,58 +2795,67 @@ section#blog {
         -o-transition: all .3s ease;
     }
 
-    a:hover .showclub-go {
+    a:hover .showclub-go,
+    a:active .showclub-go {
         opacity: 1;
     }
 
-    .darklay:hover::before {
+    .darklay:hover::before,
+    .darklay:active::before {
         opacity: .4;
     }
 
-    .serv-cont:hover img.serv-img {
+    .serv-cont:hover img.serv-img,
+    .serv-cont:active img.serv-img {
         -webkit-transform: scale(.95);
         transform: scale(.95);
         opacity: 1;
     }
 
-    .serv-cont:hover img {
+    .serv-cont:hover img,
+    .serv-cont:active img {
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
     }
 
-    .serv-cont:hover .serv-cap {
+    .serv-cont:hover .serv-cap,
+    .serv-cont:active .serv-cap {
         opacity: 1;
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 
-    .dark-borders .slider-txt .slider-svg:hover {
+    .dark-borders .slider-txt .slider-svg:hover,
+    .dark-borders .slider-txt .slider-svg:active {
         -webkit-transform: scale(.9);
         transform: scale(.9);
     }
 
-    .menu-txt-hov:hover {
-        color: #e0013f;
+    .menu-txt-hov:hover,
+    .menu-txt-hov:active {
+        color: #ff0048;
     }
 
     .sub-sect-cont:hover p,
-    .sub-sect-cont:hover i {
+    .sub-sect-cont:hover i,
+    .sub-sect-cont:active p,
+    .sub-sect-cont:active i {
         color: #e0013f;
     }
 }
 
 @media only screen and (min-width: 800px) {
-    p {
+    /* p {
         font-family: "Gotham";
-    }
+    } */
 
     .cont-home .contact-form {
         padding: 50px 150px 90px;
     }
-
+/* 
     .cont-home .contact-info p {
         font-family: "Gotham-light";
-    }
+    } */
 
     .show-home {
         margin: 55px auto;
@@ -2792,7 +2877,7 @@ section#blog {
 
     .serv-cap {
         margin: 10px auto 0;
-        font-family: "Gotham";
+        /* font-family: "Gotham"; */
         opacity: 0;
         -webkit-transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -2825,7 +2910,7 @@ section#blog {
     }
 
     .face-btn-cont .face-btn p {
-        font-family: "Gotham-bold";
+        /* font-family: "Gotham-bold"; */
         margin: 0;
         margin-left: 10px;
         transition: all .8s ease;
@@ -2953,7 +3038,8 @@ section#blog {
 
     header p,
     header a {
-        font-family: 'Gotham';
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
     }
 
     header ul {
@@ -3041,7 +3127,7 @@ section#blog {
         border-bottom: 0;
         margin: 3px auto;
         -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-        background: rgba(0, 0, 0, .8);
+        background: rgba(0, 0, 0, .5);
         box-shadow: 0 0 5px rgba(0, 0, 0, .2);
         width: 100%;
     }
@@ -3067,7 +3153,8 @@ section#blog {
 
     .cancel {
         color: #222 !important;
-        font-family: "Gotham-bold"
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
     }
 
     .down-arrow {
@@ -3085,7 +3172,7 @@ section#blog {
 
     .menu-btn {
         margin: 0 0 0 5px;
-        font-family: "Gotham";
+        font-family: "Montserrat", sans-serif;
         font-size: 1em;
         -webkit-transition: all .3s ease;
         transition: all .3s ease;
@@ -3212,7 +3299,8 @@ section#blog {
         max-width: 50px;
     }
 
-    .social a:hover {
+    .social a:hover,
+    .social a:active {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
     }
