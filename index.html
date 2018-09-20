@@ -77,7 +77,7 @@
                 <li class="menu-txt-hov">
                     <i class="fas fa-home"></i> Home</li>
             </a>
-            <li class="no-pad sub-sect-cont" onclick="toggleSubMenu(this)">
+            <li class="no-pad sub-sect-cont" id="subSec">
                 <p class="serv-sect no-pad-btm menu-txt-hov">
                     Servicios</p>
                 <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
@@ -234,7 +234,7 @@
             </ul>
         </div>
         <section id="vidSect" class="swiper-nomrg no-pad">
-            <div class="serv-cont-vid" data-aos="fade-in" id="videoShow" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=bpmIzR3CoZU',containment:'self', ratio: 16/9, optimizeDisplay: true, mute:true, startAt:0, opacity:1, useOnMobile: true, showControls: false, optimizeDisplay: true, playOnlyIfVisible: false, anchor:'top, top'}">
+            <div class="serv-cont-vid" data-aos="fade-in" id="videoShow" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=bpmIzR3CoZU',containment:'self', ratio: 16/9, mute:true, startAt:0, opacity:1, useOnMobile: false, showYTLogo: false, showControls: false, optimizeDisplay: true, playOnlyIfVisible: true, anchor:'top, top', stopMovieOnBlur: false}">
             </div>
         </section>
 
@@ -354,12 +354,12 @@
             </div>
         </div>
     </div>
-    <!-- <div class="cookie-cont">
+    <div class="cookie-cont">
         <div class="cookie-show">
             <p>POLÍTICA DE COOKIES</p>
             <img class="img-fluid" src="assets/img/cookie.svg" alt="">
         </div>
-    </div> -->
+    </div>
 
 </body>
 <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>

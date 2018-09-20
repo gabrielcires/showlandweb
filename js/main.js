@@ -13,12 +13,20 @@ function toggleMenu(x) {
 }
 
 // toggle submenu
-function toggleSubMenu(x) {
-    var subMenu = document.getElementById("subMenu");
-    var ad = document.getElementById("arrowDown");
-    subMenu.classList.toggle("show-menu");
-    ad.classList.toggle("show-menu");
-}
+// function toggleSubMenu(x) {
+//     var subMenu = document.getElementById("subMenu");
+//     var ad = document.getElementById("arrowDown");
+//     subMenu.classList.toggle("show-menu");
+//     ad.classList.toggle("show-menu");
+// }
+$('#subSec').hover(
+    function () {
+        var subMenu = document.getElementById("subMenu");
+        var ad = document.getElementById("arrowDown");
+        subMenu.classList.toggle("show-menu");
+        ad.classList.toggle("show-menu");
+    }
+)
 
 // toggle form
 function formExpand(x) {
@@ -42,12 +50,19 @@ $(".first-slider").each(function (index, element) {
         loop: true,
         effect: 'fade',
         keyboard: {
-            enabled: false,
+            enabled: true,
         },
         autoplay: {
             delay: 1500,
             disableOnInteraction: false,
         },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: false,
+        }
+
     });
 
 });

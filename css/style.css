@@ -1247,6 +1247,10 @@ _:future,
     pointer-events: none;
 }
 
+.inline-YTPlayer {
+    max-width: 100% !important;
+}
+
 .playerBox {
     position: absolute;
     z-index: 0;
@@ -1621,7 +1625,9 @@ footer a:active img {
     right: 0;
     bottom: 0;
     z-index: 3000;
-    height: 500px;
+    height: 70vh;
+    min-height: 200px;
+    max-height: 500px;
     width: 320px;
     border: 0 solid rgb(66, 103, 177);
     background: rgb(66, 103, 177);
