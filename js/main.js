@@ -176,3 +176,34 @@ $(document).ready(function () {
     })
 
 });
+
+// Cookies
+window.cookieconsent.initialise({
+    container: document.getElementById("cookieCont"),
+    palette: {
+        popup: {
+            background: 'transparent',
+            text: '#fff',
+            link: '#e0013f'
+        },
+        button: {
+            background: "#aa0000"
+        },
+    },
+    content: {
+        header: 'Usamos COOKIES!',
+        message: 'Utilizamos cookies propios y de terceros para asegurar una mejor experiencia de usuario en nuestra web. ¿Te parece bien?',
+        link: 'Más información',
+        href: 'http://cookiesandyou.com',
+        dismiss: '¡Vale!',
+        policy: 'Ver Política de Cookies.',
+    },
+    revokable: true,
+    onStatusChange: function (status) {
+        this.hasConsented($('#cookieCont').addClass('cookie-out'));
+    },
+    law: {
+        regionalLaw: false,
+    },
+    location: true,
+});
