@@ -192,11 +192,12 @@ window.cookieconsent.initialise({
     },
     content: {
         header: 'Usamos COOKIES!',
-        message: 'Utilizamos cookies propios y de terceros para asegurar una mejor experiencia de usuario en nuestra web. ¿Te parece bien?',
+        message: 'Utilizamos cookies propios y de terceros para asegurar una mejor experiencia de usuario en nuestra web. Si continuas navegando asumiremos que estás de acuerdo. ¿Te parece bien?',
         link: 'Más información',
-        href: 'http://cookiesandyou.com',
+        href: 'cookies.html',
         dismiss: '¡Vale!',
         policy: 'Ver Política de Cookies.',
+        target: "",
     },
     revokable: true,
     onStatusChange: function (status) {
