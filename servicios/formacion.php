@@ -4,6 +4,7 @@ $sender_name    = filter_var($_POST["sender_name"], FILTER_SANITIZE_STRING);
 $empresa    = filter_var($_POST["empresa"], FILTER_SANITIZE_STRING);
 $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING);
 $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING);
+$description = filter_var($_POST["description"], FILTER_SANITIZE_STRING);
 $subject = "Formulario de Formacion";
 $recipient_email = 'web@showland.es'; 
     
@@ -15,7 +16,7 @@ $recipient_email = 'web@showland.es';
     $file_error       = $_FILES['my_file']['error'];
 
     strtolower(end(explode('.',$file_name)));
-    $formcontent="Nombre: $sender_name \n\nEmpresa: $empresa \n\nTelf: $sender_number";
+    $formcontent="Nombre: $sender_name \n\nEmpresa: $empresa \n\nTelf: $sender_number \n\nMensaje: $description";
 
     //read from the uploaded file & base64_encode content for the mail
     $handle = fopen($file_tmp_name, "r");

@@ -12,13 +12,23 @@ function toggleMenu(x) {
     menu.classList.toggle("show-menu");
 }
 
+$('#cookieCont').hover(
+    function noAnim() {
+        $("#cookieCont").addClass("cookie-out");
+    });
+
+
 // toggle submenu
-// function toggleSubMenu(x) {
-//     var subMenu = document.getElementById("subMenu");
-//     var ad = document.getElementById("arrowDown");
-//     subMenu.classList.toggle("show-menu");
-//     ad.classList.toggle("show-menu");
-// }
+// $(‘.element’).hover(
+// function(){$(this).toggleClass(‘classname’);}
+// );
+function toggleSubMenu(x) {
+    var subMenu = document.getElementById("subMenu");
+    var ad = document.getElementById("arrowDown");
+    subMenu.classList.toggle("show-menu");
+    ad.classList.toggle("show-menu");
+}
+
 $('#subSec').hover(
     function () {
         var subMenu = document.getElementById("subMenu");
@@ -49,6 +59,7 @@ $(".first-slider").each(function (index, element) {
         direction: 'horizontal',
         loop: true,
         effect: 'fade',
+        slidesPerView: 3,
         keyboard: {
             enabled: true,
         },
