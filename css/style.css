@@ -601,7 +601,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    /* display: none; */
+    display: none;
 }
 
 .load-vector {
@@ -965,8 +965,91 @@ header.show-menu {
 
 /* slider */
 
-#sndSlider {
-    display: none;
+.client-cont {
+    width: 500px;
+    height: auto;
+    min-height: 250px;
+    padding: 20px;
+    position: relative;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    margin: auto;
+    background: #fff;
+    color: black;
+    box-shadow: inset -5px -8px 10px 2px rgba(0, 0, 0, .2);
+}
+
+.client-cont::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    border-top: 0px solid transparent;
+    border-right: 50px solid #fff;
+    border-bottom: 50px solid transparent;
+}
+
+.client-cont .client-user-cont {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 50px;
+}
+
+.client-cont .client-user-cont .client-user {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin: auto;
+    background: #c2c2c2;
+    text-align: center;
+    margin: auto;
+}
+
+.client-cont .client-user-cont .client-user i {
+    font-size: 40px;
+    line-height:80px;
+    font-size:40px;
+    color: #757575;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.client-cont p {
+    color: black;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.client-cont .client-user-cont p {
+    color: #3b5998;
+    font-weight: bold;
+    margin: 10px auto 0;
+}
+
+.client-cont .client-like {
+    width: auto;
+    height: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-cont .client-like .like-back {
+    width: 30px;
+    height: 30px;
+    background: #3b5998;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.client-cont .client-like i {
+    font-size: 15px;
+    line-height:30px;
+    color: #fff;
 }
 
 .snd-slider-txt {
@@ -1608,7 +1691,7 @@ footer a:active img {
 }
 
 .footer-txt span {
-    color: #e0013f;
+    color: #ff0048;
 }
 
 .footer-cont {
@@ -2051,10 +2134,6 @@ div.cc-revoke:hover {
     height: auto;
     /* margin: auto; */
 }
-
-/* section#vidSect {
-    display: none;
-} */
 
 /* CLIENTES */
 
