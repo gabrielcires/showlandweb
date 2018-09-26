@@ -59,7 +59,7 @@ $(".first-slider").each(function (index, element) {
         direction: 'horizontal',
         loop: true,
         effect: 'fade',
-        slidesPerView: 3,
+        slidesPerView: 1,
         keyboard: {
             enabled: true,
         },
@@ -85,27 +85,12 @@ $(".opinion-slider").each(function (index, element) {
         direction: 'horizontal',
         loop: true,
         effect: 'fade',
-        keyboard: {
-            enabled: true,
-        },
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,
         },
 
-        // If we need pagination
-
     });
-    var mySwiper = document.querySelector('.swiper-container').swiper
-
-    $(".swiper-container").mouseenter(function () {
-        mySwiper.autoplay.stop();
-    });
-
-    $(".swiper-container").mouseleave(function () {
-        mySwiper.autoplay.start();
-    });
-
 });
 window.addEventListener('load', AOS.refresh);
 AOS.init({

@@ -965,28 +965,40 @@ header.show-menu {
 
 /* slider */
 
+#sndSlider .swiper-slide {
+    /* position: relative; */
+    height: auto;
+    overflow: inherit;
+}
+
+
 .client-cont {
-    width: 500px;
+    width: calc(100% - 200px);
+    max-width: 500px;
     height: auto;
     min-height: 250px;
-    padding: 20px;
+    padding: 40px;
     position: relative;
     border-radius: 20px;
-    border-top-left-radius: 0;
     margin: auto;
+    margin-bottom: 30px;
     background: #fff;
     color: black;
-    box-shadow: inset -5px -8px 10px 2px rgba(0, 0, 0, .2);
+    /* box-shadow: inset -5px -8px 10px 2px rgba(0, 0, 0, .2); */
 }
 
 .client-cont::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -40px;
-    border-top: 0px solid transparent;
-    border-right: 50px solid #fff;
-    border-bottom: 50px solid transparent;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #fff;
 }
 
 .client-cont .client-user-cont {
@@ -995,7 +1007,7 @@ header.show-menu {
     margin: auto;
     text-align: center;
     margin-left: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .client-cont .client-user-cont .client-user {
@@ -1010,8 +1022,8 @@ header.show-menu {
 
 .client-cont .client-user-cont .client-user i {
     font-size: 40px;
-    line-height:80px;
-    font-size:40px;
+    line-height: 80px;
+    font-size: 40px;
     color: #757575;
     border-radius: 100%;
     margin: auto;
@@ -1029,6 +1041,16 @@ header.show-menu {
     margin: 10px auto 0;
 }
 
+.client-cont p img {
+    width: 20px;
+    height: 20px;
+}
+
+.client-cont p span {
+    font-weight: bold;
+    color: #3b5998;
+}
+
 .client-cont .client-like {
     width: auto;
     height: 20px;
@@ -1041,14 +1063,26 @@ header.show-menu {
 .client-cont .client-like .like-back {
     width: 30px;
     height: 30px;
+    border: 3px solid #fff;
     background: #3b5998;
     border-radius: 100%;
     margin-right: 5px;
+    z-index: 2;
+}
+
+.client-cont .client-like .love-back {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #fff;
+    background: #96002a;
+    border-radius: 100%;
+    margin: 0 5px 0 -15px;
+    z-index: 1;
 }
 
 .client-cont .client-like i {
     font-size: 15px;
-    line-height:30px;
+    line-height: 30px;
     color: #fff;
 }
 
@@ -1657,8 +1691,8 @@ footer a {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
     overflow: hidden;
 }
 
@@ -1721,8 +1755,6 @@ footer a:active img {
     right: 0;
     top: 0;
     z-index: -1;
-    -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .foot-svg {
@@ -1731,8 +1763,6 @@ footer a:active img {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -1746,9 +1776,7 @@ footer a:active img {
     min-height: 200px;
     max-height: 500px;
     width: 320px;
-    /* border: 0 solid #f1f1f1; */
     background: #f1f1f1;
-    /* border-top-width: 10px; */
     transition: all .5s cubic-bezier(.53, .02, .25, .86);
     transform: translateY(calc(100% + 1px));
 }
@@ -1761,7 +1789,7 @@ footer a:active img {
     border-top-left-radius: 10px;
     padding: 10px 20px;
     padding-bottom: 40px;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(34, 34, 34, 0.4);
     box-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
     justify-content: center;
     align-items: center;
@@ -1823,7 +1851,7 @@ footer a:active img {
     z-index: 4000;
     background: rgba(34, 34, 34, .4);
     border-top-right-radius: 10px;
-    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
     text-shadow: 0 0 2px rgba(0, 0, 0, .8);
     padding: 0 10px;
     transform: translate(-100%, 100%);
@@ -2369,10 +2397,11 @@ div.cc-revoke:hover {
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px white inset, 1px 1px 3px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 0 30px white inset, 1px 1px 3px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 0 30px white inset, 0px 0px 3px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 0 30px white inset, 0px 0px 3px rgba(0, 0, 0, .5);
     background-color: white !important;
     background-image: none !important;
+    border: 2px solid #f1f1f1;
 }
 
 .all-forms input[type="checkbox"] {
@@ -2418,9 +2447,9 @@ input.input-file {
     width: calc(100% - 10px);
     padding: 5px;
     margin: 5px auto 10px;
-    border: none;
     resize: vertical;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+    border: none;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .5);
 }
 
 .submit-btn {
@@ -2492,20 +2521,11 @@ input.input-file {
 }
 
 input {
-    -webkit-box-shadow: inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: inset 0 0 0 30px white, 0px 0px 3px rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 0 30px white, 0px 0px 3px rgba(0, 0, 0, .5);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
-
-/* 
-.mailLabel.input-errors. {
-    color: white;
-}
-.mailLabel.input-errors {
-    color: #e0013f;
-} */
-
 .file-message.good {
     color: black;
     opacity: 0;
@@ -2523,8 +2543,8 @@ input {
 }
 
 input.input-errors {
-    -webkit-box-shadow: inset 0 0 0px 3px #ff0048, inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 0px 3px #ff0048, inset 0 0 0 30px white, 1px 1px 3px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: inset 0 0 0px 3px #ff0048, inset 0 0 0 30px white, 0px 0px 3px rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 0px 3px #ff0048, inset 0 0 0 30px white, 0px 0px 3px rgba(0, 0, 0, .5);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
@@ -3261,7 +3281,8 @@ section#blog {
         font-size: 1.05em !important;
         position: relative;
     }
-/* 
+
+    /* 
     header ul li:before {
         position: absolute;
         height: 70px;
