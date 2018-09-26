@@ -601,7 +601,7 @@ hr {
     animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
-    display: none;
+    /* display: none; */
 }
 
 .load-vector {
@@ -1084,10 +1084,6 @@ header.show-menu {
     font-size: 15px;
     line-height: 30px;
     color: #fff;
-}
-
-.snd-slider-txt {
-    display: none;
 }
 
 .swiper-container {
@@ -3118,10 +3114,6 @@ section#blog {
     }
 
     #sndSlider {
-        display: inherit;
-    }
-
-    .snd-slider-txt {
         display: inherit;
     }
 
