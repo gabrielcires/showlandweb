@@ -19,7 +19,7 @@ $recipient_email = 'web@showland.es';
     $file_error       = $_FILES['my_file']['error'];
 
     strtolower(end(explode('.',$file_name)));
-    $formcontent="Nombre de contacto: $sender_name \nTelf de contacto: $sender_number \n\nEmpresa: $empresa \nEstablecimiento: $sender_place \n\nPoblacon: $sender_place \nUrgente 24h: $checking \n\nDescripcon: $description";
+    $formcontent="Nombre de contacto: $sender_name \nTelf de contacto: $sender_number \n\nEmpresa: $empresa \nEstablecimiento: $sender_place \n\nPoblacon: $sender_place \nUrgente 24h: $checking \n\nDescripcion: $description";
 
     //read from the uploaded file & base64_encode content for the mail
     $handle = fopen($file_tmp_name, "r");

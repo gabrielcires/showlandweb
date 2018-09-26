@@ -12,13 +12,23 @@ function toggleMenu(x) {
     menu.classList.toggle("show-menu");
 }
 
+$('#cookieCont').hover(
+    function noAnim() {
+        $("#cookieCont").addClass("cookie-out");
+    });
+
+
 // toggle submenu
-// function toggleSubMenu(x) {
-//     var subMenu = document.getElementById("subMenu");
-//     var ad = document.getElementById("arrowDown");
-//     subMenu.classList.toggle("show-menu");
-//     ad.classList.toggle("show-menu");
-// }
+// $(‘.element’).hover(
+// function(){$(this).toggleClass(‘classname’);}
+// );
+function toggleSubMenu(x) {
+    var subMenu = document.getElementById("subMenu");
+    var ad = document.getElementById("arrowDown");
+    subMenu.classList.toggle("show-menu");
+    ad.classList.toggle("show-menu");
+}
+
 $('#subSec').hover(
     function () {
         var subMenu = document.getElementById("subMenu");
@@ -49,6 +59,7 @@ $(".first-slider").each(function (index, element) {
         direction: 'horizontal',
         loop: true,
         effect: 'fade',
+        slidesPerView: 1,
         keyboard: {
             enabled: true,
         },
@@ -74,27 +85,12 @@ $(".opinion-slider").each(function (index, element) {
         direction: 'horizontal',
         loop: true,
         effect: 'fade',
-        keyboard: {
-            enabled: true,
-        },
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,
         },
 
-        // If we need pagination
-
     });
-    var mySwiper = document.querySelector('.swiper-container').swiper
-
-    $(".swiper-container").mouseenter(function () {
-        mySwiper.autoplay.stop();
-    });
-
-    $(".swiper-container").mouseleave(function () {
-        mySwiper.autoplay.start();
-    });
-
 });
 window.addEventListener('load', AOS.refresh);
 AOS.init({
@@ -192,11 +188,12 @@ window.cookieconsent.initialise({
     },
     content: {
         header: 'Usamos COOKIES!',
-        message: 'Utilizamos cookies propios y de terceros para asegurar una mejor experiencia de usuario en nuestra web. ¿Te parece bien?',
+        message: 'Utilizamos cookies propios y de terceros para asegurar una mejor experiencia de usuario en nuestra web. Si continuas navegando asumiremos que estás de acuerdo. ¿Te parece bien?',
         link: 'Más información',
-        href: 'http://cookiesandyou.com',
+        href: 'cookies.html',
         dismiss: '¡Vale!',
         policy: 'Ver Política de Cookies.',
+        target: "",
     },
     revokable: true,
     onStatusChange: function (status) {
