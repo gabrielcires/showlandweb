@@ -56,15 +56,14 @@ $(".first-slider").each(function (index, element) {
     $this.addClass("instance-" + index);
     var swiper = new Swiper(".instance-" + index, {
         // Optional parameters
-        direction: 'horizontal',
+        slidesPerView: 1,
+        initialSlide: 0,
         loop: true,
         effect: 'fade',
-        slidesPerView: 1,
         keyboard: {
             enabled: true,
         },
         autoplay: {
-            delay: 1500,
             disableOnInteraction: false,
         },
 
