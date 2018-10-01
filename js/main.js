@@ -51,19 +51,17 @@ function formExpand(x) {
 }
 
 // slider
-$(".first-slider").each(function (index, element) {
-    var $this = $(this);
-    $this.addClass("instance-" + index);
-    var swiper = new Swiper(".instance-" + index, {
+    var swiper1 = new Swiper("#firstSlider", {
         // Optional parameters
         slidesPerView: 1,
-        initialSlide: 0,
+        centeredSlides: true,
         loop: true,
         effect: 'fade',
         keyboard: {
             enabled: true,
         },
         autoplay: {
+            delay: 1500,
             disableOnInteraction: false,
         },
 
@@ -75,7 +73,6 @@ $(".first-slider").each(function (index, element) {
 
     });
 
-});
 $(".opinion-slider").each(function (index, element) {
     var $this = $(this);
     $this.addClass("instance-" + index);
