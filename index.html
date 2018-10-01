@@ -17,24 +17,6 @@
     <link href="css/YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css?" type="text/css">
 
-<script>
-    // Preload
-    function preload(arrayOfImages) {
-        $(arrayOfImages).each(function () {
-            $('<img/>')[0].src = this;
-        });
-    }
-
-    // Usage:
-
-    preload([
-        'aload/wave1.svg',
-        'aload/wave2.svg',
-        'aload/wave3.svg',
-        'aload/wave4.svg'
-    ]);
-</script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125631901-1"></script>
     <script>
@@ -69,7 +51,6 @@
         <div class="scale-cont">
             <img rel="preload" class="load-vector first-wave" src="aload/wave1.svg" alt="">
             <img rel="preload" class="load-vector second-wave" src="aload/wave2.svg" alt="">
-            <img rel="preload" class="load-vector third-wave" src="aload/wave3.svg" alt="">
             <img rel="preload" class="load-vector fourth-wave" src="aload/wave4.svg" alt="">
         </div>
     </div>
