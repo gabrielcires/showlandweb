@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,900');
-
 @keyframes spinner {
     0% {
         transform: scale(1);
@@ -472,18 +471,18 @@ hr {
 
 .loaded .load-vector.first-wave {
     z-index: 99;
-    animation: fadeIn .8s .2s forwards cubic-bezier(.65, 0, .27, 2);
+    animation: fadeIn .8s .4s forwards cubic-bezier(.65, 0, .27, 2);
 }
 
 .loaded .load-vector.second-wave {
     will-change: opacity, transform;
-    animation: fadeIn .8s .25s forwards cubic-bezier(.65, 0, .27, 2);
+    animation: fadeIn .8s .45s forwards cubic-bezier(.65, 0, .27, 2);
     z-index: 99;
 }
 
 .loaded .load-vector.fourth-wave {
     will-change: opacity, transform;
-    animation: goUp 1.2s .5s forwards cubic-bezier(.65, 0, .27, 4);
+    animation: goUp 1.2s .9s forwards cubic-bezier(.65, 0, .27, 4);
 }
 
 .spin {
@@ -553,11 +552,11 @@ hr {
 .spin-cont {
     opacity: 1;
     transition: all .5s ease;
-} 
+}
 
 .loaded .spin-cont {
     opacity: 0;
-} 
+}
 
 .loaded .scale-cont {
     position: absolute;
@@ -567,7 +566,7 @@ hr {
     left: 0;
     margin: auto;
     will-change: opacity, transform;
-    animation: scaleUp .8s .6s forwards cubic-bezier(.81,0,.41, 2);
+    animation: scaleUp .8s 1s forwards cubic-bezier(.81, 0, .41, 2);
 }
 
 .logobj-grid {
@@ -824,7 +823,7 @@ header.show-menu {
 }
 
 .logo-fixed {
-    width: 70px;
+    width: 50px;
     height: auto;
     position: fixed;
     bottom: 10px;
@@ -1658,7 +1657,7 @@ footer a:hover img, footer a:active img {
     right: 0;
     bottom: 0;
     z-index: 3000;
-    height: 70vh;
+    height: 60vh;
     min-height: 200px;
     max-height: 500px;
     width: 320px;
@@ -1797,7 +1796,7 @@ h1.cookie-title {
 }
 
 section.cookie-sec {
-    padding-top: 300px;
+    padding-top: 0px;
 }
 
 .cookie-sec a {
@@ -2893,6 +2892,9 @@ section#blog {
     }
     section.eventos-pad {
         padding-top: 250px;
+    }
+    section.cookie-sec {
+        padding-top: 300px;
     }
     section {
         padding: 100px 0;

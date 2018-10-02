@@ -48,9 +48,9 @@
 
     <div id="loading" class="loading">
         <div class="scale-cont">
-            <img class="load-vector first-wave" src="aload/wave1.svg" alt="">
-            <img class="load-vector second-wave" src="aload/wave2.svg" alt="">
-            <img class="load-vector fourth-wave" src="aload/wave4.svg" alt="">
+            <img rel="preload" as="image" class="load-vector first-wave" src="aload/wave1.svg" alt="">
+            <img rel="preload" as="image" class="load-vector second-wave" src="aload/wave2.svg" alt="">
+            <img rel="preload" as="image" class="load-vector fourth-wave" src="aload/wave4.svg" alt="">
             <div class="spin-cont">
                 <div class="spin"></div>
                 <div class="spin2"></div>
@@ -467,7 +467,7 @@
         setTimeout(function () {
             $('#loading').addClass('loaded');
 
-        }, 500);
+        }, 1500);
     });
 </script>
 <script>
