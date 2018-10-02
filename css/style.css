@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,900');
-@-webkit-keyframes goRight {
+
+@keyframes spinner {
     0% {
-        width: 100%;
+        transform: scale(1);
+        opacity: 0;
     }
     50% {
-        width: 0%;
+        transform: scale(1.5);
         opacity: 1;
     }
-    60% {
-        width: 0%;
-        opacity: .8;
-    }
     100% {
-        width: 100%;
+        transform: scale(1.5);
         opacity: 0;
     }
 }
@@ -35,37 +33,16 @@
     }
 }
 
-@-webkit-keyframes goUp {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 0;
-    }
-    50% {
-        -webkit-transform: translateY(-30%);
-        transform: translateY(-30%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateY(-55%);
-        transform: translateY(-55%);
-        opacity: 1;
-    }
-}
-
 @keyframes goUp {
     0% {
-        -webkit-transform: translateY(0);
         transform: translateY(0);
         opacity: 0;
     }
     50% {
-        -webkit-transform: translateY(-30%);
         transform: translateY(-30%);
         opacity: 0;
     }
     100% {
-        -webkit-transform: translateY(-55%);
         transform: translateY(-55%);
         opacity: 1;
     }
@@ -74,12 +51,10 @@
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-20%);
-        transform: translateY(-20%)
+        transform: translateY(-100px)
     }
     100% {
         opacity: 1;
-        -webkit-transform: translateY(0%);
         transform: translateY(0%)
     }
 }
@@ -140,32 +115,6 @@
     }
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-20%);
-        transform: translateY(-20%)
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%)
-    }
-}
-
-@-webkit-keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-        z-index: -100;
-    }
-}
-
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -195,44 +144,14 @@
     }
 }
 
-@-webkit-keyframes scaleUp {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-    100% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1)
-    }
-}
-
 @keyframes scaleUp {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-    100% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1)
-    }
-}
-
-@-webkit-keyframes scaleUpDown {
-    0% {
+    0%, 100% {
         -webkit-transform: scale(1);
         transform: scale(1)
     }
     50% {
-        -webkit-transform: scale(1.1) rotate(-5deg) translateY(-20px);
-        transform: scale(1.1) rotate(-5deg) translateY(-20px)
-    }
-    80% {
-        -webkit-transform: scale(1.1) rotate(-5deg) translateY(-20px);
-        transform: scale(1.1) rotate(-5deg) translateY(-20px)
-    }
-    100% {
-        -webkit-transform: scale(1.1) rotate(0deg) translateY(0px);
-        transform: scale(1.1) rotate(0deg) translateY(0px)
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
     }
 }
 
@@ -252,22 +171,6 @@
     100% {
         -webkit-transform: scale(1.1) rotate(0deg) translateY(0px);
         transform: scale(1.1) rotate(0deg) translateY(0px)
-    }
-}
-
-@-webkit-keyframes popIn {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
     }
 }
 
@@ -325,7 +228,6 @@ body.link-transition::after {
     right: 0;
     background: black;
     z-index: 9999;
-    -webkit-animation: fadeOut 1s .8s forwards ease;
     animation: fadeOut .5s .2s forwards ease;
 }
 
@@ -548,67 +450,124 @@ hr {
     top: 0;
     bottom: 0;
     overflow: hidden;
-    -webkit-animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
-    animation: fadeOut .7s 3s forwards cubic-bezier(.64, .01, .62, 1);
+    will-change: opacity, z-index;
     transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    display: none;
+    /* display: none; */
+}
+
+.loaded {
+    animation: fadeOut 1s 2.1s forwards cubic-bezier(.64, .01, .62, 1);
 }
 
 .load-vector {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
     width: 100px;
     opacity: 0;
 }
 
-.load-vector.first-wave {
+.loaded .load-vector.first-wave {
+    z-index: 99;
+    animation: fadeIn .8s .2s forwards cubic-bezier(.65, 0, .27, 2);
+}
+
+.loaded .load-vector.second-wave {
+    will-change: opacity, transform;
+    animation: fadeIn .8s .25s forwards cubic-bezier(.65, 0, .27, 2);
+    z-index: 99;
+}
+
+.loaded .load-vector.fourth-wave {
+    will-change: opacity, transform;
+    animation: goUp 1.2s .5s forwards cubic-bezier(.65, 0, .27, 4);
+}
+
+.spin {
+    opacity: 0;
+    width: 62px;
+    height: 62px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border: 1px solid rgba(185, 51, 102, .7);
+    transition: all .5s ease;
+    animation: spinner 1s .6s infinite ease;
+}
+
+.spin2 {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100%;
+    border: 3px solid rgba(185, 51, 102, .6);
+    transition: all .5s ease;
+    animation: spinner 1s .4s infinite ease;
+}
+
+.spin3 {
+    opacity: 0;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100%;
+    border: 4px solid rgba(185, 51, 102, .5);
+    transition: all .5s ease;
+    animation: spinner 1s .2s infinite ease;
+}
+
+.spin4 {
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100%;
+    background: rgba(185, 51, 102, .3);
+    transition: all .5s ease;
+    animation: spinner 1s infinite ease;
+}
+
+.spin-cont {
     opacity: 1;
-    z-index: 99;
-}
+    transition: all .5s ease;
+} 
 
-.load-vector.second-wave {
-    -webkit-animation: fadeIn 1s 1s forwards cubic-bezier(.65, 0, .27, 1);
-    animation: fadeIn 1s 1s forwards cubic-bezier(.65, 0, .27, 1);
-    z-index: 99;
-}
+.loaded .spin-cont {
+    opacity: 0;
+} 
 
-.load-vector.third-wave {
-    -webkit-animation: fadeIn 1s 1.15s forwards cubic-bezier(.65, 0, .27, 1);
-    animation: fadeIn 1s 1.15s forwards cubic-bezier(.65, 0, .27, 1);
-    z-index: 99;
-}
-
-.load-vector.fourth-wave {
-    -webkit-animation: goUp 1s 1.2s forwards cubic-bezier(.65, 0, .27, 1);
-    animation: goUp 1s 1.2s forwards cubic-bezier(.65, 0, .27, 1);
-}
-
-.wave-cover {
+.loaded .scale-cont {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    margin: auto;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 100;
-    background: black;
-    -webkit-animation: goRight 2.5s forwards ease;
-    animation: goRight 2.5s forwards ease;
-}
-
-.scale-cont {
-    position: absolute;
-    width: 100px;
-    height: 100px;
     margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    -webkit-animation: scaleUp 1s 1.3s forwards ease;
-    animation: scaleUp 1s 1.3s forwards ease;
+    will-change: opacity, transform;
+    animation: scaleUp .8s .6s forwards cubic-bezier(.81,0,.41, 2);
 }
 
 .logobj-grid {
@@ -2629,20 +2588,6 @@ section#blog {
         width: 150px;
         opacity: 0;
     }
-    .wave-cover {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        z-index: 100;
-        background: black;
-        -webkit-animation: goRight 2.5s forwards ease;
-        animation: goRight 2.5s forwards ease;
-    }
     .scale-cont {
         position: absolute;
         width: 150px;
@@ -2652,8 +2597,6 @@ section#blog {
         bottom: 0;
         right: 0;
         left: 0;
-        -webkit-animation: scaleUp .3s 1.8s forwards ease;
-        animation: scaleUp .3s 1.8s forwards ease;
     }
     .swiper-nomrg {
         width: calc(100% + 120px);
