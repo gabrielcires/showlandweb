@@ -6,8 +6,9 @@ $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING);
 $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING);
 $description = filter_var($_POST["description"], FILTER_SANITIZE_STRING);
 $subject = "Formulario de Formacion";
-$recipient_email = 'web@showland.es'; 
-    
+$recipient_email =
+    "web@showland.es,
+    formacion@showland.es";
     //Get uploaded file data
     $file_tmp_name    = $_FILES['my_file']['tmp_name'];
     $file_name        = $_FILES['my_file']['name'];
@@ -34,7 +35,7 @@ $recipient_email = 'web@showland.es';
 
         //plain text 
         $body .= "--$boundary\r\n";
-        $body .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
+        $body .= "Content-Type: text/plain; charset=UTF-8\r\n";
         $body .= "Content-Transfer-Encoding: base64\r\n\r\n"; 
         $body .= chunk_split(base64_encode($formcontent));
 

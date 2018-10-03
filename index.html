@@ -473,7 +473,6 @@
 <script>
     // slider
     var swiper1 = new Swiper("#firstSlider", {
-        // Optional parameters
         slidesPerView: 1,
         centeredSlides: true,
         loop: true,
@@ -486,7 +485,6 @@
             disableOnInteraction: false,
         },
 
-        // If we need pagination
         pagination: {
             el: '.swiper-pagination',
             clickable: false,
@@ -498,7 +496,6 @@
         var $this = $(this);
         $this.addClass("instance-" + index);
         var swiper = new Swiper(".instance-" + index, {
-            // Optional parameters
             direction: 'horizontal',
             loop: true,
             effect: 'fade',
