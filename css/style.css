@@ -455,17 +455,17 @@ hr {
 }
 
 .loaded {
-    animation: fadeOut 1s 2.1s forwards cubic-bezier(.64, .01, .62, 1);
+    /* animation: fadeOut 1s 2.1s forwards cubic-bezier(.64, .01, .62, 1); */
 }
 
 .load-vector {
+    width: auto;
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     margin: auto;
-    width: 100px;
     opacity: 0;
 }
 
@@ -2582,11 +2582,11 @@ section#blog {
     .container {
         margin: 0 60px 0;
     }
-    .load-vector {
+    /* .load-vector {
         position: absolute;
         width: 150px;
         opacity: 0;
-    }
+    } */
     .scale-cont {
         position: absolute;
         width: 150px;
