@@ -1,32 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,900');
 @keyframes spinner {
     0% {
-        transform: scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
         opacity: 0;
     }
     50% {
-        transform: scale(1.5);
+        transform: translate3d(0, 0, 0) scale(1.5);
         opacity: 1;
     }
     100% {
-        transform: scale(1.5);
+        transform: translate3d(0, 0, 0) scale(1.5);
         opacity: 0;
     }
 }
 
 @keyframes goRight {
     0% {
+        transform: translate3d(0, 0, 0);
         width: 100%;
     }
     50% {
+        transform: translate3d(0, 0, 0);
         width: 0%;
         opacity: 1;
     }
     60% {
+        transform: translate3d(0, 0, 0);
         width: 0%;
         opacity: .8;
     }
     100% {
+        transform: translate3d(0, 0, 0);
         width: 100%;
         opacity: 0;
     }
@@ -34,11 +38,11 @@
 
 @keyframes goUp {
     0% {
-        transform: translateY(30%);
+        transform: translate3d(0, 0, 0) translateY(30%);
         opacity: 0;
     }
     100% {
-        transform: translateY(10px);
+        transform: translate3d(0, 0, 0) translateY(10px);
         opacity: 1;
     }
 }
@@ -46,11 +50,11 @@
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(-300px)
+        transform: translate3d(0, 0, 0) translateY(-300px)
     }
     100% {
         opacity: 1;
-        transform: translateY(0%)
+        transform: translate3d(0, 0, 0) translateY(0%)
     }
 }
 
@@ -64,23 +68,21 @@
     100% {
         opacity: 0;
         transform: scale(2.5);
-        -webkit-transform: scale(2.5);
-        -moz-transform: scale(2.5);
-        -ms-transform: scale(2.5);
-        -o-transform: scale(2.5);
     }
 }
 
 @keyframes blink {
     0%, 100% {
+        transform: translate3d(0, 0, 0);
         opacity: 0;
     }
     50% {
+        transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }
 
-@keyframes meneo {
+/* @keyframes meneo {
     0% {
         transform: translate(-100%, 100%)
     }
@@ -108,17 +110,20 @@
     100% {
         transform: translate(-100%, 100%)
     }
-}
+} */
 
 @keyframes fadeOut {
     0% {
         opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
     90% {
         opacity: 0;
+        transform: translate3d(0, 0, 0);
     }
     100% {
         opacity: 0;
+        transform: translate3d(0, 0, 0);
         z-index: -100;
     }
 }
@@ -126,61 +131,52 @@
 @keyframes moveOut {
     0% {
         opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
     50% {
         opacity: 0;
+        transform: translate3d(0, 0, 0);
     }
     100% {
-        transform: translateX(1000%);
-        -webkit-transform: translateX(1000%);
-        -moz-transform: translateX(1000%);
-        -ms-transform: translateX(1000%);
-        -o-transform: translateX(1000%);
+        transform: translate3d(0, 0, 0) translateX(1000%);
     }
 }
 
 @keyframes scaleUp {
     0%, 100% {
-        -webkit-transform: scale(1);
         transform: scale(1)
     }
     50% {
-        -webkit-transform: scale(1.1);
         transform: scale(1.1)
     }
 }
 
 @keyframes scaleUpDown {
     0% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
+        transform: scale(1) translate3d(0, 0, 0)
     }
     50% {
-        -webkit-transform: scale(1.1) rotate(-5deg) translateY(-20px);
-        transform: scale(1.1) rotate(-5deg) translateY(-20px)
+        transform: scale(1.1) rotate(-5deg) translateY(-20px) translate3d(0, 0, 0)
     }
     80% {
-        -webkit-transform: scale(1.1) rotate(-5deg) translateY(-20px);
-        transform: scale(1.1) rotate(-5deg) translateY(-20px)
+        transform: scale(1.1) rotate(-5deg) translateY(-20px) translate3d(0, 0, 0)
     }
     100% {
-        -webkit-transform: scale(1.1) rotate(0deg) translateY(0px);
-        transform: scale(1.1) rotate(0deg) translateY(0px)
+        transform: scale(1.1) rotate(0deg) translateY(0px) translate3d(0, 0, 0)
     }
 }
 
 @keyframes popIn {
     0% {
+        transform: translate3d(0, 0, 0);
         opacity: 0;
     }
     50% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+        transform: translate3d(0, 0, 0) scale(1.1);
         opacity: 1;
     }
     100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
         opacity: 1;
     }
 }
@@ -260,11 +256,11 @@ span {
     transition: all .3s ease;
 }
 
-span.bold {
+.bold {
     font-weight: bold;
 }
 
-a {
+a, li, p, div {
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -455,7 +451,7 @@ hr {
 }
 
 .load-vector {
-    width: 150px;
+    width: 100px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -851,12 +847,6 @@ header.show-menu {
 
 .logo-fixed:active {
     transform: scale(.8) translate(0);
-}
-
-.logo-fixed img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 0;
 }
 
 /* HOME */
@@ -1497,7 +1487,7 @@ section#location {
     z-index: -1;
     width: 180px;
     height: 180px;
-    border: 8px solid #e0013f;
+    border: 8px solid #ff0066;
     visibility: hidden;
     border-radius: 100%;
 }
@@ -1513,7 +1503,7 @@ section#location {
     z-index: -1;
     width: 170px;
     height: 170px;
-    border: 2px solid #e0013f;
+    border: 2px solid #ff0066;
     visibility: hidden;
     border-radius: 100%;
 }
@@ -1605,7 +1595,7 @@ footer a:hover img, footer a:active img {
     text-align: center;
     width: 200px;
     position: absolute;
-    bottom: 5px;
+    bottom: 15px;
     right: 0;
     left: 0;
     margin: auto;
@@ -1630,7 +1620,7 @@ footer a:hover img, footer a:active img {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     position: relative;
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 40px;
 }
 
@@ -1649,7 +1639,7 @@ footer a:hover img, footer a:active img {
 
 .foot-svg {
     height: 100%;
-    max-height: 150px;
+    max-height: 200px;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
@@ -2587,21 +2577,9 @@ section#blog {
     .container {
         margin: 0 60px 0;
     }
-    /* .load-vector {
-        position: absolute;
+    .load-vector {
         width: 150px;
-        opacity: 0;
-    } */
-    /* .scale-cont {
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        margin: auto;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-    } */
+    }
     .swiper-nomrg {
         width: calc(100% + 120px);
         margin-left: calc(-60px);
