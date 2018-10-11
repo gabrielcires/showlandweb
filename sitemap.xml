@@ -6,7 +6,6 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://www.showland.es/</loc>
   <lastmod>2018-10-01T08:10:40+00:00</lastmod>
@@ -67,6 +66,5 @@
   <lastmod>2018-09-25T08:21:26+00:00</lastmod>
   <priority>0.51</priority>
 </url>
-
 
 </urlset>
