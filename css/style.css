@@ -1096,7 +1096,7 @@ header.show-menu {
 
 .darklay::before {
     width: 101%;
-    height: auto;
+    height: 101%;
     position: absolute;
     content: "";
     top: 0;
@@ -2625,6 +2625,11 @@ section#blog {
         grid-template-columns: 1fr 1fr;
         -ms-grid-template-columns: 1fr 1fr;
     }
+    section#artistas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        -ms-grid-template-columns: 1fr 1fr;
+    }
     section#presentacion .logobj-grid {
         grid-column-start: 1;
         grid-column-end: 2;
@@ -2675,10 +2680,7 @@ section#blog {
     }
     section#eventos.sub-eventos {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        -ms-grid-template-columns: 1fr 1fr 1fr;
-        -ms-grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .sect-tle-out {
         grid-column-start: 1;
@@ -2757,7 +2759,7 @@ section#blog {
         opacity: 1;
     }
     .darklay:hover::before, .darklay:active::before {
-        opacity: .4;
+        opacity: .1;
     }
     .serv-cont:hover img.serv-img, .serv-cont:active img.serv-img {
         -webkit-transform: scale(.95);
@@ -2922,7 +2924,7 @@ section#blog {
     }
     /* HEADER */
     header {
-        width: 100vw;
+        width: 100%;
         max-width: inherit;
         height: 165px;
         opacity: 1;
@@ -3017,24 +3019,6 @@ section#blog {
         font-size: 1.05em !important;
         position: relative;
     }
-    /* 
-    header ul li:before {
-        position: absolute;
-        height: 70px;
-        content: "";
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: rgba(0, 0, 0, 0);
-        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, 0.63) 100%);
-        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(41%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.63)));
-        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, 0.63) 100%);
-        background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, 0.63) 100%);
-        background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, 0.63) 100%);
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 41%, rgba(0, 0, 0, 0.63) 100%);
-        z-index: -1;
-    } */
     header ul p {
         font-size: 1.05em;
     }
@@ -3241,6 +3225,14 @@ section#blog {
     .withus-txtbig {
         font-size: 60px;
     }
+    section#eventos.sub-eventos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    section#artistas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     .withus-txtbig img {
         transform: rotate(180deg) translate(-10px, -4px);
         -webkit-transform: rotate(180deg) translate(-10px, -4px);
@@ -3259,20 +3251,20 @@ section#blog {
 
 @media only screen and (min-width: 1200px) {
     .container {
-        margin: 0 200px 0;
+        margin: 0 150px 0;
     }
     section#servicios.ignore-mrg {
-        margin-right: -200px;
-        margin-left: -200px;
+        margin-right: -150px;
+        margin-left: -150px;
     }
     .ignore-mrg {
         margin-right: 0;
         margin-left: 0;
     }
     .swiper-nomrg {
-        width: calc(100% + 400px);
-        margin-left: calc(-200px);
-        margin-right: calc(-200px);
+        width: calc(100% + 300px);
+        margin-left: calc(-150px);
+        margin-right: calc(-150px);
     }
     .withus-txt {
         padding: 0 50px;
@@ -3301,6 +3293,32 @@ section#blog {
     }
     .cont-home .contact-form {
         padding: 50px 450px 90px;
+    }
+    section#artistas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .container {
+        margin: 0 400px 0;
+    }
+    .swiper-nomrg {
+        width: calc(100% + 800px);
+        margin-left: calc(-400px);
+        margin-right: calc(-400px);
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .container {
+        margin: 0 400px 0;
+    }
+    .swiper-nomrg {
+        width: calc(100% + 800px);
+        margin-left: calc(-400px);
+        margin-right: calc(-400px);
     }
 }
 
