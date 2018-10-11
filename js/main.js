@@ -24,9 +24,7 @@ $('#cookieCont').hover(
 // );
 function toggleSubMenu(x) {
     var subMenu = document.getElementById("subMenu");
-    var ad = document.getElementById("arrowDown");
     subMenu.classList.toggle("show-menu");
-    ad.classList.toggle("show-menu");
 }
 
 $('#subSec').hover(
