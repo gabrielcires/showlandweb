@@ -1086,6 +1086,21 @@ header.show-menu {
     transition: all .3s ease;
 }
 
+.darklay-reverse::before {
+    width: 101%;
+    height: 101%;
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 100;
+    background: rgba(89, 89, 89, .1);
+    transition: all .3s ease;
+}
+
 .swiper-container div .slider-txt {
     position: relative;
     width: 100%;
@@ -2474,10 +2489,10 @@ section#blog {
     text-align: center;
 }
 
-.blog-text {
+.blog-desc {
     width: 100%;
     font-family: "Montserrat", sans-serif;
-    /* text-shadow: 0 0 2px rgba(0, 0, 0, .8); */
+    text-shadow: 0 0 5px rgba(0, 0, 0, .8);
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -2485,6 +2500,14 @@ section#blog {
     -o-transition: all .3s ease;
 }
 
+.blog-title {
+    font-size: 2rem;
+}
+
+.blog-text {
+    margin-top: 50px;
+    line-height: 1.2em;
+}
 /* ANIM */
 
 .aos-animate.glitch {
@@ -2708,7 +2731,7 @@ section#blog {
         max-width: 250px;
         height: 500px;
     }
-    .blog-text {
+    .blog-desc {
         max-width: 200px;
         opacity: 0;
         transform: translateX(-50px);
@@ -2724,7 +2747,7 @@ section#blog {
         -ms-transform: translateY(-10px);
         -o-transform: translateY(-10px);
     } */
-    .blog-cont:hover .blog-text, .blog-cont:active .blog-text {
+    .blog-cont:hover .blog-desc, .blog-cont:active .blog-desc {
         opacity: 1;
         transform: translateX(0);
         -webkit-transform: translateX(0);
@@ -2745,6 +2768,9 @@ section#blog {
     }
     .darklay:hover::before, .darklay:active::before {
         opacity: .1;
+    }
+    .darklay-reverse:hover::before, .darklay-reverse:active::before {
+        background: rgba(0, 0, 0, .4);
     }
     .serv-cont:hover img.serv-img, .serv-cont:active img.serv-img {
         -webkit-transform: scale(.95);
