@@ -211,7 +211,6 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     margin: 0;
     font-size: 1.5em;
-    letter-spacing: 2px;
 }
 
 p {
@@ -234,10 +233,6 @@ a, li, p, div {
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -1231,10 +1226,7 @@ _::-webkit-full-page-media, _:future, :root .pad-top-safari {
 }
 
 .serv-cont img {
-    -webkit-transition: all 1s ease;
     transition: all 1s ease;
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
 }
 
 .serv-icon {
@@ -2462,10 +2454,6 @@ input::placeholder {
 
 /* BLOG */
 
-section#blog {
-    padding-top: 250px;
-}
-
 .blog-fluid {
     width: 100%;
     height: auto;
@@ -2489,6 +2477,10 @@ section#blog {
     text-align: center;
 }
 
+.blog-banner {
+    margin: 40px 0;
+}
+
 .blog-desc {
     width: 100%;
     font-family: "Montserrat", sans-serif;
@@ -2506,8 +2498,9 @@ section#blog {
 
 .blog-text {
     margin-top: 50px;
-    line-height: 1.2em;
+    line-height: 1.3em;
 }
+
 /* ANIM */
 
 .aos-animate.glitch {
@@ -2888,6 +2881,9 @@ section#blog {
     }
     section.cookie-sec {
         padding-top: 300px;
+    }
+    section#blog {
+        padding-top: 250px;
     }
     section {
         padding: 100px 0;
