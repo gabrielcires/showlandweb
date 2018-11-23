@@ -312,6 +312,9 @@ hr {
     margin-bottom: 0;
 }
 
+.mrg-top{
+    margin-top: 80px;
+}
 .center-obj {
     width: 100%;
     text-align: center;
@@ -2497,7 +2500,8 @@ input::placeholder {
 }
 
 .blog-text {
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 0;
     line-height: 1.3em;
 }
 
@@ -2763,7 +2767,7 @@ input::placeholder {
         opacity: .1;
     }
     .darklay-reverse:hover::before, .darklay-reverse:active::before {
-        background: rgba(0, 0, 0, .4);
+        background: rgba(0, 0, 0, .6);
     }
     .serv-cont:hover img.serv-img, .serv-cont:active img.serv-img {
         -webkit-transform: scale(.95);
