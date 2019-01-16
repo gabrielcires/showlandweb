@@ -5,10 +5,10 @@ $empresa    = filter_var($_POST["empresa"], FILTER_SANITIZE_STRING);
 $sender_email = filter_var($_POST["sender_email"], FILTER_SANITIZE_STRING);
 $sender_number        = filter_var($_POST["sender_number"], FILTER_SANITIZE_STRING);
 $description = filter_var($_POST["description"], FILTER_SANITIZE_STRING);
+$spam_filter = filter_var($_POST["spam_filter"], FILTER_SANITIZE_STRING);
 $subject = "Formulario de Información y Presupuestos";
 $recipient_email =
-    "web@showland.es,
-    info@showland.es";
+    "web@showland.es";
     
     
     
@@ -50,7 +50,11 @@ $recipient_email =
         $body .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
         $body .= $encoded_content; 
 
-        $sentMail = @mail($recipient_email, $subject, $body, $headers);
-
+        // if(!empty($_POST['spam_filter'])) {
+        //     console.log("Spam!");
+        // } else {
+        //     $sentMail = @mail($recipient_email, $subject, $body, $headers);  
+        // }
+        $sentMail = @mail($recipient_email, $subject, $body, $headers);  
 
 ?>
