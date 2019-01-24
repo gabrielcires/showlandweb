@@ -156,12 +156,10 @@
 /* color corporativo #e0013f */
 
 ::-moz-selection {
-    background: #96002a;
-    color: white;
+    color: #ff0066;
 }
 
 ::selection {
-    /* background: #ff0066; */
     color: #ff0066;
 }
 
