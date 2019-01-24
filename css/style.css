@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,900');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,900'); */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
 @keyframes spinner {
     0% {
         transform: scale(1);
@@ -173,8 +174,8 @@ html {
 
 body {
     height: auto;
-    background: black;
-    font-family: "Monserrat", sans-serif;
+    background: rgb(29, 29, 29);
+    font-family: "Roboto", sans-serif;
     position: relative;
 }
 
@@ -192,7 +193,6 @@ body.link-transition::after {
 
 section {
     padding: 100px 0;
-    /* padding-top: 0; */
     overflow: hidden;
 }
 
@@ -285,8 +285,9 @@ hr {
 }
 
 .ignore-mrg {
-    margin-right: -25px;
-    margin-left: -25px;
+    width: calc(100% + 25px);
+    margin-left: -12.5px;
+    margin-right: -12.5px;
 }
 
 .center-mrg {
@@ -369,13 +370,13 @@ hr {
 }
 
 .servobj-grid ul span {
-    color: #e0013f;
+    color: #ff0066;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
 }
 
 .bdr-thin {
-    border: 1px solid #e0013f;
+    border: 1px solid #ff0066;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -413,7 +414,7 @@ hr {
     overflow: hidden;
     will-change: opacity, z-index;
     transform: translate3d(0, 0, 0);
-    /* display: none; */
+    display: none;
 }
 
 .loaded {
@@ -573,6 +574,7 @@ header {
     transform: translateX(100%);
     z-index: 2000;
     visibility: hidden;
+    display: none!important;
 }
 
 header p, header a {
@@ -808,7 +810,7 @@ header.show-menu {
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, .6));
     -ms-filter: drop-shadow(0 0 3px rgba(0, 0, 0, .6));
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-    color: rgb(185, 51, 102);
+    color: #ff0066;
     letter-spacing: 4px;
     font-size: .7em;
     font-family: "Montserrat", sans-serif;
@@ -834,6 +836,88 @@ header.show-menu {
 
 .show-home-menu2 {
     display: none;
+}
+
+.intro-container {
+    height: 100vh;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: left;
+    line-height: 6rem;
+}
+
+.intro-container span:nth-child(n) {
+    opacity: 0;
+    transform: translateY(-300px);
+}
+
+.intro-container.do-anim span:nth-child(1) {
+    animation: fadeIn 1s .2s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(2) {
+    animation: fadeIn 1s .25s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(3) {
+    animation: fadeIn 1s .3s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(4) {
+    animation: fadeIn 1s .35s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(5) {
+    animation: fadeIn 1s .4s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(6) {
+    animation: fadeIn 1s .45s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(7) {
+    color: #ff0066;
+    animation: fadeIn 1s .5s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(8) {
+    animation: fadeIn 1s .55s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(9) {
+    color: #ff0066;
+    animation: fadeIn 1s .6s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(10) {
+    animation: fadeIn 1s .65s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(11) {
+    animation: fadeIn 1s .7s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(12) {
+    animation: fadeIn 1s .75s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(13) {
+    animation: fadeIn 1s .8s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(14) {
+    animation: fadeIn 1s .85s forwards cubic-bezier(1, 0, 0, 1);
+}
+
+.intro-container.do-anim span:nth-child(15) {
+    animation: fadeIn 1s .9s forwards cubic-bezier(1, 0, 0, 1);
 }
 
 /* slider */
@@ -959,10 +1043,7 @@ header.show-menu {
 }
 
 .swiper-container {
-    width: calc(100% + 50px);
     height: 100vh;
-    margin-left: calc(-25px);
-    margin-right: calc(-25px);
     height: auto;
     position: relative;
 }
@@ -987,12 +1068,6 @@ header.show-menu {
 .opinion-slider img {
     width: 80%;
     margin: auto;
-}
-
-.swiper-nomrg {
-    width: calc(100% + 50px);
-    margin-left: calc(-25px);
-    margin-right: calc(-25px);
 }
 
 .swiper-slide {
@@ -1592,7 +1667,7 @@ footer a:hover img, footer a:active img {
 }
 
 .footer-txt a {
-    color: #ff0045;
+    color: #ff0066;
     font-weight: bold;
     display: inline
 }
@@ -1785,7 +1860,7 @@ section.cookie-sec {
 
 .cookie-sec a {
     text-decoration: none;
-    color: #e0013f;
+    color: #ff0066;
     font-size: 1.3em;
 }
 
@@ -1840,8 +1915,8 @@ div.cc-compliance a.cc-dismiss {
 
 div.cc-compliance a.cc-dismiss:hover {
     background: transparent;
-    border: 3px solid #e0013f;
-    color: #e0013f;
+    border: 3px solid #ff0066;
+    color: #ff0066;
 }
 
 div.cc-revoke {
@@ -1854,7 +1929,7 @@ div.cc-revoke {
 }
 
 div.cc-revoke:hover {
-    color: #e0013f;
+    color: #ff0066;
 }
 
 /* SUBSECCIONES */
@@ -2547,22 +2622,13 @@ input::placeholder {
 /* MEDIA-QUERY  */
 
 @media only screen and (min-width: 500px) {
-    .container {
+    /* .container {
         margin: 0 40px 0;
-    }
-    .swiper-container {
-        width: calc(100% + 80px);
-        margin-left: calc(-40px);
-        margin-right: calc(-40px);
-    }
-    .swiper-nomrg {
-        width: calc(100% + 80px);
-        margin-left: calc(-40px);
-        margin-right: calc(-40px);
-    }
+    } */
     .ignore-mrg {
-        margin-right: -39px;
-        margin-left: -39px;
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .form-cont {
         width: calc(100% - 50px);
@@ -2580,20 +2646,13 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 700px) {
-    .container {
-        margin: 0 60px 0;
+    .ignore-mrg {
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .load-vector {
         width: 150px;
-    }
-    .swiper-nomrg {
-        width: calc(100% + 120px);
-        margin-left: calc(-60px);
-        margin-right: calc(-60px);
-    }
-    .ignore-mrg {
-        margin-right: -59px;
-        margin-left: -59px;
     }
     .loc-anim {
         display: flex;
@@ -2872,17 +2931,10 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 900px) {
-    .container {
-        margin: 0 80px 0;
-    }
     .ignore-mrg {
-        margin-right: -79px;
-        margin-left: -79px;
-    }
-    .swiper-nomrg {
-        width: calc(100% + 160px);
-        margin-left: calc(-80px);
-        margin-right: calc(-80px);
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .cont-home .contact-form {
         padding: 50px 200px 90px;
@@ -3224,17 +3276,10 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 1100px) {
-    .container {
-        margin: 0 120px 0;
-    }
     .ignore-mrg {
-        margin-right: -119px;
-        margin-left: -119px;
-    }
-    .swiper-nomrg {
-        width: calc(100% + 240px);
-        margin-left: calc(-120px);
-        margin-right: calc(-120px);
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .cont-home .contact-info p {
         font-size: 1.3em;
@@ -3268,23 +3313,25 @@ input::placeholder {
         -o-transition: all .3s ease;
     }
 }
-
+/* 
 @media only screen and (min-width: 1200px) {
-    .container {
-        margin: 0 150px 0;
-    }
-    section#servicios.ignore-mrg {
-        margin-right: -150px;
-        margin-left: -150px;
-    }
-    .ignore-mrg {
-        margin-right: 0;
-        margin-left: 0;
+    .swiper-container {
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .swiper-nomrg {
-        width: calc(100% + 300px);
-        margin-left: calc(-150px);
-        margin-right: calc(-150px);
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+    }
+    .ignore-mrg {
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+    }
+    section#servicios.ignore-mrg {
+        margin-right: -12.5px;
+        margin-left: -12.5px;
     }
     .withus-txt {
         padding: 0 50px;
@@ -3299,13 +3346,19 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 1400px) {
-    .container {
-        margin: 0 300px 0;
+    .swiper-container {
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .swiper-nomrg {
-        width: calc(100% + 600px);
-        margin-left: calc(-300px);
-        margin-right: calc(-300px);
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+    }
+    .ignore-mrg {
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .swiper-container div .slider-txt .slider-svg-fa {
         width: 40%;
@@ -3321,35 +3374,53 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 1500px) {
-    .container {
-        margin: 0 400px 0;
+    .swiper-container {
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .swiper-nomrg {
-        width: calc(100% + 800px);
-        margin-left: calc(-400px);
-        margin-right: calc(-400px);
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+    }
+    .ignore-mrg {
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
 }
 
 @media only screen and (min-width: 1600px) {
-    .container {
-        margin: 0 400px 0;
+    .swiper-container {
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .swiper-nomrg {
-        width: calc(100% + 800px);
-        margin-left: calc(-400px);
-        margin-right: calc(-400px);
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+    }
+    .ignore-mrg {
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
 }
 
 @media only screen and (min-width: 1700px) {
-    .container {
-        margin: 0 500px 0;
+    .swiper-container {
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .swiper-nomrg {
-        width: calc(100% + 1000px);
-        margin-left: calc(-500px);
-        margin-right: calc(-500px);
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+    }
+    .ignore-mrg {
+        margin-left: -12.5px;
+        margin-right: -12.5px;
     }
     .swiper-container div .slider-txt .slider-svg-fa {
         width: 40%;
@@ -3358,4 +3429,4 @@ input::placeholder {
     .cont-home .contact-form {
         padding: 50px 600px 90px;
     }
-}
+} */

@@ -138,44 +138,8 @@
 
     <div class="container">
         <div class="center-obj">
-
-            <div id="firstSlider" class="swiper-container first-slider swiper-nomrg dark-borders-btn">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="slider-txt">
-                            <a href="servicios/eventos.html">
-                                <img class="slider-svg b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                    data-src="assets/img/slider/eventos.svg" alt="">
-                            </a>
-                            <img class="swiper-img b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                data-src="assets/img/slider/slide5.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider-txt">
-                            <a href="servicios/sonido.html">
-                                <img class="slider-svg b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                    data-src="assets/img/slider/sonido.svg" alt="">
-                            </a>
-                            <img class="swiper-img b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                data-src="assets/img/slider/slide3.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slider-txt">
-                            <a href="servicios/diseno.html">
-                                <img class="slider-svg b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                    data-src="assets/img/slider/design.svg" alt="">
-                            </a>
-                            <img class="swiper-img b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                data-src="assets/img/slider/slide2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- If we need scrollbar -->
-                <div class="first-container swiper-pagination"></div>
+            <div class="intro-container do-anim">
+                <div><span>Bienvenido</span> <span>a</span> <span>Showland,</span> <span>la</span> <span>agencia</span> <span>de</span> <span>publicidad</span> <span>y</span> <span>eventos</span> <span>con</span> <span>la</span> <span>que</span> <span>todo</span> <span>es</span> <span>posible.</span></div>
             </div>
         </div>
         <section id="presentacion" data-aos="fade-in" data-aos-anchor-placement="top-center">
@@ -289,7 +253,7 @@
                 ellos mismos:</p>
         </div>
 
-        <section id="sndSlider" class="swiper-nomrg">
+        <section id="sndSlider" class="ignore-mrg">
 
             <div class="swiper-container opinion-slider" data-aos="fade-in">
                 <!-- Additional required wrapper -->
@@ -478,25 +442,25 @@
 </script>
 <script>
     // slider
-    var swiper1 = new Swiper("#firstSlider", {
-        slidesPerView: 1,
-        centeredSlides: true,
-        loop: true,
-        effect: 'fade',
-        keyboard: {
-            enabled: true,
-        },
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
+    // var swiper1 = new Swiper("#firstSlider", {
+    //     slidesPerView: 1,
+    //     centeredSlides: true,
+    //     loop: true,
+    //     effect: 'fade',
+    //     keyboard: {
+    //         enabled: true,
+    //     },
+    //     autoplay: {
+    //         delay: 1500,
+    //         disableOnInteraction: false,
+    //     },
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: false,
-        }
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: false,
+    //     }
 
-    });
+    // });
 
     $(".opinion-slider").each(function (index, element) {
         var $this = $(this);
