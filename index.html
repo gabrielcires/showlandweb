@@ -9,7 +9,7 @@
     <meta name="description" content="En Showland nos encargamos de una amplia variedad de servicios que se enfocan de manera íntegra en el montaje, la organización y difusión de eventos, espectáculos, artistas, establecimientos, etc.">
     <meta http-equiv="author" content="graphik.es">
     <meta name="google-site-verification" content="Zj3R3mzTHsR6TzNfMOQM-1P4NaoZlvclOMNUyvb9g3E" />
-    <meta name="theme-color" content="#e0013f"/>
+    <meta name="theme-color" content="#f0047f" />
     <link rel="shortcut icon" href="assets/img/favicon.ico?" />
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
@@ -50,16 +50,16 @@
     <div id="loading" class="loading">
         <div class="scale-cont">
 
-            <svg preserveAspectRatio="xMidYMid slice" class="load-vector" enable-background="new 0 -49.958 400 449.958"
+            <svg class="load-vector" preserveAspectRatio="xMidYMid slice" enable-background="new 0 -49.958 400 449.958"
                 version="1.1" viewBox="0 -49.958 400 449.958" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                 <path class="fourth-wave" d="m200.18 69.497c-0.087 0-0.173 0-0.258-2e-3 -1.961-0.078-3.802-0.965-5.083-2.451l-8.198-9.522h-53.426c-5.277-0.01-9.554-4.286-9.563-9.563v-88.354c0-5.272 4.301-9.562 9.563-9.562h133.58c5.27 0 9.56 4.3 9.56 9.562v88.354c0 5.27-4.288 9.563-9.56 9.563h-51.716l-9.917 9.914c-1.325 1.318-3.117 2.059-4.987 2.061m-66.965-111.86c-1.08 0.013-1.952 0.885-1.965 1.965v88.354c0 1.065 0.897 1.967 1.965 1.967h53.68c2.054-1e-3 4.005 0.894 5.344 2.451l7.978 9.27 9.655-9.658c1.335-1.332 3.105-2.063 4.986-2.063h51.942c1.063 0 1.964-0.9 1.964-1.967v-88.355c0-1.066-0.9-1.965-1.964-1.965h-133.58v1e-3z"
                     fill="#fff" />
                 <path class="fourth-wave" d="m165.86 36.159h-12.965v-64.23h12.965v27.528h14.732v-27.528h13.2v64.23h-13.2v-27.527h-14.732v27.527zm40.3-64.23h12.964v64.23h-12.964v-64.23zm26.985 50.007l-1.646-23.213v-26.793h12.966v26.793l-1.65 23.213h-9.67zm11.08 14.223h-12.49v-9.726h12.49v9.726z"
                     fill="#96DAD4" />
                 <path class="first-wave" d="m400 210.31l-99.971 76.544-99.97-76.544-99.972 76.544-99.97-76.544v-87.15l99.97 76.54 99.972-76.54 99.97 76.54 99.971-76.54v87.15z"
-                    fill="#ff0066" />
+                    fill="#f0047f" />
                 <path class="second-wave" d="m400 323.46l-99.97 76.539-99.97-76.539-99.972 76.539-99.97-76.539v-87.153l99.97 76.54 99.972-76.54 99.97 76.54 99.97-76.54v87.153z"
-                    fill="#ff0066" />
+                    fill="#f0047f" />
             </svg>
 
             <div class="spin-cont">
@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
+    <div id="menuAnim" class="menu-cont no-select no-disp" onclick="toggleMenu(this)">
         <p class="menu-btn">MENÚ</p>
         <div class="menu-icon">
             <div class="bar1"></div>
@@ -80,11 +80,11 @@
         </div>
     </div>
 
-    <a href="index.html" class="logo-fixed" onclick="void(0)">
+    <a href="index.html" class="logo-fixed no-disp" onclick="void(0)">
         <img src="aload/iconologo.svg" class="logo-fixed" alt="">
     </a>
 
-    <header id="menu" data-aos="" data-aos-offset="1100" data-aos-once="false">
+    <header id="menu" class="no-disp" data-aos="" data-aos-offset="1100" data-aos-once="false">
 
         <ul id="menuCont">
             <a href="index.html" onclick="void(0)"><img class="show-home-menu" src="assets/img/showlh.svg" alt=""></a>
@@ -138,11 +138,13 @@
 
     <div class="container">
         <div class="center-obj">
-            <div class="intro-container do-anim">
-                <div><span>Bienvenido</span> <span>a</span> <span>Showland,</span> <span>la</span> <span>agencia</span> <span>de</span> <span>publicidad</span> <span>y</span> <span>eventos</span> <span>con</span> <span>la</span> <span>que</span> <span>todo</span> <span>es</span> <span>posible.</span></div>
+            <div id="intro" class="intro-container">
+                <div><span>Bienvenido</span> <span>a</span> <span>Showland,</span> <span>la</span> <span>agencia</span>
+                    <span>de</span> <span>publicidad</span> <span>y</span> <span>eventos</span> <span>con</span> <span>la</span>
+                    <span>que</span> <span>todo</span> <span>es</span> <span>posible.</span></div>
             </div>
         </div>
-        <section id="presentacion" data-aos="fade-in" data-aos-anchor-placement="top-center">
+        <section class="no-pad-top" id="presentacion" data-aos="fade-in" data-aos-anchor-placement="top-bottom">
             <div class="logobj-grid">
                 <img class="img-fluid b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                     data-src="assets/img/homeimage.png" alt="">
@@ -395,7 +397,8 @@
     </div>
     <footer>
         <div class="footer-cont" data-aos="fade-in">
-                <p class="footer-txt">© 2018, <span>SHOWLAND</span>. Todos los derechos reservados. <a href="avisolegal.html">AVISO LEGAL</a></p>
+            <p class="footer-txt">© 2018, <span>SHOWLAND</span>. Todos los derechos reservados. <a href="avisolegal.html">AVISO
+                    LEGAL</a></p>
             <a href="https://www.facebook.com/SHOWLANDGROUP/" target="_blank" rel="noopener">
                 <img class="img-fluid foot-svg" src="assets/img/footer1.svg" alt="">
             </a>
@@ -409,7 +412,7 @@
         </div>
     </footer>
     <!-- Facebook Plugin Page -->
-    <div id="faceCont" class="face-btn-cont">
+    <div id="faceCont" class="face-btn-cont no-disp">
         <div class="face-btn" onclick="toggleFace(this)"><i class="fas fa-caret-left"></i><i class="fab fa-facebook-f"></i></div>
         <div class=" face-cont">
             <div class="fb-page" data-href="https://www.facebook.com/SHOWLANDGROUP/" data-tabs="timeline" data-width="500"
@@ -418,7 +421,7 @@
             </div>
         </div>
     </div>
-    <div id="cookieCont" class="cookie-cont">
+    <div id="cookieCont" class="cookie-cont no-disp">
         <div class="cookie-show">
             <p>POLÍTICA DE COOKIES</p>
             <img class="img-fluid" src="assets/img/cookie.svg" alt="">
@@ -433,12 +436,14 @@
 <script src="js/cookieconsent.min.js"></script>
 <script src="js/main.js?" type="text/javascript"></script>
 <script>
-    $(window).bind("load", function() {
-   setTimeout(function () {
+    $(window).bind("load", function () {
+        setTimeout(function () {
             $('#loading').addClass('loaded');
-
+            setTimeout(function () {
+                $('#intro').addClass('do-anim');
+            }, 2300);
         }, 500);
-});
+    });
 </script>
 <script>
     // slider
