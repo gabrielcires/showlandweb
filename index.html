@@ -71,24 +71,26 @@
         </div>
     </div>
 
-    <div id="menuAnim" class="menu-cont no-select no-disp" onclick="toggleMenu(this)">
-        <p class="menu-btn">MENÚ</p>
-        <div class="menu-icon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
-
     <a href="index.html" class="logo-fixed no-disp" onclick="void(0)">
         <img src="aload/iconologo.svg" class="logo-fixed" alt="">
     </a>
 
-    <header id="menu" class="no-disp" data-aos="" data-aos-offset="1100" data-aos-once="false">
+    <header id="menu" class="" data-aos="" data-aos-offset="1100" data-aos-once="false">
+            <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
+                    <p class="menu-btn">MENÚ</p>
+                    <div class="menu-icon">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </div>
 
         <ul id="menuCont">
-            <a href="index.html" onclick="void(0)"><img class="show-home-menu" src="assets/img/showlh.svg" alt=""></a>
-            <a class="no-select " rel="canonical" href="index.html">
+            <a class="show-home-container" href="index.html" onclick="void(0)">
+                <img class="show-home-menu" src="assets/img/horizontal-logo.svg" alt="">
+                <img class="show-home-w will-change" src="assets/img/horizontal-w.svg" alt="">
+            </a>
+            <!-- <a class="no-select " rel="canonical" href="index.html">
                 <li class="menu-txt-hov active-menu">
                     <i class="fas fa-home"></i> Home</li>
             </a>
@@ -119,7 +121,7 @@
                     <p class="menu-txt-hov">
                         <i class="fas fa-users"></i> Clientes</p>
                 </a>
-            </li>
+            </li> -->
 
         </ul>
         <div id="social" class="social">
@@ -441,7 +443,7 @@
             $('#loading').addClass('loaded');
             setTimeout(function () {
                 $('#intro').addClass('do-anim');
-            }, 2300);
+            }, 2500);
         }, 500);
     });
 </script>
