@@ -8,8 +8,10 @@ function toggleFace(x) {
 // toggle menu
 function toggleMenu(x) {
     var menu = document.getElementById("menu");
+    var nav = document.getElementById("sectionNav");
     x.classList.toggle("change");
     menu.classList.toggle("show-menu");
+    nav.classList.toggle("show-menu");
 }
 
 $('#cookieCont').hover(
