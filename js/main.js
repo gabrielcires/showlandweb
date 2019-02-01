@@ -32,9 +32,7 @@ function toggleSubMenu(x) {
 $('#subSec').hover(
     function () {
         var subMenu = document.getElementById("subMenu");
-        var ad = document.getElementById("arrowDown");
         subMenu.classList.toggle("show-menu");
-        ad.classList.toggle("show-menu");
     }
 )
 
