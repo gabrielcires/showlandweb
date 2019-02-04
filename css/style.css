@@ -225,7 +225,6 @@ body.link-transition::after {
 
 section {
     padding: 100px 0;
-    overflow: hidden;
 }
 
 section.sections-pad {
@@ -596,7 +595,7 @@ header {
     align-content: center;
     font-size: 2em;
     font-weight: bold;
-    background: #f0047edc;
+    background: rgba(240, 4, 126, 0.94);
     position: fixed;
     z-index: 1000;
     opacity: 0;
@@ -633,6 +632,7 @@ header {
     font-size: .5em;
     line-height: 1em;
     margin-right: 20px;
+    margin-bottom: 0;
     position: relative;
     max-width: 250px;
 }
@@ -953,6 +953,21 @@ header.show-menu {
     animation: fadeInIntro 1.5s .9s forwards cubic-bezier(.77, -0.02, .19, 1.13);
 }
 
+.port-back {
+    position: relative;
+}
+
+.port-back::before {
+    content: "PROYECTOS";
+    color: white;
+    opacity: .05;
+    font-size: 200px;
+    font-weight: bolder;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 /* slider */
 
 #firstSlider.proyects-slider {
@@ -966,8 +981,8 @@ header.show-menu {
 
 #firstSlider.proyects-slider .swiper-slide {
     height: auto;
-    max-height: 500px !important;
-    max-width: 274px !important;
+    /* max-height: 400px !important; */
+    max-width: 300px !important;
     transition: all .3s ease-in;
     position: relative;
     margin: auto;
@@ -1551,7 +1566,6 @@ _::-webkit-full-page-media, _:future, :root .pad-top-safari {
 /* LOCATION */
 
 section#location {
-    overflow: inherit;
 }
 
 .loc-cont {
@@ -2881,7 +2895,20 @@ input::placeholder {
         color: black;
     }
     .menu-txt-hov.active-menu {
-        color: black!important;
+        position: relative;
+        color: white;
+    }
+    .menu-txt-hov.active-menu::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -25px;
+        height: 15px;
+        width: 15px;
+        margin: auto;
+        background: black;
+        border-radius: 100%;
     }
     .sub-sect-cont:hover p, .sub-sect-cont:hover i, .sub-sect-cont:active p, .sub-sect-cont:active i {
         color: rgb(177, 177, 177);
@@ -2986,7 +3013,6 @@ input::placeholder {
     }
     section {
         padding: 100px 0;
-        overflow: hidden;
     }
     section#clientes.sections-pad {
         padding-top: 250px;
@@ -3132,45 +3158,89 @@ input::placeholder {
     .social-icon-home {
         max-width: 50px;
     }
-    @media only screen and (min-width: 1100px) {
-        .intro-txt {
-            font-size: 4.6rem;
-            line-height: 4.9rem;
-        }
-        h1.intro-txt {
-            font-size: 4.6rem;
-            line-height: 4.9rem;
-        }
-        .ignore-mrg {
-            width: calc(100% + 25px);
-            margin-left: -12.5px;
-            margin-right: -12.5px;
-        }
-        .cont-home .contact-info p {
-            font-size: 1.3em;
-        }
-        .cont-home .contact-form {
-            padding: 50px 250px 90px;
-        }
-        .withus-txtbig {
-            font-size: 60px;
-        }
-        section#eventos.sub-eventos {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-        section#artistas {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-        .withus-txtbig img {
-            transform: rotate(180deg) translate(-10px, -4px);
-            height: 50px;
-            width: auto;
-            transition: all .3s ease;
-        }
+    #firstSlider.proyects-slider .swiper-wraper {
+        max-width: 1400px;
+        margin: auto;
     }
-    /* 
+    #firstSlider.proyects-slider .swiper-slide {
+        /* padding: 0 10px; */
+        overflow: visible;
+    }
+    #firstSlider.proyects-slider .swiper-slide::before {
+        display: none;
+    }
+    #firstSlider.proyects-slider .swiper-slide-active {
+        z-index: inherit;
+        transform: scale(1);
+    }
+    #firstSlider.proyects-slider .swiper-slide-active.swiper-slide::before {
+        opacity: 0;
+    }
+    .proyect-txt {
+        padding: 0;
+        background: transparent;
+        opacity: 1;
+        transform: translateY(80px);
+    }
+    .proyect-txt p {
+        font-size: 1rem;
+        margin: 0;
+        width: 100%;
+    }
+    .swiper-slide-active .proyect-txt {
+        transform: translateY(80px);
+    }
+    .proyect-title {
+        margin: auto;
+        color: #f0047f;
+        width: 100%;
+    }
+
+    .port-down {
+        transform: translateY(80px);
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .intro-txt {
+        font-size: 4.6rem;
+        line-height: 4.9rem;
+    }
+    h1.intro-txt {
+        font-size: 4.6rem;
+        line-height: 4.9rem;
+    }
+    .ignore-mrg {
+        width: calc(100% + 25px);
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+    }
+    .cont-home .contact-info p {
+        font-size: 1.3em;
+    }
+    .cont-home .contact-form {
+        padding: 50px 250px 90px;
+    }
+    .withus-txtbig {
+        font-size: 60px;
+    }
+    section#eventos.sub-eventos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    section#artistas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .withus-txtbig img {
+        transform: rotate(180deg) translate(-10px, -4px);
+        height: 50px;
+        width: auto;
+        transition: all .3s ease;
+    }
+}
+
+/* 
 @media only screen and (min-width: 1200px) {
     .swiper-container {
         width: calc(100% + 25px);

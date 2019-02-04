@@ -19,16 +19,6 @@ $('#cookieCont').hover(
         $("#cookieCont").addClass("cookie-out");
     });
 
-
-// toggle submenu
-// $(‘.element’).hover(
-// function(){$(this).toggleClass(‘classname’);}
-// );
-function toggleSubMenu(x) {
-    var subMenu = document.getElementById("subMenu");
-    subMenu.classList.toggle("show-menu");
-}
-
 $('#subSec').hover(
     function () {
         var subMenu = document.getElementById("subMenu");
@@ -73,9 +63,9 @@ AOS.init({
     offset: 0, // offset (in px) from the original trigger point
     delay: 0, // values from 0 to 3000, with step 50ms
     duration: 400, // values from 0 to 3000, with step 50ms
-    easing: 'ease', // default easing for AOS animations
+    easing: 'ease-in', // default easing for AOS animations
     once: false, // whether animation should happen only once - while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
+    mirror: true, // whether elements should animate out while scrolling past them
     anchorPlacement: 'center-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 AOS.refresh()
