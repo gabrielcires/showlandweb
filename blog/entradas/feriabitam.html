@@ -21,71 +21,73 @@
 
 <body style="overflow-x: hidden!important" class="link-transition">
 
-    <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
-        <p class="menu-btn">MENÚ</p>
-        <div class="menu-icon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
-
-    <a href="../../index.html" class="logo-fixed" onclick="void(0)">
-        <img src="../../aload/iconologo.svg" class="logo-fixed" alt="">
-    </a>
-
-    <header id="menu" data-aos="" data-aos-offset="1100" data-aos-once="false">
-
-        <ul id="menuCont">
-            <a href="../../index.html"><img class="show-home-menu" src="../../assets/img/showlh.svg" alt=""></a>
-            <a class="no-select " href="../../index.html">
-                <li class="menu-txt-hov">
-                    <i class="fas fa-home"></i> Home</li>
-            </a>
-            <li class="no-pad sub-sect-cont" id="subSec">
-                <p class="serv-sect no-pad-btm menu-txt-hov">
-                    Servicios</p>
-                <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
-                <ul class="sub-sect" id="subMenu">
-                    <a class="" href="../../servicios/eventos.html">
-                        <li class="no-select menu-txt-hov">Eventos y Espectáculos</li>
+        <a href="../../index.html" class="logo-fixed pc-nodisp" onclick="void(0)">
+            <img src="../../assets/img/iconologo.svg" class="logo-fixed" alt="">
+        </a>
+    
+        <header class="menu-back" id="menu" class="" data-aos="" data-aos-anchor-placement="top-top" data-aos-once="false">
+            <ul class="menu-container" id="menuCont">
+                <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
+                    <div class="menu-icon">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <p class="menu-btn movil-nodisp">MENÚ</p>
+                </div>
+                <div class="menu-center">
+                    <a class="show-home-container movil-nodisp" href="../../index.html" onclick="void(0)">
+                        <img class="show-home-menu" src="../../assets/img/horizontal-logo.svg" alt="">
+                        <img class="show-home-w will-change" src="../../assets/img/horizontal-w.svg" alt="">
                     </a>
-                    <a class="" href="../../servicios/sonido.html">
-                        <li class="no-select menu-txt-hov">Sonido e Iluminación</li>
+                </div>
+                <div id="social" class="social movil-nodisp">
+                    <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon" target="_blank" rel="noopener">
+                        <img class="img-fluid" src="../../assets/img/facebook.svg" alt="">
                     </a>
-                    <a class="" href="../../servicios/diseno.html">
-                        <li class="no-select menu-txt-hov">Diseño y Comunicación</li>
+                    <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon" target="_blank" rel="noopener">
+                        <img class="img-fluid" src="../../assets/img/instagram.svg" alt="">
                     </a>
-                </ul>
-            </li>
-
-            <a class="no-select" href="../blog.html">
-                <li class="menu-txt-hov active-menu">
-                    <i class="fas fa-book-open"></i> Blog</li>
-            </a>
-
-            <li class="no-pad">
-                <a href="../../servicios/clientes.html" class="serv-sect no-select">
-                    <p class="menu-txt-hov">
-                        <i class="fas fa-users"></i> Clientes</p>
+                    <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon" target="_blank"
+                        rel="noopener">
+                        <img class="img-fluid" src="../../assets/img/youtube.svg" alt="">
+                    </a>
+    
+                </div>
+            </ul>
+        </header>
+        <nav id="sectionNav" class="sections-nav intro-txt">
+            <ul class="sections-container">
+                <a class="no-select " rel="canonical" href="../../index.html">
+                    <li class="menu-txt-hov" onclick="">Home</li>
                 </a>
-            </li>
-
-        </ul>
-        <div id="social" class="social">
-            <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon" target="_blank" rel="noopener">
-                <img class="img-fluid" src="../../assets/img/facebook.svg" alt="">
-            </a>
-            <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon" target="_blank"
-                rel="noopener">
-                <img class="img-fluid" src="../../assets/img/youtube.svg" alt="">
-            </a>
-            <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon" target="_blank" rel="noopener">
-                <img class="img-fluid" src="../../assets/img/instagram.svg" alt="">
-            </a>
-        </div>
-    </header>
-
+                <li class="no-pad sub-sect-cont menu-txt-hov" id="subSec" onclick="">
+                    Departamentos
+                    <ul class="sub-sect" id="subMenu">
+                        <a class="" rel="canonical" href="../../servicios/diseno.html">
+                            <li class="no-select menu-txt-hov" onclick="">Diseño y Comunicación</li>
+                        </a>
+                        <a class="" rel="canonical" href="../../servicios/eventos.html">
+                            <li class="no-select menu-txt-hov" onclick="">Eventos y Espectáculos</li>
+                        </a>
+                        <a class="" rel="canonical" href="../../servicios/sonido.html">
+                            <li class="no-select menu-txt-hov" onclick="">Sonido e Iluminación</li>
+                        </a>
+                    </ul>
+                </li>
+    
+                <a class="no-select" rel="canonical" href="../blog.html">
+                    <li class="menu-txt-hov active-menu" onclick="">Blog</li>
+                </a>
+    
+                <li class="no-pad">
+                    <a rel="canonical" href="../../servicios/clientes.html" class="serv-sect no-select">
+                        <p class="menu-txt-hov" onclick="">Clientes</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
     <div class="container">
 
         <section id="blog" class="">
