@@ -1418,6 +1418,14 @@ _::-webkit-full-page-media, _:future, :root .pad-top-safari {
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, .9));
 }
 
+..serv-icon::before {
+    content: "";
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 3px solid #f0047f;
+}
+
 /* video */
 
 .serv-cont-vid {
@@ -1461,11 +1469,30 @@ _::-webkit-full-page-media, _:future, :root .pad-top-safari {
     color: white;
 }
 
+/* WITHUS*/
+
+.with-flex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.with-text {
+    width: 100%;
+    max-width: 600px;
+    height: fit-content;
+    border-left: 4px solid #f0047f;
+    padding-left: 15px;
+}
+
 .glitch {
     position: relative;
     width: 100%;
+    max-width: 600px;
     height: auto;
     min-height: 300px;
+    min-width: 300px;
     margin-bottom: 30px;
 }
 
@@ -1577,6 +1604,7 @@ section#location {}
 .loc-cont {
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
 .loc-anim {
@@ -2051,10 +2079,7 @@ div.cc-revoke:hover {
 }
 
 .vertical-bar {
-    width: 10px;
-    height: 100px;
-    background: #f0047f;
-    margin: 15px 0;
+    display: none;
 }
 
 .title-bar {
@@ -2928,6 +2953,18 @@ input::placeholder {
     .sub-sect-cont:hover p, .sub-sect-cont:hover i, .sub-sect-cont:active p, .sub-sect-cont:active i {
         color: rgb(177, 177, 177);
     }
+    .vertical-bar {
+        width: 4px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: #f0047f;
+        margin: 15px 0;
+        display: inherit;
+    }
 }
 
 @media only screen and (min-width: 800px) {
@@ -2992,6 +3029,16 @@ input::placeholder {
         transition: all .8s ease;
         display: inherit;
     }
+    .with-flex {
+        flex-wrap: inherit;
+    }
+    .with-text {
+        margin-left: -15px;
+    }
+    .glitch {
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
 }
 
 @media only screen and (min-width: 900px) {
@@ -3031,7 +3078,7 @@ input::placeholder {
         padding-top: 250px;
     }
     section {
-        padding: 170px 0;
+        padding: 150px 0;
     }
     section#clientes.sections-pad {
         padding-top: 250px;
@@ -3178,6 +3225,7 @@ input::placeholder {
     }
     #firstSlider.proyects-slider {
         padding: 60px 0;
+        min-height: 600px;
     }
     #firstSlider.proyects-slider.swiper-container-autoheight .swiper-wrapper {
         max-width: 1200px!important;
@@ -3260,7 +3308,6 @@ input::placeholder {
         transition: all .3s ease;
     }
 }
-
 
 @media only screen and (min-width: 1200px) {
     .swiper-nomrg {
