@@ -385,12 +385,20 @@ hr {
 }
 
 .bdr-title {
-    border-left: 3px solid white;
-    /* border-left: 3px solid #f0047f; */
     min-height: 40px;
     padding-left: 10px;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.8em;
+    font-weight: 300;
+    opacity: .8;
+}
+
+.big-title {
+    font-size: 3em;
+    padding: 0;
+    font-weight: bold;
+    opacity: 1;
+    margin-bottom: 50px;
 }
 
 .servobj-grid {
@@ -1368,6 +1376,11 @@ section#servicios a {
     text-align: left;
 }
 
+.title-hop {
+    height: auto;
+    margin: auto;
+}
+
 .serv-cont:hover .title-hop {
     animation: heart .5s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -1418,10 +1431,12 @@ _::-webkit-full-page-media, _:future, :root .pad-top-safari {
     bottom: 0;
     right: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     margin: auto;
-    width: fit-content;
-    height: fit-content;
-    max-height: 200px;
+    width: 100%;
+    height: auto;
     z-index: 300;
     text-align: center;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
@@ -1504,12 +1519,25 @@ _::-webkit-full-page-media, _:future, :root .pad-top-safari {
     flex-wrap: wrap;
 }
 
+.who-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 1000px;
+    background-image: url('../assets/img/who-back.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* filter: grayscale(1); */
+    opacity: .8;
+}
+
 .with-text {
     width: 100%;
     max-width: 600px;
     height: fit-content;
-    border-left: 4px solid #f0047f;
-    padding-left: 15px;
+    text-shadow: 1px 1px 10px black;
 }
 
 .glitch {
@@ -1519,6 +1547,7 @@ _::-webkit-full-page-media, _:future, :root .pad-top-safari {
     height: auto;
     min-height: 300px;
     min-width: 300px;
+    margin: auto;
     margin-bottom: 30px;
 }
 
@@ -1621,6 +1650,13 @@ _::-webkit-full-page-media, _:future, :root .pad-top-safari {
 
 .cont-home .contact-info {
     margin-top: 20px;
+}
+
+.contact-sect {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 /* LOCATION */
@@ -2312,7 +2348,8 @@ div.cc-revoke:hover {
 
 .contact-go {
     display: block;
-    margin: 20px auto;
+    height: fit-content;
+    margin: auto;
 }
 
 .cont-img {
@@ -2322,7 +2359,6 @@ div.cc-revoke:hover {
 
 .contact-txt {
     letter-spacing: 2px;
-    font-family: "Montserrat", sans-serif;
     font-size: 20px;
     word-spacing: 5px;
     margin: 0;
@@ -2334,33 +2370,17 @@ div.cc-revoke:hover {
 
 .withus-txtbig img {
     transform: rotate(180deg) translate(-10px, -2px);
-    -webkit-transform: rotate(180deg) translate(-10px, -2px);
-    -moz-transform: rotate(180deg) translate(-10px, -2px);
-    -ms-transform: rotate(180deg) translate(-10px, -2px);
-    -o-transform: rotate(180deg) translate(-10px, -2px);
     height: 30px;
     width: auto;
     transition: all .3s ease;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
 }
 
 .contact-go:hover, .contact-go:active {
     transform: scale(.9);
-    -webkit-transform: scale(.9);
-    -moz-transform: scale(.9);
-    -ms-transform: scale(.9);
-    -o-transform: scale(.9);
 }
 
 .contact-go:focus {
     transform: scale(.8);
-    -webkit-transform: scale(.8);
-    -moz-transform: scale(.8);
-    -ms-transform: scale(.8);
-    -o-transform: scale(.8);
 }
 
 #contLink {
@@ -2938,18 +2958,6 @@ input::placeholder {
     .sub-sect-cont:hover p, .sub-sect-cont:hover i, .sub-sect-cont:active p, .sub-sect-cont:active i {
         color: rgb(177, 177, 177);
     }
-    .vertical-bar {
-        width: 4px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background: #f0047f;
-        margin: 15px 0;
-        display: inherit;
-    }
 }
 
 @media only screen and (min-width: 800px) {
@@ -3019,10 +3027,6 @@ input::placeholder {
     }
     .with-text {
         margin-left: -15px;
-    }
-    .glitch {
-        margin-bottom: 0;
-        margin-right: 30px;
     }
 }
 
@@ -3264,10 +3268,14 @@ input::placeholder {
         font-size: 4.6rem;
         line-height: 4.9rem;
     }
+    .container {
+        margin: 0 50px 0;
+        position: relative;
+    }
     .ignore-mrg {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
+        width: calc(100% + 100px);
+        margin-left: -50px;
+        margin-right: -50px;
     }
     .cont-home .contact-info p {
         font-size: 1.3em;
@@ -3295,22 +3303,6 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 1200px) {
-    .swiper-nomrg {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .ignore-mrg {
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    section#servicios.ignore-mrg {
-        margin-right: -12.5px;
-        margin-left: -12.5px;
-    }
-    .withus-txt {
-        padding: 0 50px;
-    }
     .swiper-container div .slider-txt .slider-svg-fa {
         width: 70%;
         top: 40px;
@@ -3321,20 +3313,6 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 1400px) {
-    .swiper-container {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .swiper-nomrg {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .ignore-mrg {
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
     .swiper-container div .slider-txt .slider-svg-fa {
         width: 40%;
         top: 80px;
@@ -3349,54 +3327,12 @@ input::placeholder {
 }
 
 @media only screen and (min-width: 1500px) {
-    .swiper-container {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .swiper-nomrg {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .ignore-mrg {
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
 }
 
 @media only screen and (min-width: 1600px) {
-    .swiper-container {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .swiper-nomrg {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .ignore-mrg {
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
 }
 
 @media only screen and (min-width: 1700px) {
-    .swiper-container {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .swiper-nomrg {
-        width: calc(100% + 25px);
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
-    .ignore-mrg {
-        margin-left: -12.5px;
-        margin-right: -12.5px;
-    }
     .swiper-container div .slider-txt .slider-svg-fa {
         width: 40%;
         top: 160px;
