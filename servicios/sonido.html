@@ -8,7 +8,7 @@
     <title>Sonido e Iluminación</title>
     <meta name="description" content="Aprovecha el mejor efecto que producen nuestros equipos de sonido e iluminación">
     <meta http-equiv="author" content="Graphik">
-    <meta name="theme-color" content="#e0013f"/>
+    <meta name="theme-color" content="#f0047f" />
     <link rel="shortcut icon" href="../assets/img/favicon.ico?" />
 
     <link rel="stylesheet" href="../css/normalize.css" type="text/css">
@@ -21,78 +21,80 @@
 
 <body style="overflow-x: hidden!important" class="link-transition">
 
-    <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
-        <p class="menu-btn">MENÚ</p>
-        <div class="menu-icon">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-    </div>
-
-    <a href="../index.html" class="logo-fixed" onclick="void(0)">
-        <img src="../aload/iconologo.svg" class="logo-fixed" alt="">
-    </a>
-
-    <header id="menu" data-aos="" data-aos-offset="1100" data-aos-once="false">
-
-        <ul id="menuCont">
-            <a href="../index.html"><img class="show-home-menu" src="../assets/img/showlh.svg" alt=""></a>
-            <a class="no-select " href="../index.html">
-                <li class="menu-txt-hov">
-                    <i class="fas fa-home"></i> Home</li>
-            </a>
-            <li class="no-pad sub-sect-cont" id="subSec">
-                <p class="serv-sect no-pad-btm menu-txt-hov active-menu">
-                    Servicios</p>
-                <i id="arrowDown" class="fas fa-sort-down down-arrow"></i>
-                <ul class="sub-sect" id="subMenu">
-                    <a class="" href="eventos.html">
-                        <li class="no-select menu-txt-hov">Eventos y Espectáculos</li>
+        <a href="../index.html" class="logo-fixed pc-nodisp" onclick="void(0)">
+            <img src="../assets/img/iconologo.svg" class="logo-fixed" alt="">
+        </a>
+    
+        <header class="menu-back" id="menu" class="" data-aos="" data-aos-anchor-placement="top-top" data-aos-once="false">
+            <ul class="menu-container" id="menuCont">
+                <div id="menuAnim" class="menu-cont no-select" onclick="toggleMenu(this)">
+                    <div class="menu-icon">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <p class="menu-btn movil-nodisp">MENÚ</p>
+                </div>
+                <div class="menu-center">
+                    <a class="show-home-container movil-nodisp" href="../index.html" onclick="void(0)">
+                        <img class="show-home-menu" src="../assets/img/horizontal-logo.svg" alt="">
+                        <img class="show-home-w will-change" src="../assets/img/horizontal-w.svg" alt="">
                     </a>
-                    <a class="" href="sonido.html">
-                        <li class="no-select menu-txt-hov active-menu">Sonido e Iluminación</li>
+                </div>
+                <div id="social" class="social movil-nodisp">
+                    <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon" target="_blank" rel="noopener">
+                        <img class="img-fluid" src="../assets/img/facebook.svg" alt="">
                     </a>
-                    <a class="" href="diseno.html">
-                        <li class="no-select menu-txt-hov">Diseño y Comunicación</li>
+                    <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon" target="_blank" rel="noopener">
+                        <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
                     </a>
-                </ul>
-            </li>
-
-            <a class="no-select" href="../blog/blog.html">
-                <li class="menu-txt-hov">
-                    <i class="fas fa-book-open"></i> Blog</li>
-            </a>
-
-            <li class="no-pad">
-                <a href="clientes.html" class="serv-sect no-select">
-                    <p class="menu-txt-hov">
-                        <i class="fas fa-users"></i> Clientes</p>
+                    <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon" target="_blank"
+                        rel="noopener">
+                        <img class="img-fluid" src="../assets/img/youtube.svg" alt="">
+                    </a>
+    
+                </div>
+            </ul>
+        </header>
+        <nav id="sectionNav" class="sections-nav intro-txt">
+            <ul class="sections-container">
+                <a class="no-select " rel="canonical" href="../index.html">
+                    <li class="menu-txt-hov" onclick="">Home</li>
                 </a>
-            </li>
-
-        </ul>
-        <div id="social" class="social">
-            <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon" target="_blank" rel="noopener">
-                <img class="img-fluid" src="../assets/img/facebook.svg" alt="">
-            </a>
-            <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon" target="_blank"
-                rel="noopener">
-                <img class="img-fluid" src="../assets/img/youtube.svg" alt="">
-            </a>
-            <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon" target="_blank" rel="noopener">
-                <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
-            </a>
-        </div>
-    </header>
-
+                <li class="no-pad sub-sect-cont menu-txt-hov" id="subSec" onclick="">
+                    Departamentos
+                    <ul class="sub-sect" id="subMenu">
+                        <a class="" rel="canonical" href="diseno.html">
+                            <li class="no-select menu-txt-hov" onclick="">Diseño y Comunicación</li>
+                        </a>
+                        <a class="" rel="canonical" href="eventos.html">
+                            <li class="no-select menu-txt-hov" onclick="">Eventos y Espectáculos</li>
+                        </a>
+                        <a class="" rel="canonical" href="sonido.html">
+                            <li class="no-select menu-txt-hov active-menu" onclick="">Sonido e Iluminación</li>
+                        </a>
+                    </ul>
+                </li>
+    
+                <a class="no-select" rel="canonical" href="../blog/blog.html">
+                    <li class="menu-txt-hov" onclick="">Blog</li>
+                </a>
+    
+                <li class="no-pad">
+                    <a rel="canonical" href="clientes.html" class="serv-sect no-select">
+                        <p class="menu-txt-hov" onclick="">Clientes</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
     <div class="container">
 
-        <section id="eventos" class="ignore-mrg eventos-pad sections-pad">
+        <section id="eventos" class="more-mrg eventos-pad sections-pad">
             <div class="sub-sep">
                 <a rel="canonical" href="siespectaculos.html">
                     <div class="serv-cont darklay" data-aos="fade-in">
-                        <img class="img-fluid" src="../assets/img/serv13.jpg" alt="">
+                        <img class="show-in img-fluid" src="../assets/img/serv13.jpg" alt="">
                         <div class="serv-icon">
                             <img class="serv-img" src="../assets/img/sound-icon.svg" alt="">
                         </div>
@@ -104,7 +106,7 @@
             <div class="sub-sep">
                 <a rel="canonical" href="siestablecimientos.html">
                     <div class="serv-cont darklay" data-aos="fade-in">
-                        <img class="img-fluid" src="../assets/img/serv14.jpg" alt="">
+                        <img class="show-in img-fluid" src="../assets/img/serv14.jpg" alt="">
                         <div class="serv-icon">
                             <img class="serv-img" src="../assets/img/establ-icon.svg" alt="">
                         </div>
@@ -123,26 +125,27 @@
                 equipos de videoproyección y pantallas LED para mejorar y acompañar tu evento.
             </p>
         </section>
-        <section id="contLink">
+        <section id="contLink" class="port-back contact-sect" data-aos-delay="400" data-aos="fade-in">
             <a href="clientes.html" class="contact-go">
-                <img class="img-fluid cont-img" src="../assets/img/cont-icon.svg" alt="">
                 <p class="contact-txt">CONTACTA CON NOSOTROS EN EL</p>
                 <h1 class="withus-txtbig">ÁREA DE CLIENTES<img src="../assets/img/backarrow.svg" alt=""></h1>
             </a>
+            <div class="port-back-text"><img class="img-fluid back-img" src="../assets/img/cont-icon.svg" alt=""></div>
         </section>
         <div class="vertical-bar center-mrg" data-aos="fade-in"></div>
         <section id="location">
 
             <div class="loc-cont">
-                <div class="loc-anim" data-aos="fade-in">
-                    <a href="https://goo.gl/maps/nvdGMq6E81k" target="_blank" rel="noopener">
+                <div class="loc-anim more-mrg" data-aos="fade-in">
+                    <a href="https://goo.gl/maps/8MU873hjSGo" target="_blank" rel="noopener">
                         <div class="loc-img-back do1">
-                            <img class="loc-vector img-fluid" src="../assets/img/showLog.svg" alt="">
+                            <img class="loc-vector img-fluid b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                data-src="../assets/img/showLog.svg" alt="">
                         </div>
                         <p class="location-mark">
                             <i class="fas fa-map-marker-alt"></i>
                         </p>
-                        <p class="loc-txt">C/ San Ignacio, 14 45600 | Talavera de la Reina</p>
+                        <p class="loc-txt">C/ Buenavista, 6 45638 | Pepino</p>
                     </a>
                     <a href="https://goo.gl/maps/kdkhfUFxJ5C2" target="_blank" rel="noopener">
                         <div class="loc-img-back do2">
@@ -154,37 +157,14 @@
                         <p class="loc-txt">C/ de Velazquez, 15, 1ºD 28001 | Madrid</p>
                     </a>
                 </div>
-                <div class="location social">
-                    <a href="https://www.facebook.com/SHOWLANDGROUP/" class="no-select social-icon-home" target="_blank"
-                        rel="noopener">
-                        <img class="img-fluid" src="../assets/img/facebook.svg" alt="">
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCLboiY9T0X1qHIjZ3j-Vv2A" class="no-select social-icon-home"
-                        target="_blank" rel="noopener">
-                        <img class="img-fluid" src="../assets/img/youtube.svg" alt="">
-                    </a>
-                    <a href="https://www.instagram.com/showlandgroup/" class="no-select social-icon-home" target="_blank"
-                        rel="noopener">
-                        <img class="img-fluid" src="../assets/img/instagram.svg" alt="">
-                    </a>
-                </div>
             </div>
 
         </section>
     </div>
     <footer>
         <div class="footer-cont" data-aos="fade-in">
-                <p class="footer-txt">© 2018, <span>SHOWLAND</span>. Todos los derechos reservados. <a href="../avisolegal.html">AVISO LEGAL</a></p>
-            <a href="https://www.facebook.com/SHOWLANDGROUP/" target="_blank" rel="noopener">
-                <img class="img-fluid foot-svg" src="../assets/img/footer1.svg" alt="">
-            </a>
-            <a href="https://www.facebook.com/PublitruckTalavera/" target="_blank" rel="noopener">
-                <img class="img-fluid foot-svg" src="../assets/img/footer2.svg" alt="">
-            </a>
-            <a><img class="img-fluid foot-svg" src="../assets/img/footer3.svg" alt=""></a>
-            <a href="https://www.facebook.com/WOWGarageESP/" target="_blank" rel="noopener">
-                <img class="img-fluid foot-svg" src="../assets/img/footer4.svg" alt="">
-            </a>
+            <p class="footer-txt">© 2019, <span>SHOWLAND</span>. Todos los derechos reservados. <a href="../avisolegal.html">AVISO
+                    LEGAL</a></p>
         </div>
     </footer>
 
